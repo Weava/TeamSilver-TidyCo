@@ -3,6 +3,9 @@ An iOS app to assign and track completion of cleaning rooms for hotel maids.
 
 ### Project Resources
 
+NOTE: Since there are Cocoa Pods in the project, make sure you open the project
+using the .xcworkspace file and NOT the .xcodeproj file
+
 [Parse](www.parse.com)
 The handy database with API integration for mobile platforms.
 
