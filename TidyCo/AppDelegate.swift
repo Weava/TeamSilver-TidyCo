@@ -16,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Initialize Parse and analytic tools.
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId("Bry2OJhYY86g53zIevDcjxBJBZw7SArIZ74ndEz7", clientKey: "tl1a0WEHrCVGwPZeICg9CalUdJuoIBqCnFsoykld")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        // Register Parse subclasses to enable database integration.
+        Employee.registerSubclass()
+        Room.registerSubclass()
+        Service.registerSubclass()
+        Timer.registerSubclass()
+        ServiceType.registerSubclass()
+        EmployeeType.registerSubclass()
+        
         return true
     }
 
