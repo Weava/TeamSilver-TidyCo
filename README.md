@@ -33,3 +33,5 @@ Aaron Weaver
 [Swift Documentation Style Guide: For Documenting Your Code Properly](http://nshipster.com/swift-documentation/)
 
 [Basic Git/Github Tutorial for Beginners](https://try.github.io/levels/1/challenges/1)
+
+[Great Parse Guide For Android That Applies Well To iOS](https://guides.codepath.com/android/Building-Data-driven-Apps-with-Parse)
