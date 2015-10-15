@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CBB96C71BCD5AB6009A4C17 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB96C61BCD5AB6009A4C17 /* Employee.swift */; settings = {ASSET_TAGS = (); }; };
-		1CBB96C91BCD5ADA009A4C17 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB96C81BCD5ADA009A4C17 /* Room.swift */; settings = {ASSET_TAGS = (); }; };
-		1CBB96CB1BCD5AF5009A4C17 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB96CA1BCD5AF5009A4C17 /* Service.swift */; settings = {ASSET_TAGS = (); }; };
-		1CBB96CD1BCD5B07009A4C17 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB96CC1BCD5B07009A4C17 /* Timer.swift */; settings = {ASSET_TAGS = (); }; };
-		1CBB96CF1BCD5B3D009A4C17 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB96CE1BCD5B3D009A4C17 /* ServiceType.swift */; settings = {ASSET_TAGS = (); }; };
-		1CBB96D11BCD5B4C009A4C17 /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB96D01BCD5B4C009A4C17 /* EmployeeType.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782BFC1BD049A00046B280 /* RoomStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFB1BD049A00046B280 /* RoomStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782BFF1BD049CA0046B280 /* EmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFD1BD049CA0046B280 /* EmployeeStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C001BD049CA0046B280 /* ServiceStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFE1BD049CA0046B280 /* ServiceStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C021BD049E70046B280 /* TimerStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C011BD049E70046B280 /* TimerStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C041BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C031BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C061BD053930046B280 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C051BD053930046B280 /* LoginController.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C091BD0541A0046B280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C081BD0541A0046B280 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1CAAAB541BD0031200E3650F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4E1BD0031200E3650F /* Employee.swift */; settings = {ASSET_TAGS = (); }; };
+		1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */; settings = {ASSET_TAGS = (); }; };
+		1CAAAB561BD0031200E3650F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB501BD0031200E3650F /* Room.swift */; settings = {ASSET_TAGS = (); }; };
+		1CAAAB571BD0031200E3650F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB511BD0031200E3650F /* Service.swift */; settings = {ASSET_TAGS = (); }; };
+		1CAAAB581BD0031200E3650F /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB521BD0031200E3650F /* ServiceType.swift */; settings = {ASSET_TAGS = (); }; };
+		1CAAAB591BD0031200E3650F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB531BD0031200E3650F /* Timer.swift */; settings = {ASSET_TAGS = (); }; };
 		1CC05F421BC73110003DB99F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC05F411BC73110003DB99F /* AppDelegate.swift */; };
-		1CC05F441BC73110003DB99F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC05F431BC73110003DB99F /* ViewController.swift */; };
 		1CC05F471BC73110003DB99F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC05F451BC73110003DB99F /* Main.storyboard */; };
 		1CC05F491BC73110003DB99F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC05F481BC73110003DB99F /* Assets.xcassets */; };
 		1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC05F4A1BC73110003DB99F /* LaunchScreen.storyboard */; };
@@ -42,16 +48,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C782BFB1BD049A00046B280 /* RoomStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomStorageAdapter.swift; path = Data/Database/RoomStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782BFD1BD049CA0046B280 /* EmployeeStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeStorageAdapter.swift; path = Data/Database/EmployeeStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782BFE1BD049CA0046B280 /* ServiceStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceStorageAdapter.swift; path = Data/Database/ServiceStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C011BD049E70046B280 /* TimerStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C031BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseEmployeeStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C051BD053930046B280 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Controller/LoginController.swift; sourceTree = "<group>"; };
+		1C782C081BD0541A0046B280 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
 		1CAAAB4A1BCD61C500E3650F /* TidyCo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TidyCo-Bridging-Header.h"; sourceTree = "<group>"; };
-		1CBB96C61BCD5AB6009A4C17 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Employee.swift; path = Entities/Employee.swift; sourceTree = "<group>"; };
-		1CBB96C81BCD5ADA009A4C17 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = Entities/Room.swift; sourceTree = "<group>"; };
-		1CBB96CA1BCD5AF5009A4C17 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Entities/Service.swift; sourceTree = "<group>"; };
-		1CBB96CC1BCD5B07009A4C17 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Entities/Timer.swift; sourceTree = "<group>"; };
-		1CBB96CE1BCD5B3D009A4C17 /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceType.swift; path = Entities/ServiceType.swift; sourceTree = "<group>"; };
-		1CBB96D01BCD5B4C009A4C17 /* EmployeeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeType.swift; path = Entities/EmployeeType.swift; sourceTree = "<group>"; };
+		1CAAAB4E1BD0031200E3650F /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Employee.swift; path = Data/Entities/Employee.swift; sourceTree = "<group>"; };
+		1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeType.swift; path = Data/Entities/EmployeeType.swift; sourceTree = "<group>"; };
+		1CAAAB501BD0031200E3650F /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = Data/Entities/Room.swift; sourceTree = "<group>"; };
+		1CAAAB511BD0031200E3650F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Data/Entities/Service.swift; sourceTree = "<group>"; };
+		1CAAAB521BD0031200E3650F /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceType.swift; path = Data/Entities/ServiceType.swift; sourceTree = "<group>"; };
+		1CAAAB531BD0031200E3650F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Data/Entities/Timer.swift; sourceTree = "<group>"; };
 		1CC05F3E1BC73110003DB99F /* TidyCo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TidyCo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC05F411BC73110003DB99F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CC05F431BC73110003DB99F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1CC05F461BC73110003DB99F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CC05F481BC73110003DB99F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CC05F4B1BC73110003DB99F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C782C071BD053A60046B280 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1C782C051BD053930046B280 /* LoginController.swift */,
+				1C782C081BD0541A0046B280 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		1CAAAB491BCD61AB00E3650F /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,20 +129,33 @@
 		1CAAAB4D1BCFFF7200E3650F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1CAAAB5A1BD0037F00E3650F /* Database */,
 				1CBB96C51BCD5A95009A4C17 /* Entities */,
 			);
 			name = Data;
 			sourceTree = "<group>";
 		};
+		1CAAAB5A1BD0037F00E3650F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				1C782BFD1BD049CA0046B280 /* EmployeeStorageAdapter.swift */,
+				1C782BFE1BD049CA0046B280 /* ServiceStorageAdapter.swift */,
+				1C782BFB1BD049A00046B280 /* RoomStorageAdapter.swift */,
+				1C782C011BD049E70046B280 /* TimerStorageAdapter.swift */,
+				1C782C031BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		1CBB96C51BCD5A95009A4C17 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				1CBB96C61BCD5AB6009A4C17 /* Employee.swift */,
-				1CBB96C81BCD5ADA009A4C17 /* Room.swift */,
-				1CBB96CA1BCD5AF5009A4C17 /* Service.swift */,
-				1CBB96CC1BCD5B07009A4C17 /* Timer.swift */,
-				1CBB96CE1BCD5B3D009A4C17 /* ServiceType.swift */,
-				1CBB96D01BCD5B4C009A4C17 /* EmployeeType.swift */,
+				1CAAAB4E1BD0031200E3650F /* Employee.swift */,
+				1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */,
+				1CAAAB501BD0031200E3650F /* Room.swift */,
+				1CAAAB511BD0031200E3650F /* Service.swift */,
+				1CAAAB521BD0031200E3650F /* ServiceType.swift */,
+				1CAAAB531BD0031200E3650F /* Timer.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -151,10 +185,10 @@
 		1CC05F401BC73110003DB99F /* TidyCo */ = {
 			isa = PBXGroup;
 			children = (
+				1C782C071BD053A60046B280 /* Controller */,
 				1CAAAB4D1BCFFF7200E3650F /* Data */,
 				1CAAAB491BCD61AB00E3650F /* ObjC */,
 				1CC05F411BC73110003DB99F /* AppDelegate.swift */,
-				1CC05F431BC73110003DB99F /* ViewController.swift */,
 				1CC05F451BC73110003DB99F /* Main.storyboard */,
 				1CC05F481BC73110003DB99F /* Assets.xcassets */,
 				1CC05F4A1BC73110003DB99F /* LaunchScreen.storyboard */,
@@ -402,14 +436,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CC05F441BC73110003DB99F /* ViewController.swift in Sources */,
-				1CBB96C71BCD5AB6009A4C17 /* Employee.swift in Sources */,
-				1CBB96CB1BCD5AF5009A4C17 /* Service.swift in Sources */,
-				1CBB96CD1BCD5B07009A4C17 /* Timer.swift in Sources */,
-				1CBB96C91BCD5ADA009A4C17 /* Room.swift in Sources */,
+				1C782C091BD0541A0046B280 /* ViewController.swift in Sources */,
+				1C782BFF1BD049CA0046B280 /* EmployeeStorageAdapter.swift in Sources */,
+				1CAAAB541BD0031200E3650F /* Employee.swift in Sources */,
+				1C782C021BD049E70046B280 /* TimerStorageAdapter.swift in Sources */,
+				1C782C041BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift in Sources */,
+				1C782C001BD049CA0046B280 /* ServiceStorageAdapter.swift in Sources */,
+				1CAAAB581BD0031200E3650F /* ServiceType.swift in Sources */,
+				1CAAAB571BD0031200E3650F /* Service.swift in Sources */,
 				1CC05F421BC73110003DB99F /* AppDelegate.swift in Sources */,
-				1CBB96CF1BCD5B3D009A4C17 /* ServiceType.swift in Sources */,
-				1CBB96D11BCD5B4C009A4C17 /* EmployeeType.swift in Sources */,
+				1CAAAB591BD0031200E3650F /* Timer.swift in Sources */,
+				1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */,
+				1C782BFC1BD049A00046B280 /* RoomStorageAdapter.swift in Sources */,
+				1CAAAB561BD0031200E3650F /* Room.swift in Sources */,
+				1C782C061BD053930046B280 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
