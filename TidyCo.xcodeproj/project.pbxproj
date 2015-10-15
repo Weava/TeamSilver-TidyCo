@@ -105,6 +105,14 @@
 			name = ObjC;
 			sourceTree = "<group>";
 		};
+		1CAAAB4D1BCFFF7200E3650F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1CBB96C51BCD5A95009A4C17 /* Entities */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		1CBB96C51BCD5A95009A4C17 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +151,8 @@
 		1CC05F401BC73110003DB99F /* TidyCo */ = {
 			isa = PBXGroup;
 			children = (
+				1CAAAB4D1BCFFF7200E3650F /* Data */,
 				1CAAAB491BCD61AB00E3650F /* ObjC */,
-				1CBB96C51BCD5A95009A4C17 /* Entities */,
 				1CC05F411BC73110003DB99F /* AppDelegate.swift */,
 				1CC05F431BC73110003DB99F /* ViewController.swift */,
 				1CC05F451BC73110003DB99F /* Main.storyboard */,
