@@ -1,5 +1,5 @@
 //
-//  RoomStorageAdapter.swift
+//  TimerStorageAdapter.swift
 //  TidyCo
 //
 //  Created by Aaron Weaver on 10/15/15.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol RoomStorageAdapter
+protocol TimerStorageAdapter
 {
-    func getAllRooms() -> [Room]
+    func getAllTimers() -> [Timer]?
     
-    func createRoom() -> String
+    func createTimer(timer: Timer)
 }

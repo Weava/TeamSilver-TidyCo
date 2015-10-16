@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C782BFC1BD049A00046B280 /* RoomStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFB1BD049A00046B280 /* RoomStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782BFF1BD049CA0046B280 /* EmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFD1BD049CA0046B280 /* EmployeeStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C001BD049CA0046B280 /* ServiceStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFE1BD049CA0046B280 /* ServiceStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C021BD049E70046B280 /* TimerStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C011BD049E70046B280 /* TimerStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C041BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C031BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
 		1C782C061BD053930046B280 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C051BD053930046B280 /* LoginController.swift */; settings = {ASSET_TAGS = (); }; };
 		1C782C091BD0541A0046B280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C081BD0541A0046B280 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C0B1BD065690046B280 /* ParseServiceStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C0A1BD065690046B280 /* ParseServiceStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C0E1BD065870046B280 /* ParseEmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C0C1BD065870046B280 /* ParseEmployeeStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C111BD075920046B280 /* ParseRoomStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C101BD075920046B280 /* ParseRoomStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C141BD0764E0046B280 /* ParseTimerStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C131BD0764E0046B280 /* ParseTimerStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C191BD077410046B280 /* EmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C151BD077410046B280 /* EmployeeStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C1A1BD077410046B280 /* RoomStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C161BD077410046B280 /* RoomStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C1B1BD077410046B280 /* ServiceStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C171BD077410046B280 /* ServiceStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C1C1BD077410046B280 /* TimerStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C181BD077410046B280 /* TimerStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
 		1CAAAB541BD0031200E3650F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4E1BD0031200E3650F /* Employee.swift */; settings = {ASSET_TAGS = (); }; };
 		1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */; settings = {ASSET_TAGS = (); }; };
 		1CAAAB561BD0031200E3650F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB501BD0031200E3650F /* Room.swift */; settings = {ASSET_TAGS = (); }; };
@@ -48,13 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C782BFB1BD049A00046B280 /* RoomStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomStorageAdapter.swift; path = Data/Database/RoomStorageAdapter.swift; sourceTree = "<group>"; };
-		1C782BFD1BD049CA0046B280 /* EmployeeStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeStorageAdapter.swift; path = Data/Database/EmployeeStorageAdapter.swift; sourceTree = "<group>"; };
-		1C782BFE1BD049CA0046B280 /* ServiceStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceStorageAdapter.swift; path = Data/Database/ServiceStorageAdapter.swift; sourceTree = "<group>"; };
-		1C782C011BD049E70046B280 /* TimerStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerStorageAdapter.swift; sourceTree = "<group>"; };
-		1C782C031BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseEmployeeStorageAdapter.swift; sourceTree = "<group>"; };
 		1C782C051BD053930046B280 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Controller/LoginController.swift; sourceTree = "<group>"; };
 		1C782C081BD0541A0046B280 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
+		1C782C0A1BD065690046B280 /* ParseServiceStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseServiceStorageAdapter.swift; path = Data/Database/ParseServiceStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C0C1BD065870046B280 /* ParseEmployeeStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseEmployeeStorageAdapter.swift; path = Data/Database/ParseEmployeeStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C101BD075920046B280 /* ParseRoomStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseRoomStorageAdapter.swift; path = Data/Database/ParseRoomStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C131BD0764E0046B280 /* ParseTimerStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseTimerStorageAdapter.swift; path = Data/Database/ParseTimerStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C151BD077410046B280 /* EmployeeStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeStorageAdapter.swift; path = Data/Database/Protocols/EmployeeStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C161BD077410046B280 /* RoomStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomStorageAdapter.swift; path = Data/Database/Protocols/RoomStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C171BD077410046B280 /* ServiceStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceStorageAdapter.swift; path = Data/Database/Protocols/ServiceStorageAdapter.swift; sourceTree = "<group>"; };
+		1C782C181BD077410046B280 /* TimerStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerStorageAdapter.swift; path = Data/Database/Protocols/TimerStorageAdapter.swift; sourceTree = "<group>"; };
 		1CAAAB4A1BCD61C500E3650F /* TidyCo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TidyCo-Bridging-Header.h"; sourceTree = "<group>"; };
 		1CAAAB4E1BD0031200E3650F /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Employee.swift; path = Data/Entities/Employee.swift; sourceTree = "<group>"; };
 		1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeType.swift; path = Data/Entities/EmployeeType.swift; sourceTree = "<group>"; };
@@ -118,6 +124,17 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		1C782C121BD075EB0046B280 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1C782C151BD077410046B280 /* EmployeeStorageAdapter.swift */,
+				1C782C161BD077410046B280 /* RoomStorageAdapter.swift */,
+				1C782C171BD077410046B280 /* ServiceStorageAdapter.swift */,
+				1C782C181BD077410046B280 /* TimerStorageAdapter.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		1CAAAB491BCD61AB00E3650F /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,11 +155,11 @@
 		1CAAAB5A1BD0037F00E3650F /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				1C782BFD1BD049CA0046B280 /* EmployeeStorageAdapter.swift */,
-				1C782BFE1BD049CA0046B280 /* ServiceStorageAdapter.swift */,
-				1C782BFB1BD049A00046B280 /* RoomStorageAdapter.swift */,
-				1C782C011BD049E70046B280 /* TimerStorageAdapter.swift */,
-				1C782C031BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift */,
+				1C782C121BD075EB0046B280 /* Protocols */,
+				1C782C0C1BD065870046B280 /* ParseEmployeeStorageAdapter.swift */,
+				1C782C0A1BD065690046B280 /* ParseServiceStorageAdapter.swift */,
+				1C782C101BD075920046B280 /* ParseRoomStorageAdapter.swift */,
+				1C782C131BD0764E0046B280 /* ParseTimerStorageAdapter.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -437,18 +454,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C782C091BD0541A0046B280 /* ViewController.swift in Sources */,
-				1C782BFF1BD049CA0046B280 /* EmployeeStorageAdapter.swift in Sources */,
 				1CAAAB541BD0031200E3650F /* Employee.swift in Sources */,
-				1C782C021BD049E70046B280 /* TimerStorageAdapter.swift in Sources */,
-				1C782C041BD04C7F0046B280 /* ParseEmployeeStorageAdapter.swift in Sources */,
-				1C782C001BD049CA0046B280 /* ServiceStorageAdapter.swift in Sources */,
+				1C782C1C1BD077410046B280 /* TimerStorageAdapter.swift in Sources */,
+				1C782C1A1BD077410046B280 /* RoomStorageAdapter.swift in Sources */,
 				1CAAAB581BD0031200E3650F /* ServiceType.swift in Sources */,
+				1C782C0E1BD065870046B280 /* ParseEmployeeStorageAdapter.swift in Sources */,
+				1C782C111BD075920046B280 /* ParseRoomStorageAdapter.swift in Sources */,
+				1C782C191BD077410046B280 /* EmployeeStorageAdapter.swift in Sources */,
+				1C782C1B1BD077410046B280 /* ServiceStorageAdapter.swift in Sources */,
 				1CAAAB571BD0031200E3650F /* Service.swift in Sources */,
 				1CC05F421BC73110003DB99F /* AppDelegate.swift in Sources */,
 				1CAAAB591BD0031200E3650F /* Timer.swift in Sources */,
 				1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */,
-				1C782BFC1BD049A00046B280 /* RoomStorageAdapter.swift in Sources */,
+				1C782C0B1BD065690046B280 /* ParseServiceStorageAdapter.swift in Sources */,
 				1CAAAB561BD0031200E3650F /* Room.swift in Sources */,
+				1C782C141BD0764E0046B280 /* ParseTimerStorageAdapter.swift in Sources */,
 				1C782C061BD053930046B280 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

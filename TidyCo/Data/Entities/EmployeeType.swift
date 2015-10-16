@@ -8,18 +8,18 @@
 
 import Foundation
 
+enum EmployeeTypeValue: Int
+{
+    case admin = 0
+    case manager = 1
+    case housekeeper = 2
+    case maintenance = 3
+}
+
 class EmployeeType: PFObject, PFSubclassing
 {
     @NSManaged var typeNum: Int
     @NSManaged var typeName: String
-    
-    enum EmployeeTypeValue: Int
-    {
-        case admin = 0
-        case manager = 1
-        case housekeeper = 2
-        case maintenance = 3
-    }
     
     override class func initialize() {
         struct Static {

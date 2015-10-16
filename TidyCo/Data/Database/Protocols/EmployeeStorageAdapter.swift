@@ -17,4 +17,8 @@ protocol EmployeeStorageAdapter
     func createEmployee(employee: Employee)
     
     func checkLoginForEmployee(loginId: String, password: String) -> Employee?
+    
+    func getAllEmployeeTypes() -> [EmployeeType]?
+    
+    func getEmployeeTypeByName(employeeType: EmployeeTypeValue) -> EmployeeType?
 }

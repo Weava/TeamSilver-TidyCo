@@ -8,16 +8,16 @@
 
 import Foundation
 
+enum ServiceTypeValue: Int
+{
+    case maintenance = 0
+    case housekeeping = 1
+}
+
 class ServiceType: PFObject, PFSubclassing
 {
     @NSManaged var typeNum: Int
     @NSManaged var typeName: String
-    
-    enum ServiceTypeValue: Int
-    {
-        case maintenance = 0
-        case housekeeping = 1
-    }
     
     override class func initialize() {
         struct Static {
