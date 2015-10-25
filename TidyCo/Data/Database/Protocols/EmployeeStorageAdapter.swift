@@ -14,7 +14,7 @@ protocol EmployeeStorageAdapter
     
     func getEmployeeByFirstAndLast(firstName: String, lastName: String) -> Employee?
     
-    func createEmployee(employee: Employee)
+    func createEmployee(employee: Employee, employeeType: EmployeeTypeValue)
     
     func checkLoginForEmployee(loginId: String, password: String) -> Employee?
     

@@ -10,10 +10,11 @@ import Foundation
 
 class Employee: PFObject, PFSubclassing
 {
+    static let EMPLOYEE_TYPE_RELATION: String = "employeeType"
+    
     @NSManaged var firstName: String
     @NSManaged var middleInitial: String
     @NSManaged var lastName: String
-    //@NSManaged var employeeType: PFRelation
     @NSManaged var employeeId: String
     @NSManaged var loginId: String
     @NSManaged var hashedPassword: String

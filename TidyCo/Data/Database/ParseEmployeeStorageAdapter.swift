@@ -31,7 +31,7 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
         return nil
     }
     
-    func createEmployee(employee: Employee)
+    func createEmployee(employee: Employee, employeeType: EmployeeTypeValue)
     {
         var employeesArr: [Employee]?
         
@@ -54,6 +54,8 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
             }
             else
             {
+                let relation: PFRelation = employee.relationForKey(Employee.EMPLOYEE_TYPE_RELATION)
+                relation.addObject(self.getEmployeeTypeByName(employeeType)!)
                 employee.saveInBackground()
             }
         } catch

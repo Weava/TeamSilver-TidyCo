@@ -10,10 +10,11 @@ import Foundation
 
 class Service: PFObject, PFSubclassing
 {
-    @NSManaged var roomServiced: Room
-    @NSManaged var employeeAssigned: Employee
-    @NSManaged var serviceType: ServiceType
-    @NSManaged var serviceTimer: Timer
+    static let ROOM_SERVICED_RELATION: String = "roomServiced"
+    static let EMPLOYEE_ASSIGNED_RELATION: String = "employeeAssigned"
+    static let SERVICE_TYPE_RELATION: String = "serviceType"
+    static let TIMER_RELATION: String = "serviceTimer"
+    
     @NSManaged var timeToFinishInMinutes: Int
     @NSManaged var dateTimeAssigned: NSDate
     @NSManaged var dateTimeStarted: NSDate

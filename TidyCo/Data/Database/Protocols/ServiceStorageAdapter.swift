@@ -14,7 +14,7 @@ protocol ServiceStorageAdapter
     
     func getAllServicesForEmployee(employeeAssigned: Employee) -> [Service]?
     
-    func createService()
+    func createService(service: Service, serviceType: ServiceTypeValue, room: Room, employeeAssigned: Employee, timer: Timer)
     
     func getAllServiceTypes() -> [ServiceType]?
     

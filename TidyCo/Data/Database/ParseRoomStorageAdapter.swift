@@ -12,11 +12,19 @@ class ParseRoomStorageAdapter : RoomStorageAdapter
 {
     func getAllRooms() -> [Room]?
     {
-        return nil
+        let query: PFQuery = Room.query()!
+        
+        do
+        {
+            return try query.findObjects() as? [Room]
+        } catch
+        {
+            return nil
+        }
     }
     
     func createRoom(room: Room)
     {
-        
+        room.saveInBackground()
     }
 }

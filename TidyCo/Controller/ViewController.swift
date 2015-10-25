@@ -22,14 +22,10 @@ class ViewController: UIViewController {
         employeeTest.firstName = "Main"
         employeeTest.middleInitial = "T"
         employeeTest.lastName = "Nancy"
-        
-        let relation: PFRelation = employeeTest.relationForKey("employeeType")
-        relation.addObject(employeeDbOperations.getEmployeeTypeByName(EmployeeTypeValue.maintenance)!)
-            
         employeeTest.employeeId = "maint420"
         employeeTest.loginId = "testMaint"
         employeeTest.hashedPassword = "realPass"
-        employeeDbOperations.createEmployee(employeeTest)
+        employeeDbOperations.createEmployee(employeeTest, employeeType: EmployeeTypeValue.maintenance)
     }
 
     override func didReceiveMemoryWarning() {
