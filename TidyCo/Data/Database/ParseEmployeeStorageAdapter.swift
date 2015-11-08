@@ -90,6 +90,43 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
         }
     }
     
+    func getEmployeeByEmployeeId(employeeId: String) -> Employee?
+    {
+        let employeeQuery: PFQuery = Employee.query()!
+        
+        employeeQuery.whereKey("employeeId", equalTo: employeeId)
+        
+        do
+        {
+            if let employee: Employee = try employeeQuery.findObjects().first as? Employee
+            {
+                return employee
+            }
+        } catch
+        {
+            print("Could not retrieve employee by ID")
+        }
+        
+        return nil
+    }
+    
+    func getEmployeeTypeFromEmployee(employee: Employee) -> EmployeeTypeValue?
+    {
+        let employeeType: PFRelation = employee.relationForKey(Employee.EMPLOYEE_TYPE_RELATION)
+        
+        do
+        {
+            let employeeTypeFromQuery: [EmployeeType] = try employeeType.query()?.findObjects() as! [EmployeeType]
+            
+            return EmployeeType.getEmployeeTypeValue(employeeTypeFromQuery.first!)
+        } catch
+        {
+            print("lol")
+        }
+        
+        return nil
+    }
+    
     func getAllEmployeeTypes() -> [EmployeeType]?
     {
         let query: PFQuery = EmployeeType.query()!
@@ -105,23 +142,7 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
     
     func getEmployeeTypeByName(employeeType: EmployeeTypeValue) -> EmployeeType?
     {
-        var employeeTypeString: String
-        
-        switch employeeType
-        {
-            case EmployeeTypeValue.admin:
-                employeeTypeString = "admin"
-                break
-            case EmployeeTypeValue.manager:
-                employeeTypeString = "manager"
-                break
-            case EmployeeTypeValue.housekeeper:
-                employeeTypeString = "housekeeper"
-                break
-            case EmployeeTypeValue.maintenance:
-                employeeTypeString = "maintenance"
-                break
-        }
+        let employeeTypeString: String = employeeType.rawValue
         
         let query: PFQuery = EmployeeType.query()!
         query.whereKey("typeName", equalTo: employeeTypeString)

@@ -7,28 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C782C061BD053930046B280 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C051BD053930046B280 /* LoginController.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C091BD0541A0046B280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C081BD0541A0046B280 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C0B1BD065690046B280 /* ParseServiceStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C0A1BD065690046B280 /* ParseServiceStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C0E1BD065870046B280 /* ParseEmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C0C1BD065870046B280 /* ParseEmployeeStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C111BD075920046B280 /* ParseRoomStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C101BD075920046B280 /* ParseRoomStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C141BD0764E0046B280 /* ParseTimerStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C131BD0764E0046B280 /* ParseTimerStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C191BD077410046B280 /* EmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C151BD077410046B280 /* EmployeeStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C1A1BD077410046B280 /* RoomStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C161BD077410046B280 /* RoomStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C1B1BD077410046B280 /* ServiceStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C171BD077410046B280 /* ServiceStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1C782C1C1BD077410046B280 /* TimerStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C181BD077410046B280 /* TimerStorageAdapter.swift */; settings = {ASSET_TAGS = (); }; };
-		1CAAAB541BD0031200E3650F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4E1BD0031200E3650F /* Employee.swift */; settings = {ASSET_TAGS = (); }; };
-		1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */; settings = {ASSET_TAGS = (); }; };
-		1CAAAB561BD0031200E3650F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB501BD0031200E3650F /* Room.swift */; settings = {ASSET_TAGS = (); }; };
-		1CAAAB571BD0031200E3650F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB511BD0031200E3650F /* Service.swift */; settings = {ASSET_TAGS = (); }; };
-		1CAAAB581BD0031200E3650F /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB521BD0031200E3650F /* ServiceType.swift */; settings = {ASSET_TAGS = (); }; };
-		1CAAAB591BD0031200E3650F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB531BD0031200E3650F /* Timer.swift */; settings = {ASSET_TAGS = (); }; };
+		1C782C061BD053930046B280 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C051BD053930046B280 /* LoginController.swift */; };
+		1C782C091BD0541A0046B280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C081BD0541A0046B280 /* ViewController.swift */; };
+		1C782C0B1BD065690046B280 /* ParseServiceStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C0A1BD065690046B280 /* ParseServiceStorageAdapter.swift */; };
+		1C782C0E1BD065870046B280 /* ParseEmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C0C1BD065870046B280 /* ParseEmployeeStorageAdapter.swift */; };
+		1C782C111BD075920046B280 /* ParseRoomStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C101BD075920046B280 /* ParseRoomStorageAdapter.swift */; };
+		1C782C141BD0764E0046B280 /* ParseTimerStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C131BD0764E0046B280 /* ParseTimerStorageAdapter.swift */; };
+		1C782C191BD077410046B280 /* EmployeeStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C151BD077410046B280 /* EmployeeStorageAdapter.swift */; };
+		1C782C1A1BD077410046B280 /* RoomStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C161BD077410046B280 /* RoomStorageAdapter.swift */; };
+		1C782C1B1BD077410046B280 /* ServiceStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C171BD077410046B280 /* ServiceStorageAdapter.swift */; };
+		1C782C1C1BD077410046B280 /* TimerStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C181BD077410046B280 /* TimerStorageAdapter.swift */; };
+		1CAAAB541BD0031200E3650F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4E1BD0031200E3650F /* Employee.swift */; };
+		1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */; };
+		1CAAAB561BD0031200E3650F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB501BD0031200E3650F /* Room.swift */; };
+		1CAAAB571BD0031200E3650F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB511BD0031200E3650F /* Service.swift */; };
+		1CAAAB581BD0031200E3650F /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB521BD0031200E3650F /* ServiceType.swift */; };
+		1CAAAB591BD0031200E3650F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB531BD0031200E3650F /* Timer.swift */; };
 		1CC05F421BC73110003DB99F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC05F411BC73110003DB99F /* AppDelegate.swift */; };
 		1CC05F471BC73110003DB99F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC05F451BC73110003DB99F /* Main.storyboard */; };
 		1CC05F491BC73110003DB99F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC05F481BC73110003DB99F /* Assets.xcassets */; };
 		1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC05F4A1BC73110003DB99F /* LaunchScreen.storyboard */; };
 		1CC05F571BC73110003DB99F /* TidyCoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC05F561BC73110003DB99F /* TidyCoTests.swift */; };
 		1CC05F621BC73110003DB99F /* TidyCoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC05F611BC73110003DB99F /* TidyCoUITests.swift */; };
+		1CDB9C041BEC4F6900A9DEA9 /* StringUitls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB9C031BEC4F6900A9DEA9 /* StringUitls.swift */; };
 		7E0C1AE4EED781457A18FFF7 /* libPods-TidyCo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE617F29106482EDF060A424 /* libPods-TidyCo.a */; };
 		A2BDB33ED5D9E26DA6056014 /* libPods-TidyCoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D4D7B494EA5B992EC8F1E9 /* libPods-TidyCoTests.a */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		1CC05F5D1BC73110003DB99F /* TidyCoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidyCoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC05F611BC73110003DB99F /* TidyCoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidyCoUITests.swift; sourceTree = "<group>"; };
 		1CC05F631BC73110003DB99F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CDB9C031BEC4F6900A9DEA9 /* StringUitls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringUitls.swift; path = Utils/StringUitls.swift; sourceTree = "<group>"; };
 		3022936D46E13BD6DBA6332E /* Pods-TidyCoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCoTests/Pods-TidyCoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C9D6F8DAAC9904774151F5F /* Pods-TidyCoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCoTests/Pods-TidyCoTests.release.xcconfig"; sourceTree = "<group>"; };
 		B19C3FE266F997844FA31452 /* Pods-TidyCo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCo/Pods-TidyCo.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		1CC05F401BC73110003DB99F /* TidyCo */ = {
 			isa = PBXGroup;
 			children = (
+				1CDB9C021BEC4E4F00A9DEA9 /* Utils */,
 				1C782C071BD053A60046B280 /* Controller */,
 				1CAAAB4D1BCFFF7200E3650F /* Data */,
 				1CAAAB491BCD61AB00E3650F /* ObjC */,
@@ -230,6 +233,14 @@
 				1CC05F631BC73110003DB99F /* Info.plist */,
 			);
 			path = TidyCoUITests;
+			sourceTree = "<group>";
+		};
+		1CDB9C021BEC4E4F00A9DEA9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1CDB9C031BEC4F6900A9DEA9 /* StringUitls.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		2956BE12243FB2D4B32256E5 /* Pods */ = {
@@ -460,6 +471,7 @@
 				1CAAAB581BD0031200E3650F /* ServiceType.swift in Sources */,
 				1C782C0E1BD065870046B280 /* ParseEmployeeStorageAdapter.swift in Sources */,
 				1C782C111BD075920046B280 /* ParseRoomStorageAdapter.swift in Sources */,
+				1CDB9C041BEC4F6900A9DEA9 /* StringUitls.swift in Sources */,
 				1C782C191BD077410046B280 /* EmployeeStorageAdapter.swift in Sources */,
 				1C782C1B1BD077410046B280 /* ServiceStorageAdapter.swift in Sources */,
 				1CAAAB571BD0031200E3650F /* Service.swift in Sources */,

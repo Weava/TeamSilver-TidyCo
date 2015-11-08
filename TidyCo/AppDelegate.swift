@@ -30,6 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServiceType.registerSubclass()
         EmployeeType.registerSubclass()
         
+        let loginDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        if let employeeId: String = loginDefaults.valueForKey(StringUtils.loginDefaults) as! String
+        {
+            //Select appropriate view controller for the user
+        }
+        else
+        {
+            //Select login view for the user
+        }
+        
         return true
     }
 

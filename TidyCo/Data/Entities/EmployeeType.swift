@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum EmployeeTypeValue: Int
+enum EmployeeTypeValue: String
 {
-    case admin = 0
-    case manager = 1
-    case housekeeper = 2
-    case maintenance = 3
+    case admin = "admin"
+    case manager = "manager"
+    case housekeeper = "housekeeper"
+    case maintenance = "maintenance"
 }
 
 class EmployeeType: PFObject, PFSubclassing
@@ -32,5 +32,22 @@ class EmployeeType: PFObject, PFSubclassing
     
     class func parseClassName() -> String {
         return "EmployeeType"
+    }
+    
+    static func getEmployeeTypeValue(employeeType: EmployeeType) -> EmployeeTypeValue?
+    {
+        switch employeeType.typeName
+        {
+            case EmployeeTypeValue.admin.rawValue:
+                return EmployeeTypeValue.admin
+            case EmployeeTypeValue.manager.rawValue:
+                return EmployeeTypeValue.manager
+            case EmployeeTypeValue.housekeeper.rawValue:
+                return EmployeeTypeValue.housekeeper
+            case EmployeeTypeValue.maintenance.rawValue:
+                return EmployeeTypeValue.maintenance
+            default:
+                return nil
+        }
     }
 }
