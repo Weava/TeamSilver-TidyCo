@@ -82,6 +82,7 @@
 		1CC05F611BC73110003DB99F /* TidyCoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidyCoUITests.swift; sourceTree = "<group>"; };
 		1CC05F631BC73110003DB99F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CDB9C031BEC4F6900A9DEA9 /* StringUitls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringUitls.swift; path = Utils/StringUitls.swift; sourceTree = "<group>"; };
+		1CDB9C061BF0188100A9DEA9 /* AppDesignVisuals.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = AppDesignVisuals.pdf; path = Docs/AppDesignVisuals.pdf; sourceTree = "<group>"; };
 		3022936D46E13BD6DBA6332E /* Pods-TidyCoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCoTests/Pods-TidyCoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C9D6F8DAAC9904774151F5F /* Pods-TidyCoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCoTests/Pods-TidyCoTests.release.xcconfig"; sourceTree = "<group>"; };
 		B19C3FE266F997844FA31452 /* Pods-TidyCo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCo/Pods-TidyCo.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 		1CC05F351BC73110003DB99F = {
 			isa = PBXGroup;
 			children = (
+				1CDB9C051BF0186D00A9DEA9 /* Docs */,
 				1CC05F401BC73110003DB99F /* TidyCo */,
 				1CC05F551BC73110003DB99F /* TidyCoTests */,
 				1CC05F601BC73110003DB99F /* TidyCoUITests */,
@@ -241,6 +243,14 @@
 				1CDB9C031BEC4F6900A9DEA9 /* StringUitls.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		1CDB9C051BF0186D00A9DEA9 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				1CDB9C061BF0188100A9DEA9 /* AppDesignVisuals.pdf */,
+			);
+			name = Docs;
 			sourceTree = "<group>";
 		};
 		2956BE12243FB2D4B32256E5 /* Pods */ = {

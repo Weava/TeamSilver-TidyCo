@@ -8,10 +8,10 @@
 
 import Foundation
 
-enum ServiceTypeValue: Int
+enum ServiceTypeValue: String
 {
-    case maintenance = 0
-    case housekeeping = 1
+    case maintenance = "maintenance"
+    case housekeeping = "housekeeping"
 }
 
 class ServiceType: PFObject, PFSubclassing
@@ -30,5 +30,18 @@ class ServiceType: PFObject, PFSubclassing
     
     class func parseClassName() -> String {
         return "ServiceType"
+    }
+    
+    static func getServiceTypeValue(serviceType: ServiceType) -> ServiceTypeValue?
+    {
+        switch serviceType.typeName
+        {
+        case ServiceTypeValue.maintenance.rawValue:
+            return ServiceTypeValue.maintenance
+        case ServiceTypeValue.housekeeping.rawValue:
+            return ServiceTypeValue.housekeeping
+        default:
+            return nil
+        }
     }
 }
