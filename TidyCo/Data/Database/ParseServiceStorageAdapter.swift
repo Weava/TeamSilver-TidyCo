@@ -12,7 +12,8 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
 {
     func getAllServices() -> [Service]?
     {
-        let query: PFQuery = Service.query()!
+        let query: PFQuery = self.queryWithRelations()
+        
         do
         {
             let allServices: [Service] = try query.findObjects() as! [Service]
@@ -25,7 +26,7 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
     
     func getAllServicesForEmployee(employeeAssigned: Employee) -> [Service]?
     {
-        let query: PFQuery = Service.query()!
+        let query: PFQuery = self.queryWithRelations()
         do
         {
             query.whereKey(Service.EMPLOYEE_ASSIGNED_RELATION, equalTo: employeeAssigned)
@@ -39,19 +40,17 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
     
     func createService(service: Service, serviceType: ServiceTypeValue, room: Room, employeeAssigned: Employee, timer: Timer)
     {
-        service.relationForKey(Service.SERVICE_TYPE_RELATION)
-            .addObject(self.getServiceTypeByName(serviceType)!);
-        
-        service.relationForKey(Service.ROOM_SERVICED_RELATION).addObject(room)
-        service.relationForKey(Service.EMPLOYEE_ASSIGNED_RELATION).addObject(employeeAssigned)
-        service.relationForKey(Service.TIMER_RELATION).addObject(timer)
+        service[Service.SERVICE_TYPE_RELATION] = self.getServiceTypeByName(serviceType)
+        service[Service.ROOM_SERVICED_RELATION] = room
+        service[Service.EMPLOYEE_ASSIGNED_RELATION] = employeeAssigned
+        service[Service.TIMER_RELATION] = timer
         
         service.saveInBackground()
     }
     
     func getAllServiceTypes() -> [ServiceType]?
     {
-        let query: PFQuery = ServiceType.query()!
+        let query: PFQuery = self.queryWithRelations()
         
         do
         {
@@ -64,20 +63,8 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
     
     func getServiceTypeByName(serviceType: ServiceTypeValue) -> ServiceType?
     {
-        var serviceTypeString: String
-        
-        switch serviceType
-        {
-            case ServiceTypeValue.maintenance:
-                serviceTypeString = "maintenance"
-                break
-            case ServiceTypeValue.housekeeping:
-                serviceTypeString = "housekeeping"
-                break
-        }
-        
-        let query: PFQuery = ServiceType.query()!
-        query.whereKey("typeName", equalTo: serviceTypeString)
+        let query: PFQuery = self.queryWithRelations()
+        query.whereKey("typeName", equalTo: serviceType.rawValue)
         
         do
         {
@@ -91,5 +78,16 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
             return nil
         }
         return nil
+    }
+    
+    private func queryWithRelations() -> PFQuery!
+    {
+        let query: PFQuery = Service.query()!
+        query.includeKey(Service.ROOM_SERVICED_RELATION)
+        query.includeKey(Service.EMPLOYEE_ASSIGNED_RELATION)
+        query.includeKey(Service.SERVICE_TYPE_RELATION)
+        query.includeKey(Service.TIMER_RELATION)
+        
+        return query
     }
 }

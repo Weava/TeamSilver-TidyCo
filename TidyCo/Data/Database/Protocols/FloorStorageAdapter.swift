@@ -8,9 +8,11 @@
 
 import Foundation
 
-protocol RoomStorageAdapter
+protocol FloorStorageAdapter
 {
-    func getAllRooms() -> [Room]?
+    func getAllFloors() -> [Floor]?
     
-    func createRoom(room: Room)
+    func createFloor(floor: Floor)
+    
+    func addRoomsToFloor(floor: Floor, rooms: [Room])
 }

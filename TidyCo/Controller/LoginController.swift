@@ -27,19 +27,22 @@ class LoginController : UIViewController
     private func loginCheck()
     {
         print("Running login check")
-        let loginUser: String = "testManager"
+        let loginUser: String = "testMaint"
         let loginPassword: String = "realPass"
         
         if let employeeLogged: Employee = loginAdapter.checkLoginForEmployee(loginUser, password: loginPassword)!
         {
             let employeeStore: NSUserDefaults = NSUserDefaults.standardUserDefaults()
             
-            print("Logged employee's type:  \(loginAdapter.getEmployeeTypeFromEmployee(employeeLogged)!)")
+            let employeeType: EmployeeType = employeeLogged[Employee.EMPLOYEE_TYPE_POINTER] as! EmployeeType
+            
+            print("Logged employee's type:  \(EmployeeType.getEmployeeTypeValue(employeeType)!.rawValue)")
             employeeStore.setObject(employeeLogged.employeeId, forKey: StringUtils.loginDefaults)
             employeeStore.synchronize()
         }
         else
         {
+            print("Failed")
             // Do something to alert the user of incorrect password 'n' stuff.
         }
     }

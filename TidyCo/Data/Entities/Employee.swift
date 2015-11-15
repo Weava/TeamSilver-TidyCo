@@ -10,7 +10,7 @@ import Foundation
 
 class Employee: PFObject, PFSubclassing
 {
-    static let EMPLOYEE_TYPE_RELATION: String = "employeeType"
+    static let EMPLOYEE_TYPE_POINTER: String = "employeeType"
     
     @NSManaged var firstName: String
     @NSManaged var middleInitial: String
@@ -18,6 +18,13 @@ class Employee: PFObject, PFSubclassing
     @NSManaged var employeeId: String
     @NSManaged var loginId: String
     @NSManaged var hashedPassword: String
+    
+    var employeeType: EmployeeType {
+        get
+        {
+            return self[Employee.EMPLOYEE_TYPE_POINTER] as! EmployeeType
+        }
+    }
     
     override class func initialize() {
         struct Static {

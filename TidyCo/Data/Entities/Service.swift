@@ -22,6 +22,34 @@ class Service: PFObject, PFSubclassing
     @NSManaged var employeeNotes: String
     @NSManaged var employeeImages: [PFFile]
     
+    var roomServiced: Room {
+        get
+        {
+            return self[Service.ROOM_SERVICED_RELATION] as! Room
+        }
+    }
+    
+    var employeeAssigned: Employee {
+        get
+        {
+            return self[Service.EMPLOYEE_ASSIGNED_RELATION] as! Employee
+        }
+    }
+    
+    var serviceType: ServiceType {
+        get
+        {
+            return self[Service.SERVICE_TYPE_RELATION] as! ServiceType
+        }
+    }
+    
+    var serviceTimer: Timer {
+        get
+        {
+            return self[Service.TIMER_RELATION] as! Timer
+        }
+    }
+    
     override class func initialize() {
         struct Static {
             static var onceToken: dispatch_once_t = 0;

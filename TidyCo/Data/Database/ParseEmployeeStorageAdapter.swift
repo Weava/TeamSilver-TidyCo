@@ -54,8 +54,9 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
             }
             else
             {
-                let relation: PFRelation = employee.relationForKey(Employee.EMPLOYEE_TYPE_RELATION)
-                relation.addObject(self.getEmployeeTypeByName(employeeType)!)
+                //let relation: PFRelation = employee.relationForKey(Employee.EMPLOYEE_TYPE_RELATION)
+                //relation.addObject(self.getEmployeeTypeByName(employeeType)!)
+                employee[Employee.EMPLOYEE_TYPE_POINTER] = self.getEmployeeTypeByName(employeeType)
                 employee.saveInBackground()
             }
         } catch
@@ -71,6 +72,7 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
         
         query.whereKey("loginId", equalTo: loginId)
         query.whereKey("hashedPassword", equalTo: password)
+        query.includeKey(Employee.EMPLOYEE_TYPE_POINTER)
         
         do
         {
@@ -110,22 +112,22 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
         return nil
     }
     
-    func getEmployeeTypeFromEmployee(employee: Employee) -> EmployeeTypeValue?
-    {
-        let employeeType: PFRelation = employee.relationForKey(Employee.EMPLOYEE_TYPE_RELATION)
-        
-        do
-        {
-            let employeeTypeFromQuery: [EmployeeType] = try employeeType.query()?.findObjects() as! [EmployeeType]
-            
-            return EmployeeType.getEmployeeTypeValue(employeeTypeFromQuery.first!)
-        } catch
-        {
-            print("lol")
-        }
-        
-        return nil
-    }
+//    func getEmployeeTypeFromEmployee(employee: Employee) -> EmployeeTypeValue?
+//    {
+//        let employeeType: PFRelation = employee.relationForKey(Employee.EMPLOYEE_TYPE_RELATION)
+//        
+//        do
+//        {
+//            let employeeTypeFromQuery: [EmployeeType] = try employeeType.query()?.findObjects() as! [EmployeeType]
+//            
+//            return EmployeeType.getEmployeeTypeValue(employeeTypeFromQuery.first!)
+//        } catch
+//        {
+//            print("lol")
+//        }
+//        
+//        return nil
+//    }
     
     func getAllEmployeeTypes() -> [EmployeeType]?
     {

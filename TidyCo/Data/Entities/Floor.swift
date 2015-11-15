@@ -1,16 +1,25 @@
 //
-//  Room.swift
+//  Floor.swift
 //  TidyCo
 //
-//  Created by Aaron Weaver on 10/13/15.
+//  Created by Aaron Weaver on 11/12/15.
 //  Copyright © 2015 Team Silver. All rights reserved.
 //
 
 import Foundation
 
-class Room: PFObject, PFSubclassing
+class Floor: PFObject, PFSubclassing
 {
-    @NSManaged var roomNum: String
+    static let ROOM_ARRAY: String = "floorRooms"
+    
+    @NSManaged var floorNum: String
+    
+    var floorRooms: [Room] {
+        get
+        {
+            return self[Floor.ROOM_ARRAY] as! [Room]
+        }
+    }
     
     override class func initialize() {
         struct Static {
@@ -22,6 +31,6 @@ class Room: PFObject, PFSubclassing
     }
     
     class func parseClassName() -> String {
-        return "Room"
+        return "Floor"
     }
 }
