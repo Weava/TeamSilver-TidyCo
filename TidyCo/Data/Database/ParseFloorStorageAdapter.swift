@@ -24,6 +24,19 @@ class ParseFloorStorageAdapter : FloorStorageAdapter
         }
     }
     
+    func getAllRooms() -> [Room]?
+    {
+        let query: PFQuery = Room.query()!
+        
+        do
+        {
+            return try query.findObjects() as? [Room]
+        } catch
+        {
+            return nil
+        }
+    }
+    
     func createFloor(floor: Floor)
     {
         floor.saveInBackground()

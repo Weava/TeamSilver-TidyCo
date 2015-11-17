@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     let employeeDbOperations: ParseEmployeeStorageAdapter = ParseEmployeeStorageAdapter()
+    let floorOps: ParseFloorStorageAdapter = ParseFloorStorageAdapter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +19,9 @@ class ViewController: UIViewController {
         
         // THIS IS ONLY A TEST
         // This should not be taken as an example on how to use Parse, only testing for my own purposes.
-        let employeeTest: Employee = Employee()
-        employeeTest.firstName = "Main"
-        employeeTest.middleInitial = "T"
-        employeeTest.lastName = "Nancy"
-        employeeTest.employeeId = "maint420"
-        employeeTest.loginId = "testMaint"
-        employeeTest.hashedPassword = "realPass"
-        employeeDbOperations.createEmployee(employeeTest, employeeType: EmployeeTypeValue.maintenance)
+        
+        
+        //employeeDbOperations.createEmployee(employeeTest, employeeType: EmployeeTypeValue.maintenance)
     }
 
     override func didReceiveMemoryWarning() {
