@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Register Parse subclasses to enable database integration.
         Employee.registerSubclass()
+        Floor.registerSubclass()
         Room.registerSubclass()
         Service.registerSubclass()
         Timer.registerSubclass()
@@ -33,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loginDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if let employeeId: String = loginDefaults.valueForKey(StringUtils.loginDefaults) as? String
         {
+            print("\(employeeId)")
             //Select appropriate view controller for the user
         }
         else

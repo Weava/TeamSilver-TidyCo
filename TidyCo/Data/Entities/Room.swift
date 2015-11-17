@@ -11,6 +11,7 @@ import Foundation
 class Room: PFObject, PFSubclassing
 {
     @NSManaged var roomNum: String
+    @NSManaged var doNotDisturb: Bool
     
     override class func initialize() {
         struct Static {

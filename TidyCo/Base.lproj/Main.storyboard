@@ -295,10 +295,10 @@
             </objects>
             <point key="canvasLocation" x="998" y="1685"/>
         </scene>
-        <!--Room Notes View-->
+        <!--Employee Room Notes View-->
         <scene sceneID="lcO-SY-mgr">
             <objects>
-                <viewController title="Room Notes View" id="qqn-IX-ybp" sceneMemberID="viewController">
+                <viewController title="Employee Room Notes View" id="qqn-IX-ybp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JnL-Rx-I4Z"/>
                         <viewControllerLayoutGuide type="bottom" id="9O0-PT-Ep1"/>

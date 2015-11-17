@@ -16,6 +16,7 @@ class Employee: PFObject, PFSubclassing
     @NSManaged var middleInitial: String
     @NSManaged var lastName: String
     @NSManaged var employeeId: String
+    @NSManaged var storeNumber: String
     @NSManaged var loginId: String
     @NSManaged var hashedPassword: String
     
