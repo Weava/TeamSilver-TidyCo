@@ -36,7 +36,6 @@
 		7E0C1AE4EED781457A18FFF7 /* libPods-TidyCo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE617F29106482EDF060A424 /* libPods-TidyCo.a */; };
 		A2BDB33ED5D9E26DA6056014 /* libPods-TidyCoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D4D7B494EA5B992EC8F1E9 /* libPods-TidyCoTests.a */; };
 		ED104A221BFB9B78004E0769 /* EmployeeRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */; };
-		ED104A241BFB9BB2004E0769 /* RoomNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A231BFB9BB2004E0769 /* RoomNotesViewController.swift */; };
 		ED104A261BFB9C07004E0769 /* ManagerTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A251BFB9C07004E0769 /* ManagerTabBarViewController.swift */; };
 		ED104A281BFB9C3F004E0769 /* EditRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A271BFB9C3F004E0769 /* EditRoomsTableViewController.swift */; };
 		ED104A2A1BFB9C64004E0769 /* EditTimersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A291BFB9C64004E0769 /* EditTimersTableViewController.swift */; };
@@ -46,6 +45,8 @@
 		ED104A321BFB9D38004E0769 /* RoomsToAssignTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A311BFB9D38004E0769 /* RoomsToAssignTableViewController.swift */; };
 		ED104A341BFB9D61004E0769 /* ViewProgressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A331BFB9D61004E0769 /* ViewProgressTableViewController.swift */; };
 		ED104A361BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */; };
+		ED104A381BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */; };
+		ED104A3A1BFB9E89004E0769 /* RoomNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +108,6 @@
 		B7D4D7B494EA5B992EC8F1E9 /* libPods-TidyCoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TidyCoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE617F29106482EDF060A424 /* libPods-TidyCo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TidyCo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRoomTableViewController.swift; sourceTree = "<group>"; };
-		ED104A231BFB9BB2004E0769 /* RoomNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNotesViewController.swift; sourceTree = "<group>"; };
 		ED104A251BFB9C07004E0769 /* ManagerTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerTabBarViewController.swift; sourceTree = "<group>"; };
 		ED104A271BFB9C3F004E0769 /* EditRoomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRoomsTableViewController.swift; sourceTree = "<group>"; };
 		ED104A291BFB9C64004E0769 /* EditTimersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTimersTableViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +117,8 @@
 		ED104A311BFB9D38004E0769 /* RoomsToAssignTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsToAssignTableViewController.swift; sourceTree = "<group>"; };
 		ED104A331BFB9D61004E0769 /* ViewProgressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProgressTableViewController.swift; sourceTree = "<group>"; };
 		ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeProgressViewTableViewController.swift; sourceTree = "<group>"; };
+		ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRoomNotesViewController.swift; sourceTree = "<group>"; };
+		ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNotesTableViewController.swift; sourceTree = "<group>"; };
 		F4E47071B70FAE5877A6DED9 /* Pods-TidyCo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCo/Pods-TidyCo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +155,6 @@
 				1C782C051BD053930046B280 /* LoginController.swift */,
 				1C782C081BD0541A0046B280 /* ViewController.swift */,
 				ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */,
-				ED104A231BFB9BB2004E0769 /* RoomNotesViewController.swift */,
 				ED104A251BFB9C07004E0769 /* ManagerTabBarViewController.swift */,
 				ED104A271BFB9C3F004E0769 /* EditRoomsTableViewController.swift */,
 				ED104A291BFB9C64004E0769 /* EditTimersTableViewController.swift */,
@@ -163,6 +164,8 @@
 				ED104A311BFB9D38004E0769 /* RoomsToAssignTableViewController.swift */,
 				ED104A331BFB9D61004E0769 /* ViewProgressTableViewController.swift */,
 				ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */,
+				ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */,
+				ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				ED104A321BFB9D38004E0769 /* RoomsToAssignTableViewController.swift in Sources */,
 				ED104A221BFB9B78004E0769 /* EmployeeRoomTableViewController.swift in Sources */,
 				1C782C1C1BD077410046B280 /* TimerStorageAdapter.swift in Sources */,
+				ED104A381BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift in Sources */,
 				1C7B8B651BF565A70069C10E /* Floor.swift in Sources */,
 				1C782C1A1BD077410046B280 /* FloorStorageAdapter.swift in Sources */,
 				ED104A301BFB9D1A004E0769 /* AssignRoomsTableViewController.swift in Sources */,
@@ -540,7 +544,6 @@
 				1C7B8B611BF52E310069C10E /* ShapedButton.swift in Sources */,
 				1C782C111BD075920046B280 /* ParseFloorStorageAdapter.swift in Sources */,
 				1CDB9C041BEC4F6900A9DEA9 /* StringUitls.swift in Sources */,
-				ED104A241BFB9BB2004E0769 /* RoomNotesViewController.swift in Sources */,
 				ED104A2C1BFB9C94004E0769 /* EditWorkforceTableViewController.swift in Sources */,
 				1C782C191BD077410046B280 /* EmployeeStorageAdapter.swift in Sources */,
 				ED104A261BFB9C07004E0769 /* ManagerTabBarViewController.swift in Sources */,
@@ -554,6 +557,7 @@
 				ED104A2A1BFB9C64004E0769 /* EditTimersTableViewController.swift in Sources */,
 				1CAAAB561BD0031200E3650F /* Room.swift in Sources */,
 				ED104A341BFB9D61004E0769 /* ViewProgressTableViewController.swift in Sources */,
+				ED104A3A1BFB9E89004E0769 /* RoomNotesTableViewController.swift in Sources */,
 				1C782C141BD0764E0046B280 /* ParseTimerStorageAdapter.swift in Sources */,
 				ED104A281BFB9C3F004E0769 /* EditRoomsTableViewController.swift in Sources */,
 				1C782C061BD053930046B280 /* LoginController.swift in Sources */,

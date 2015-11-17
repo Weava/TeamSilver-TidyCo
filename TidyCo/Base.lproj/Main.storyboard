@@ -139,7 +139,7 @@
         <!--Room Notes View-->
         <scene sceneID="Sx9-WM-DjI">
             <objects>
-                <tableViewController title="Room Notes View" id="mFj-xo-fmg" sceneMemberID="viewController">
+                <tableViewController title="Room Notes View" id="mFj-xo-fmg" customClass="RoomNotesTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="n6e-7W-K0e">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,10 +296,10 @@
             </objects>
             <point key="canvasLocation" x="998" y="1685"/>
         </scene>
-        <!--Room Notes View-->
+        <!--Employee Room Notes View-->
         <scene sceneID="lcO-SY-mgr">
             <objects>
-                <viewController title="Room Notes View" id="qqn-IX-ybp" customClass="RoomNotesViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Employee Room Notes View" id="qqn-IX-ybp" customClass="EmployeeRoomNotesViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JnL-Rx-I4Z"/>
                         <viewControllerLayoutGuide type="bottom" id="9O0-PT-Ep1"/>
