@@ -19,6 +19,10 @@ class Floor: PFObject, PFSubclassing
         {
             return self[Floor.ROOM_ARRAY] as! [Room]
         }
+        set(rooms)
+        {
+            self[Floor.ROOM_ARRAY] = rooms
+        }
     }
     
     override class func initialize() {

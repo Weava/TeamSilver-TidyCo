@@ -24,6 +24,10 @@ class Employee: PFObject, PFSubclassing
         {
             return self[Employee.EMPLOYEE_TYPE_POINTER] as! EmployeeType
         }
+        set(employeeType)
+        {
+            self[Employee.EMPLOYEE_TYPE_POINTER] = employeeType
+        }
     }
     
     override class func initialize() {

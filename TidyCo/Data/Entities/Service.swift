@@ -27,12 +27,20 @@ class Service: PFObject, PFSubclassing
         {
             return self[Service.ROOM_SERVICED_RELATION] as! Room
         }
+        set(room)
+        {
+            self[Service.ROOM_SERVICED_RELATION] = room
+        }
     }
     
     var employeeAssigned: Employee {
         get
         {
             return self[Service.EMPLOYEE_ASSIGNED_RELATION] as! Employee
+        }
+        set(employee)
+        {
+            self[Service.EMPLOYEE_ASSIGNED_RELATION] = employee
         }
     }
     
@@ -41,12 +49,20 @@ class Service: PFObject, PFSubclassing
         {
             return self[Service.SERVICE_TYPE_RELATION] as! ServiceType
         }
+        set(serviceType)
+        {
+            self[Service.SERVICE_TYPE_RELATION] = serviceType
+        }
     }
     
     var serviceTimer: Timer {
         get
         {
             return self[Service.TIMER_RELATION] as! Timer
+        }
+        set(timer)
+        {
+            self[Service.TIMER_RELATION] = timer
         }
     }
     
