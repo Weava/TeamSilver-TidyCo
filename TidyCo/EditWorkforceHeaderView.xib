@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EditWorkforceHeader" customModule="TidyCo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-X8-ZQG">
+                    <rect key="frame" x="271" y="8" width="98" height="30"/>
+                    <state key="normal" title="Delete Worker"/>
+                    <connections>
+                        <action selector="deleteWorkerAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="qnT-Pk-EQI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xh-UB-oTl">
+                    <rect key="frame" x="8" y="8" width="81" height="30"/>
+                    <state key="normal" title="Add Worker"/>
+                    <connections>
+                        <action selector="addWorkerAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="OfW-GH-03n"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecj-th-Z2Q">
+                    <rect key="frame" x="160" y="8" width="57" height="30"/>
+                    <state key="normal" title="Edit Info"/>
+                    <connections>
+                        <action selector="editInfoAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ggu-bD-gjk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <accessibility key="accessibilityConfiguration" identifier="editWorkforceHeader"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="307.5" y="-361.5"/>
+        </view>
+    </objects>
+</document>
