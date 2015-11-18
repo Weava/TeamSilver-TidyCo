@@ -55,7 +55,7 @@ class EditWorkforceTableViewController: UITableViewController {
         
         if cell == nil
         {
-            let nibs = NSBundle.mainBundle().loadNibNamed("EditWorkforceCell", owner: self, options: nil)
+            let nibs = NSBundle.mainBundle().loadNibNamed("EditWorkforceView", owner: self, options: nil)
             cell = (nibs[0] as? EditWorkforceTableViewCell)!
         }
         
@@ -64,7 +64,7 @@ class EditWorkforceTableViewController: UITableViewController {
         
         //let employeeStatus = self.getEmployeeProgress(currentEmployee)
         
-        cell?.employeeNameLabel.text = "\(currentEmployee.lastName.uppercaseString), \(currentEmployee.firstName)"
+        cell?.EmployeeName.text = "\(currentEmployee.lastName.uppercaseString), \(currentEmployee.firstName)"
         
        // cell?.employeePercentCompleteLabel.text = "\(Int(employeeStatus!.employeePercentComplete * 100))% Complete"
         

@@ -38,6 +38,10 @@
 		1CC05F621BC73110003DB99F /* TidyCoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC05F611BC73110003DB99F /* TidyCoUITests.swift */; };
 		1CDB9C041BEC4F6900A9DEA9 /* StringUitls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB9C031BEC4F6900A9DEA9 /* StringUitls.swift */; };
 		7E0C1AE4EED781457A18FFF7 /* libPods-TidyCo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE617F29106482EDF060A424 /* libPods-TidyCo.a */; };
+		7FF942711BFD381E00E15C38 /* EditWorkforceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF942701BFD381E00E15C38 /* EditWorkforceTableViewCell.swift */; };
+		7FF942751BFD388000E15C38 /* EditWorkforceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF942741BFD388000E15C38 /* EditWorkforceView.xib */; };
+		7FF942771BFD399B00E15C38 /* EditWorkforceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF942761BFD399B00E15C38 /* EditWorkforceHeaderView.xib */; };
+		7FF942791BFD39EC00E15C38 /* EditWorkforceHeaderViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF942781BFD39EC00E15C38 /* EditWorkforceHeaderViewClass.swift */; };
 		A2BDB33ED5D9E26DA6056014 /* libPods-TidyCoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D4D7B494EA5B992EC8F1E9 /* libPods-TidyCoTests.a */; };
 		ED104A221BFB9B78004E0769 /* EmployeeRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */; };
 		ED104A261BFB9C07004E0769 /* ManagerTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A251BFB9C07004E0769 /* ManagerTabBarViewController.swift */; };
@@ -111,6 +115,10 @@
 		1CDB9C061BF0188100A9DEA9 /* AppDesignVisuals.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = AppDesignVisuals.pdf; path = Docs/AppDesignVisuals.pdf; sourceTree = "<group>"; };
 		1CDB9C191BF0350000A9DEA9 /* HKAppWireframes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = HKAppWireframes.pdf; path = Docs/HKAppWireframes.pdf; sourceTree = "<group>"; };
 		3022936D46E13BD6DBA6332E /* Pods-TidyCoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCoTests/Pods-TidyCoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7FF942701BFD381E00E15C38 /* EditWorkforceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWorkforceTableViewCell.swift; sourceTree = "<group>"; };
+		7FF942741BFD388000E15C38 /* EditWorkforceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditWorkforceView.xib; sourceTree = "<group>"; };
+		7FF942761BFD399B00E15C38 /* EditWorkforceHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditWorkforceHeaderView.xib; sourceTree = "<group>"; };
+		7FF942781BFD39EC00E15C38 /* EditWorkforceHeaderViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWorkforceHeaderViewClass.swift; sourceTree = "<group>"; };
 		8C9D6F8DAAC9904774151F5F /* Pods-TidyCoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCoTests/Pods-TidyCoTests.release.xcconfig"; sourceTree = "<group>"; };
 		B19C3FE266F997844FA31452 /* Pods-TidyCo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCo/Pods-TidyCo.release.xcconfig"; sourceTree = "<group>"; };
 		B7D4D7B494EA5B992EC8F1E9 /* libPods-TidyCoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TidyCoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +220,8 @@
 			children = (
 				1C7B8B6B1BFBD2350069C10E /* EmployeeProgressCell.xib */,
 				1C7B8B6F1BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib */,
+				7FF942741BFD388000E15C38 /* EditWorkforceView.xib */,
+				7FF942761BFD399B00E15C38 /* EditWorkforceHeaderView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -221,6 +231,8 @@
 			children = (
 				1C7B8B6D1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift */,
 				1C7B8B711BFCFC960069C10E /* SingleEmployeeProgressTableViewCell.swift */,
+				7FF942701BFD381E00E15C38 /* EditWorkforceTableViewCell.swift */,
+				7FF942781BFD39EC00E15C38 /* EditWorkforceHeaderViewClass.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -476,10 +488,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C7B8B671BFBC7EE0069C10E /* Main.storyboard in Resources */,
+				7FF942771BFD399B00E15C38 /* EditWorkforceHeaderView.xib in Resources */,
 				1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */,
 				1C7B8B6C1BFBD2350069C10E /* EmployeeProgressCell.xib in Resources */,
 				1CC05F491BC73110003DB99F /* Assets.xcassets in Resources */,
 				1C7B8B701BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib in Resources */,
+				7FF942751BFD388000E15C38 /* EditWorkforceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +584,9 @@
 				1C782C091BD0541A0046B280 /* ViewController.swift in Sources */,
 				1CAAAB541BD0031200E3650F /* Employee.swift in Sources */,
 				ED104A321BFB9D38004E0769 /* RoomsToAssignTableViewController.swift in Sources */,
+				7FF942791BFD39EC00E15C38 /* EditWorkforceHeaderViewClass.swift in Sources */,
 				ED104A221BFB9B78004E0769 /* EmployeeRoomTableViewController.swift in Sources */,
+				7FF942711BFD381E00E15C38 /* EditWorkforceTableViewCell.swift in Sources */,
 				1C782C1C1BD077410046B280 /* TimerStorageAdapter.swift in Sources */,
 				ED104A381BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift in Sources */,
 				1C7B8B651BF565A70069C10E /* Floor.swift in Sources */,
