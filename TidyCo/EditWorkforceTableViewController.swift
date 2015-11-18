@@ -9,9 +9,17 @@
 import UIKit
 
 class EditWorkforceTableViewController: UITableViewController {
+    
+    let employeeOps = ParseEmployeeStorageAdapter()
+    let serviceOps = ParseServiceStorageAdapter()
+    var selectedRowIndex : Int = -1;
+    
+    var allEmployees: [Employee]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        allEmployees = employeeOps.getAllItems()!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,24 +37,108 @@ class EditWorkforceTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (allEmployees?.count)!
     }
 
-    /*
+    // Return each Section name.
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Header"
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        var cell = tableView.dequeueReusableCellWithIdentifier("editWorkforceCell") as? EditWorkforceTableViewCell
+        
+        if cell == nil
+        {
+            let nibs = NSBundle.mainBundle().loadNibNamed("EditWorkforceCell", owner: self, options: nil)
+            cell = (nibs[0] as? EditWorkforceTableViewCell)!
+        }
+        
         // Configure the cell...
-
-        return cell
+        let currentEmployee = allEmployees![indexPath.row]
+        
+        //let employeeStatus = self.getEmployeeProgress(currentEmployee)
+        
+        cell?.employeeNameLabel.text = "\(currentEmployee.lastName.uppercaseString), \(currentEmployee.firstName)"
+        
+       // cell?.employeePercentCompleteLabel.text = "\(Int(employeeStatus!.employeePercentComplete * 100))% Complete"
+        
+       // cell?.employeeSimpleStatusLabel.text = "\(employeeStatus!.employeeSimpleStatus)"
+        
+        return cell!
     }
-    */
+    
 
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if indexPath.row == selectedRowIndex && selectedRowIndex != -1{
+            return 140
+        }
+        return 44
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        //var myView : UIView
+        //myView = UIView("editWorkforceHeader")
+        
+        let customView = NSBundle.mainBundle().loadNibNamed("EditWorkforceHeaderView", owner: self, options: nil).first as? UIView
+            
+        
+       // headerCell.backgroundColor = UIColor.cyanColor()
+    /*
+        switch (section) {
+        case 0:
+            headerCell.headerLabel.text = "Europe";
+            //return sectionHeaderView
+        case 1:
+            headerCell.headerLabel.text = "Asia";
+            //return sectionHeaderView
+        case 2:
+            headerCell.headerLabel.text = "South America";
+            //return sectionHeaderView
+        default:
+            headerCell.headerLabel.text = "Other";
+        }
+        */
+        return customView
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if selectedRowIndex != indexPath.row {
+            
+            // paint the last cell tapped to white again
+            self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: self.selectedRowIndex, inSection: 0))?.backgroundColor = UIColor.whiteColor()
+            
+            // save the selected index
+            self.selectedRowIndex = indexPath.row
+            
+            // paint the selected cell to gray
+            self.tableView.cellForRowAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
+            
+            // update the height for all the cells
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+            //self.tableView.reloadData()
+        }else
+        {
+            selectedRowIndex = -1
+            // update the height for all the cells
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+            
+        }
+    }
+    
+    
+
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

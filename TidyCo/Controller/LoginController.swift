@@ -15,7 +15,7 @@ class LoginController : UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Login controller, starting")
-        loginCheck()
+        //loginCheck()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
