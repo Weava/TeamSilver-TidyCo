@@ -46,7 +46,9 @@ class ParseFloorStorageAdapter : FloorStorageAdapter
     {
         var roomsForFloor : [Room] = []
         roomsForFloor = floor[Floor.ROOM_ARRAY] as! [Room]
-        roomsForFloor.appendContentsOf(rooms)
+        for i in rooms{
+        roomsForFloor.append(i)
+        }
         floor[Floor.ROOM_ARRAY] = roomsForFloor
         floor.saveInBackground()
     }
