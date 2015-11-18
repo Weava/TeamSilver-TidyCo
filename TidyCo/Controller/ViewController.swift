@@ -22,19 +22,19 @@ class ViewController: UIViewController {
         // THIS IS ONLY A TEST
         // This should not be taken as an example on how to use Parse, only testing for my own purposes.
         
-        let service = Service()
-        service.isFinished = false
-        service.employeeAssigned = (employeeDbOperations.getAllItems()?.first)!
-        service.roomServiced = (floorOps.getAllFloors()?.first?.floorRooms[2])!
-        service.serviceTimer = timerOps.getTimerByName("Stayover")!
-        service.serviceType = serviceOps.getServiceTypeByName(ServiceTypeValue.maintenance)!
-        //service.dateTimeFinished = NSDate()
-        //service.timeToFinishInMinutes
-        
-        //service.dateTimeStarted = NSDate(timeIntervalSinceNow: -1800)
-        service.dateTimeAssigned = NSDate(timeIntervalSinceNow: -18000000)
-        
-        serviceOps.createService(service)
+//        let service = Service()
+//        service.isFinished = false
+//        service.employeeAssigned = (employeeDbOperations.getAllItems()?.first)!
+//        service.roomServiced = (floorOps.getAllFloors()?.first?.floorRooms[2])!
+//        service.serviceTimer = timerOps.getTimerByName("Stayover")!
+//        service.serviceType = serviceOps.getServiceTypeByName(ServiceTypeValue.maintenance)!
+//        //service.dateTimeFinished = NSDate()
+//        //service.timeToFinishInMinutes
+//        
+//        //service.dateTimeStarted = NSDate(timeIntervalSinceNow: -1800)
+//        service.dateTimeAssigned = NSDate(timeIntervalSinceNow: -18000000)
+//        
+//        serviceOps.createService(service)
         
         //employeeDbOperations.createEmployee(employeeTest, employeeType: EmployeeTypeValue.maintenance)
     }

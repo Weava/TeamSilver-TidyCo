@@ -10,9 +10,12 @@ import UIKit
 
 class EmployeeProgressViewTableViewController: UITableViewController {
 
+    var employee: Employee?
+    var servicesForEmployee: [Service]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("loading single employee")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +32,71 @@ class EmployeeProgressViewTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (servicesForEmployee?.count)!
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        var cell = tableView.dequeueReusableCellWithIdentifier("singleEmployeeProgressCell") as? SingleEmployeeProgressTableViewCell
+        
+        if cell == nil
+        {
+            let nibs = NSBundle.mainBundle().loadNibNamed("SingleEmployeeRoomProgressCell", owner: self, options: nil)
+            cell = (nibs[0] as? SingleEmployeeProgressTableViewCell)!
+        }
+        
+        let serviceForCell = servicesForEmployee![indexPath.row]
+        let serviceExpectedTime = NSString(format: "%.2f", Float(serviceForCell.serviceTimer.timerLengthInMinutes)).stringByReplacingOccurrencesOfString(".", withString: ":")
+        let serviceActualTime = NSString(format: "%.2f", calculateActualTimeForService(serviceForCell)).stringByReplacingOccurrencesOfString(".", withString: ":")
 
+        let roomStatus: String = calculateRoomProgress(serviceForCell)
+        
+        cell?.roomNumberLabel.text = serviceForCell.roomServiced.roomNum
+        cell?.employeeStatusLabel.text = roomStatus
+        
+        if serviceForCell.employeeNotes != ""
+        {
+            // Set imageView here
+        }
+        
+        cell?.timeDifferenceLabel.text = "\(serviceActualTime)/\(serviceExpectedTime)"
+        
         // Configure the cell...
 
-        return cell
+        return cell!
     }
-    */
+    
+    private func calculateActualTimeForService(service: Service) -> Float
+    {
+        let timeDifference = service.dateTimeFinished.timeIntervalSinceDate(service.dateTimeStarted)
+        let timeDiffFloat = Float(timeDifference) / 60.0
+        return timeDiffFloat
+    }
+
+    private func calculateRoomProgress(service: Service) -> String
+    {
+        let timeDifference = calculateActualTimeForService(service)
+        
+        switch (timeDifference)
+        {
+            case let x where x < Float(service.serviceTimer.timerLengthInMinutes):
+                return "Ahead"
+                
+            case let x where x == Float(service.serviceTimer.timerLengthInMinutes):
+                return "On Time"
+                
+            case let x where x > Float(service.serviceTimer.timerLengthInMinutes):
+                return "Over Time"
+                
+            default:
+                return ""
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

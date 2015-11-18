@@ -88,7 +88,7 @@
                 <tableViewController id="G7h-7J-aup" customClass="ViewProgressTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="View Progress" id="Vb9-PZ-CgK"/>
                     <connections>
-                        <segue destination="wxT-ai-kfA" kind="show" id="zPm-vO-QQt"/>
+                        <segue destination="wxT-ai-kfA" kind="show" identifier="viewEmployeeProgressSegue" id="zPm-vO-QQt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPQ-gf-D6z" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="singleEmployeeProgressCell" id="Q4m-2c-5kE" customClass="SingleEmployeeProgressTableViewCell" customModule="TidyCo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q4m-2c-5kE" id="veE-cN-aA0">
+                <rect key="frame" x="0.0" y="0.0" width="444" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="304" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2t-O0-cNW">
+                        <rect key="frame" x="8" y="10" width="31.5" height="20.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Over Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNh-ij-pD8">
+                        <rect key="frame" x="52" y="10" width="79" height="20.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tUz-ZO-xv2">
+                        <rect key="frame" x="164" y="4" width="36" height="31.5"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="actual time/expected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nQ-KV-daI">
+                        <rect key="frame" x="275" y="10" width="161" height="20.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstAttribute="leadingMargin" secondItem="Q2t-O0-cNW" secondAttribute="leading" id="PJA-G8-CEv"/>
+                    <constraint firstItem="lNh-ij-pD8" firstAttribute="top" secondItem="veE-cN-aA0" secondAttribute="topMargin" constant="2" id="l6S-fR-MI1"/>
+                    <constraint firstItem="tUz-ZO-xv2" firstAttribute="leading" secondItem="lNh-ij-pD8" secondAttribute="trailing" constant="33" id="nbl-gJ-anr"/>
+                    <constraint firstItem="lNh-ij-pD8" firstAttribute="leading" secondItem="Q2t-O0-cNW" secondAttribute="trailing" constant="12.5" id="sg8-Pv-Uu1"/>
+                    <constraint firstItem="Q2t-O0-cNW" firstAttribute="top" secondItem="veE-cN-aA0" secondAttribute="topMargin" constant="2" id="ye4-gg-naF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4nQ-KV-daI" secondAttribute="trailing" id="zGR-4d-3HS"/>
+                    <constraint firstItem="4nQ-KV-daI" firstAttribute="baseline" secondItem="lNh-ij-pD8" secondAttribute="baseline" id="zxR-UD-iiM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="employeeNotesImageView" destination="tUz-ZO-xv2" id="fuA-ZN-Cqy"/>
+                <outlet property="employeeStatusLabel" destination="lNh-ij-pD8" id="rwD-xt-NjZ"/>
+                <outlet property="roomNumberLabel" destination="Q2t-O0-cNW" id="lGg-Ue-u4e"/>
+                <outlet property="timeDifferenceLabel" destination="4nQ-KV-daI" id="qHf-O2-Vbp"/>
+            </connections>
+            <point key="canvasLocation" x="233" y="207"/>
+        </tableViewCell>
+    </objects>
+</document>
