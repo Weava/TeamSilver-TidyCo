@@ -10,8 +10,16 @@ import UIKit
 
 class EditRoomsTableViewController: UITableViewController {
 
+    var floors = [Floor]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let adapter = ParseFloorStorageAdapter()
+        
+        floors = adapter.getAllFloors()!
+        
+        print(floors.count)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +37,24 @@ class EditRoomsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return floors.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("floorCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = "FLOOR " + floors[indexPath.row].floorNum
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
