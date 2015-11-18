@@ -31,3 +31,31 @@ DerivedData
 # Carthage/Checkouts
 
 Carthage/Build
+
+*.storyboard
+
+*.swift
+
+*.xib
+
+TidyCo/EditWorkforceHeader.swift
+
+TidyCo/EditWorkforceCell.xib
+
+TidyCo/EditRoomsTableViewController.swift
+
+TidyCo/EditWorkforceHeaderView.xib
+
+TidyCo/EditWorkforceTableViewController.swift
+
+TidyCo/Controller/LoginController.swift
+
+TidyCo/Controller/LoginController.swift
+
+TidyCo/Data/Database/ParseFloorStorageAdapter.swift
+
+TidyCo/EditRoomsTableViewCell.swift
+
+TidyCo/EditRoomsTableViewController.swift
+
+TidyCo/Cells/Views/EmployeeProgressCell.xib
