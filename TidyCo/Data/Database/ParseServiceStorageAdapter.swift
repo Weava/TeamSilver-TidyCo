@@ -38,13 +38,8 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
         }
     }
     
-    func createService(service: Service, serviceType: ServiceTypeValue, room: Room, employeeAssigned: Employee, timer: Timer)
+    func createService(service: Service)
     {
-        service[Service.SERVICE_TYPE_RELATION] = self.getServiceTypeByName(serviceType)
-        service[Service.ROOM_SERVICED_RELATION] = room
-        service[Service.EMPLOYEE_ASSIGNED_RELATION] = employeeAssigned
-        service[Service.TIMER_RELATION] = timer
-        
         service.saveInBackground()
     }
     
@@ -63,7 +58,7 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
     
     func getServiceTypeByName(serviceType: ServiceTypeValue) -> ServiceType?
     {
-        let query: PFQuery = self.queryWithRelations()
+        let query: PFQuery = ServiceType.query()!
         query.whereKey("typeName", equalTo: serviceType.rawValue)
         
         do

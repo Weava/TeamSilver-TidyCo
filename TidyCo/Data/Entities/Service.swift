@@ -21,6 +21,7 @@ class Service: PFObject, PFSubclassing
     @NSManaged var dateTimeFinished: NSDate
     @NSManaged var employeeNotes: String
     @NSManaged var employeeImages: [PFFile]
+    @NSManaged var isFinished: Bool
     
     var roomServiced: Room {
         get

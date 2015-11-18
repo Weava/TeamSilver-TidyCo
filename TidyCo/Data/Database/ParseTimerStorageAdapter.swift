@@ -23,6 +23,21 @@ class ParseTimerStorageAdapter : TimerStorageAdapter
         }
     }
     
+    func getTimerByName(name: String) -> Timer?
+    {
+        let query: PFQuery = Timer.query()!
+        
+        query.whereKey("timerName", equalTo: name)
+        
+        do
+        {
+            return try query.findObjects().first as? Timer
+        } catch
+        {
+            return nil
+        }
+    }
+    
     func createTimer(timer: Timer)
     {
         timer.saveInBackground()

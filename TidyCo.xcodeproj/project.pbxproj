@@ -21,6 +21,8 @@
 		1C7B8B631BF52ECF0069C10E /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B8B621BF52ECF0069C10E /* CircularButton.swift */; };
 		1C7B8B651BF565A70069C10E /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B8B641BF565A70069C10E /* Floor.swift */; };
 		1C7B8B671BFBC7EE0069C10E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B661BFBC7EE0069C10E /* Main.storyboard */; };
+		1C7B8B6C1BFBD2350069C10E /* EmployeeProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B6B1BFBD2350069C10E /* EmployeeProgressCell.xib */; };
+		1C7B8B6E1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B8B6D1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift */; };
 		1CAAAB541BD0031200E3650F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4E1BD0031200E3650F /* Employee.swift */; };
 		1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */; };
 		1CAAAB561BD0031200E3650F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB501BD0031200E3650F /* Room.swift */; };
@@ -81,6 +83,8 @@
 		1C7B8B621BF52ECF0069C10E /* CircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularButton.swift; path = Views/CircularButton.swift; sourceTree = "<group>"; };
 		1C7B8B641BF565A70069C10E /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Floor.swift; path = Data/Entities/Floor.swift; sourceTree = "<group>"; };
 		1C7B8B661BFBC7EE0069C10E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1C7B8B6B1BFBD2350069C10E /* EmployeeProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmployeeProgressCell.xib; path = Cells/Views/EmployeeProgressCell.xib; sourceTree = "<group>"; };
+		1C7B8B6D1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeProgressTableViewCell.swift; path = Cells/Controllers/EmployeeProgressTableViewCell.swift; sourceTree = "<group>"; };
 		1CAAAB4A1BCD61C500E3650F /* TidyCo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TidyCo-Bridging-Header.h"; sourceTree = "<group>"; };
 		1CAAAB4E1BD0031200E3650F /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Employee.swift; path = Data/Entities/Employee.swift; sourceTree = "<group>"; };
 		1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeType.swift; path = Data/Entities/EmployeeType.swift; sourceTree = "<group>"; };
@@ -190,6 +194,31 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		1C7B8B681BFBD1A00069C10E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1C7B8B6A1BFBD1DF0069C10E /* Controllers */,
+				1C7B8B691BFBD1D50069C10E /* Views */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		1C7B8B691BFBD1D50069C10E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C7B8B6B1BFBD2350069C10E /* EmployeeProgressCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1C7B8B6A1BFBD1DF0069C10E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C7B8B6D1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		1CAAAB491BCD61AB00E3650F /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +288,7 @@
 		1CC05F401BC73110003DB99F /* TidyCo */ = {
 			isa = PBXGroup;
 			children = (
+				1C7B8B681BFBD1A00069C10E /* Cells */,
 				1C7B8B5F1BF52DA10069C10E /* Views */,
 				1CDB9C021BEC4E4F00A9DEA9 /* Utils */,
 				1C782C071BD053A60046B280 /* Controller */,
@@ -441,6 +471,7 @@
 			files = (
 				1C7B8B671BFBC7EE0069C10E /* Main.storyboard in Resources */,
 				1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */,
+				1C7B8B6C1BFBD2350069C10E /* EmployeeProgressCell.xib in Resources */,
 				1CC05F491BC73110003DB99F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +584,7 @@
 				1CAAAB591BD0031200E3650F /* Timer.swift in Sources */,
 				ED104A2E1BFB9CB5004E0769 /* AddEmployeesViewController.swift in Sources */,
 				1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */,
+				1C7B8B6E1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift in Sources */,
 				1C782C0B1BD065690046B280 /* ParseServiceStorageAdapter.swift in Sources */,
 				ED104A2A1BFB9C64004E0769 /* EditTimersTableViewController.swift in Sources */,
 				1CAAAB561BD0031200E3650F /* Room.swift in Sources */,
