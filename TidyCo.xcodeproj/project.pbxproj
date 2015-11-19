@@ -55,6 +55,8 @@
 		ED104A361BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */; };
 		ED104A381BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */; };
 		ED104A3A1BFB9E89004E0769 /* RoomNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */; };
+		EDC4B2541BFD74AF00BEFF29 /* EditFloorsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */; };
+		EDC4B2561BFD74C500BEFF29 /* EditFloorsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC4B2551BFD74C500BEFF29 /* EditFloorsHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeProgressViewTableViewController.swift; sourceTree = "<group>"; };
 		ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRoomNotesViewController.swift; sourceTree = "<group>"; };
 		ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNotesTableViewController.swift; sourceTree = "<group>"; };
+		EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditFloorsHeaderView.xib; sourceTree = "<group>"; };
+		EDC4B2551BFD74C500BEFF29 /* EditFloorsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFloorsHeaderView.swift; sourceTree = "<group>"; };
 		F4E47071B70FAE5877A6DED9 /* Pods-TidyCo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCo/Pods-TidyCo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +226,7 @@
 				7FF9427F1BFD460100E15C38 /* EditWorkforceView.xib */,
 				1C7B8B6B1BFBD2350069C10E /* EmployeeProgressCell.xib */,
 				1C7B8B6F1BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib */,
+				EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				7FF9427B1BFD45EF00E15C38 /* EditWorkforceTableViewCell.swift */,
 				1C7B8B6D1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift */,
 				1C7B8B711BFCFC960069C10E /* SingleEmployeeProgressTableViewCell.swift */,
+				EDC4B2551BFD74C500BEFF29 /* EditFloorsHeaderView.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC4B2541BFD74AF00BEFF29 /* EditFloorsHeaderView.xib in Resources */,
 				1C7B8B671BFBC7EE0069C10E /* Main.storyboard in Resources */,
 				7FF942811BFD460100E15C38 /* EditWorkforceView.xib in Resources */,
 				1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */,
@@ -611,6 +618,7 @@
 				1C782C0B1BD065690046B280 /* ParseServiceStorageAdapter.swift in Sources */,
 				ED104A2A1BFB9C64004E0769 /* EditTimersTableViewController.swift in Sources */,
 				1CAAAB561BD0031200E3650F /* Room.swift in Sources */,
+				EDC4B2561BFD74C500BEFF29 /* EditFloorsHeaderView.swift in Sources */,
 				ED104A341BFB9D61004E0769 /* ViewProgressTableViewController.swift in Sources */,
 				ED104A3A1BFB9E89004E0769 /* RoomNotesTableViewController.swift in Sources */,
 				1C782C141BD0764E0046B280 /* ParseTimerStorageAdapter.swift in Sources */,

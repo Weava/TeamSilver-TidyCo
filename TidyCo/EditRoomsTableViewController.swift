@@ -11,6 +11,8 @@ import UIKit
 class EditRoomsTableViewController: UITableViewController {
 
     var floors = [Floor]()
+    var headerHeight : CGFloat = 50
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +60,40 @@ class EditRoomsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
        
     }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Header"
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let customView = NSBundle.mainBundle().loadNibNamed("EditFloorsHeaderView", owner: self, options: nil).first as? EditFloorsHeaderView
+        customView?.addFloorButton.addTarget(self, action: "addFloor:", forControlEvents: UIControlEvents.TouchUpInside)
+        customView?.editTimersButton.addTarget(self, action: "editTimers:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        if let fr : CGRect = customView?.frame{
+            
+            headerHeight = fr.height
+            
+        }
+        
+        return customView
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return headerHeight
+    }
+    
+    func addFloor(sender: UIButton!) {
+        print ("addFloor clicked!")
+    }
+    
+    func editTimers(sender: UIButton!) {
+        print ("edit timers!")
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
