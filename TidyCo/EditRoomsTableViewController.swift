@@ -11,6 +11,7 @@ import UIKit
 class EditRoomsTableViewController: UITableViewController {
 
     var floors = [Floor]()
+    var selectedRowIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,14 +48,40 @@ class EditRoomsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("floorCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("floorCell", forIndexPath: indexPath) as! FloorTableViewCell
 
         // Configure the cell...
         cell.textLabel?.text = "FLOOR " + floors[indexPath.row].floorNum
+        cell.addSubview(UIButton())
+        if cell.frame.size.height != 44.0 {
+            cell.textLabel?.hidden = true
+        }
 
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if selectedRowIndex != indexPath.row {
+            selectedRowIndex = indexPath.row
+            
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
+        else {
+            selectedRowIndex = -1
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == selectedRowIndex && selectedRowIndex != -1 {
+            return 140
+        }
+        
+        return 44
+    }
 
     /*
     // Override to support conditional editing of the table view.
