@@ -135,6 +135,11 @@ class EditRoomsTableViewController: UITableViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.title = self.title
+    }
+    
     func editTimers(sender: UIButton!) {
         print ("edit timers!")
         performSegueWithIdentifier("editTimersSegue", sender: self)

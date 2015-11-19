@@ -113,8 +113,9 @@
         <!--View Progress-->
         <scene sceneID="5vs-Dw-u21">
             <objects>
-                <tableViewController id="G7h-7J-aup" customClass="ViewProgressTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="View Progress" id="G7h-7J-aup" customClass="ViewProgressTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="View Progress" id="Vb9-PZ-CgK"/>
+                    <navigationItem key="navigationItem" title="View Progress" id="SOY-uQ-GeY"/>
                     <connections>
                         <segue destination="wxT-ai-kfA" kind="show" identifier="viewEmployeeProgressSegue" id="zPm-vO-QQt"/>
                     </connections>
@@ -137,6 +138,7 @@
                             <outlet property="delegate" destination="wxT-ai-kfA" id="Vym-lO-hpi"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Employee Progress" id="euW-Tc-9S8"/>
                     <connections>
                         <segue destination="mFj-xo-fmg" kind="show" id="A5F-ja-HfX"/>
                     </connections>
@@ -159,6 +161,7 @@
                             <outlet property="delegate" destination="eRO-NQ-DXI" id="I6S-sE-aTR"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Rooms to Assign" id="tug-pz-631"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAb-0I-Y11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,15 +181,16 @@
                             <outlet property="delegate" destination="mFj-xo-fmg" id="mea-Jo-kEp"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Room Notes" id="bM5-BI-IbJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dr0-gH-kfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3642" y="-2139"/>
         </scene>
-        <!--Manager Tab Bar View-->
+        <!--Summary-->
         <scene sceneID="5XP-zr-yEO">
             <objects>
-                <tabBarController storyboardIdentifier="managerController" title="Manager Tab Bar View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2GF-wt-Nuw" customClass="ManagerTabBarViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="managerController" title="Summary" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2GF-wt-Nuw" customClass="ManagerTabBarViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rt2-Y0-9UL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -208,8 +212,9 @@
         <!--Assign Rooms-->
         <scene sceneID="vEy-RH-SyS">
             <objects>
-                <tableViewController id="CQi-Qt-LQ3" customClass="AssignRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Assign Rooms" id="CQi-Qt-LQ3" customClass="AssignRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Assign Rooms" id="TIG-KX-oS7"/>
+                    <navigationItem key="navigationItem" title="Assign Rooms" id="8YX-sC-kfo"/>
                     <connections>
                         <segue destination="eRO-NQ-DXI" kind="show" id="KFY-6O-KHf"/>
                     </connections>
@@ -218,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="1950" y="-1339"/>
         </scene>
-        <!--EDIT WORKFORCE-->
+        <!--Edit Workforce-->
         <scene sceneID="JAf-Dn-sFX">
             <objects>
-                <tableViewController title="EDIT WORKFORCE" id="qkp-SJ-3Er" customClass="EditWorkforceTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Edit Workforce" id="qkp-SJ-3Er" customClass="EditWorkforceTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WUs-nq-uSh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,6 +238,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Edit Workforce" id="3b5-hL-7Lb"/>
+                    <navigationItem key="navigationItem" title="Edit Workforce" id="jGb-2S-Fnw"/>
                     <connections>
                         <segue destination="FdL-93-KoI" kind="show" identifier="addEmployeeSegue" id="4PZ-hj-npq"/>
                     </connections>
@@ -296,6 +302,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Employee" id="FQN-w1-kN7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ids-vL-Wx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,7 +311,7 @@
         <!--Edit Rooms-->
         <scene sceneID="ioc-jJ-5XQ">
             <objects>
-                <tableViewController id="U0l-cM-vqk" customClass="EditRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Edit Rooms" id="U0l-cM-vqk" customClass="EditRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="690-Ji-f2d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,6 +335,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Edit Rooms" id="OIF-pt-7Wa"/>
+                    <navigationItem key="navigationItem" title="Floors" id="95x-yo-O1B"/>
                     <connections>
                         <segue destination="m9A-vt-4Fu" kind="show" identifier="editTimersSegue" id="iiJ-oH-82i"/>
                         <segue destination="rnd-Je-VBN" kind="show" identifier="roomListSegue" id="hae-wd-Nct"/>
@@ -363,6 +371,7 @@
                             <outlet property="delegate" destination="rnd-Je-VBN" id="aw7-K7-HuY"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Edit Rooms" id="jYa-t8-50A"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZr-ng-Cib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,6 +391,7 @@
                             <outlet property="delegate" destination="m9A-vt-4Fu" id="Cz9-zF-9YX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Edit Timers" id="ddA-mh-y5G"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4O4-Ot-3oL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -401,6 +411,7 @@
                             <outlet property="delegate" destination="Ows-OM-wjJ" id="Ong-vH-uXx"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Rooms" id="8lx-GK-r3d"/>
                     <connections>
                         <segue destination="qqn-IX-ybp" kind="show" id="tYk-lR-3LX"/>
                     </connections>
@@ -423,6 +434,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Notes" id="U5B-kN-hIC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRt-Fa-3nl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
