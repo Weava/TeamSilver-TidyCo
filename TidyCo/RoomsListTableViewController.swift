@@ -1,28 +1,19 @@
 //
-//  EditRoomsTableViewController.swift
+//  RoomsListTableViewController.swift
 //  TidyCo
 //
-//  Created by KEETON AUSTIN R on 11/17/15.
+//  Created by KEETON AUSTIN R on 11/18/15.
 //  Copyright © 2015 Team Silver. All rights reserved.
 //
 
 import UIKit
 
-class EditRoomsTableViewController: UITableViewController {
+class RoomsListTableViewController: UITableViewController {
 
-    var floors = [Floor]()
-    var headerHeight : CGFloat = 50
-    var selectedRowIndexPath: NSIndexPath?
-
+    var rooms = [Room]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let adapter = ParseFloorStorageAdapter()
-        
-        floors = adapter.getAllFloors()!
-        
-        print(floors.count)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -45,58 +36,18 @@ class EditRoomsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return floors.count
+        return rooms.count
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("floorCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "FLOOR " + floors[indexPath.row].floorNum
 
         return cell
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        selectedRowIndexPath = indexPath
-        performSegueWithIdentifier("roomListSegue", sender: self)
-       
-    }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Header"
-    }
-    
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let customView = NSBundle.mainBundle().loadNibNamed("EditFloorsHeaderView", owner: self, options: nil).first as? EditFloorsHeaderView
-        customView?.addFloorButton.addTarget(self, action: "addFloor:", forControlEvents: UIControlEvents.TouchUpInside)
-        customView?.editTimersButton.addTarget(self, action: "editTimers:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        
-        if let fr : CGRect = customView?.frame{
-            
-            headerHeight = fr.height
-            
-        }
-        
-        return customView
-    }
-    
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return headerHeight
-    }
-    
-    func addFloor(sender: UIButton!) {
-        print ("addFloor clicked!")
-    }
-    
-    func editTimers(sender: UIButton!) {
-        print ("edit timers!")
-    }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
