@@ -43,6 +43,8 @@
 		7FF942801BFD460100E15C38 /* EditWorkforceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9427E1BFD460100E15C38 /* EditWorkforceHeaderView.xib */; };
 		7FF942811BFD460100E15C38 /* EditWorkforceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9427F1BFD460100E15C38 /* EditWorkforceView.xib */; };
 		A2BDB33ED5D9E26DA6056014 /* libPods-TidyCoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D4D7B494EA5B992EC8F1E9 /* libPods-TidyCoTests.a */; };
+		ED026B8E1BFD9CB200842292 /* EditRoomsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED026B8D1BFD9CB200842292 /* EditRoomsHeaderView.swift */; };
+		ED026B901BFD9CCE00842292 /* EditRoomsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED026B8F1BFD9CCE00842292 /* EditRoomsHeaderView.xib */; };
 		ED104A221BFB9B78004E0769 /* EmployeeRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */; };
 		ED104A261BFB9C07004E0769 /* ManagerTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A251BFB9C07004E0769 /* ManagerTabBarViewController.swift */; };
 		ED104A281BFB9C3F004E0769 /* EditRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A271BFB9C3F004E0769 /* EditRoomsTableViewController.swift */; };
@@ -58,6 +60,8 @@
 		EDC4B2541BFD74AF00BEFF29 /* EditFloorsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */; };
 		EDC4B2561BFD74C500BEFF29 /* EditFloorsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC4B2551BFD74C500BEFF29 /* EditFloorsHeaderView.swift */; };
 		EDC4B2581BFD7B4C00BEFF29 /* RoomsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC4B2571BFD7B4C00BEFF29 /* RoomsListTableViewController.swift */; };
+		EDCC63E81BFDAD6E005D3187 /* EditTimersHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCC63E71BFDAD6E005D3187 /* EditTimersHeaderView.xib */; };
+		EDCC63EA1BFDADBE005D3187 /* EditTimersHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC63E91BFDADBE005D3187 /* EditTimersHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +130,8 @@
 		B19C3FE266F997844FA31452 /* Pods-TidyCo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCo/Pods-TidyCo.release.xcconfig"; sourceTree = "<group>"; };
 		B7D4D7B494EA5B992EC8F1E9 /* libPods-TidyCoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TidyCoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE617F29106482EDF060A424 /* libPods-TidyCo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TidyCo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED026B8D1BFD9CB200842292 /* EditRoomsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRoomsHeaderView.swift; sourceTree = "<group>"; };
+		ED026B8F1BFD9CCE00842292 /* EditRoomsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditRoomsHeaderView.xib; sourceTree = "<group>"; };
 		ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRoomTableViewController.swift; sourceTree = "<group>"; };
 		ED104A251BFB9C07004E0769 /* ManagerTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerTabBarViewController.swift; sourceTree = "<group>"; };
 		ED104A271BFB9C3F004E0769 /* EditRoomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRoomsTableViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditFloorsHeaderView.xib; sourceTree = "<group>"; };
 		EDC4B2551BFD74C500BEFF29 /* EditFloorsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFloorsHeaderView.swift; sourceTree = "<group>"; };
 		EDC4B2571BFD7B4C00BEFF29 /* RoomsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsListTableViewController.swift; sourceTree = "<group>"; };
+		EDCC63E71BFDAD6E005D3187 /* EditTimersHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTimersHeaderView.xib; sourceTree = "<group>"; };
+		EDCC63E91BFDADBE005D3187 /* EditTimersHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTimersHeaderView.swift; sourceTree = "<group>"; };
 		F4E47071B70FAE5877A6DED9 /* Pods-TidyCo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCo/Pods-TidyCo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +238,8 @@
 				1C7B8B6B1BFBD2350069C10E /* EmployeeProgressCell.xib */,
 				1C7B8B6F1BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib */,
 				EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */,
+				ED026B8F1BFD9CCE00842292 /* EditRoomsHeaderView.xib */,
+				EDCC63E71BFDAD6E005D3187 /* EditTimersHeaderView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -242,6 +252,8 @@
 				1C7B8B6D1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift */,
 				1C7B8B711BFCFC960069C10E /* SingleEmployeeProgressTableViewCell.swift */,
 				EDC4B2551BFD74C500BEFF29 /* EditFloorsHeaderView.swift */,
+				ED026B8D1BFD9CB200842292 /* EditRoomsHeaderView.swift */,
+				EDCC63E91BFDADBE005D3187 /* EditTimersHeaderView.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -497,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC4B2541BFD74AF00BEFF29 /* EditFloorsHeaderView.xib in Resources */,
+				EDCC63E81BFDAD6E005D3187 /* EditTimersHeaderView.xib in Resources */,
 				1C7B8B671BFBC7EE0069C10E /* Main.storyboard in Resources */,
 				7FF942811BFD460100E15C38 /* EditWorkforceView.xib in Resources */,
 				1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */,
@@ -504,6 +517,7 @@
 				1C7B8B6C1BFBD2350069C10E /* EmployeeProgressCell.xib in Resources */,
 				1CC05F491BC73110003DB99F /* Assets.xcassets in Resources */,
 				1C7B8B701BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib in Resources */,
+				ED026B901BFD9CCE00842292 /* EditRoomsHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +610,7 @@
 				EDC4B2581BFD7B4C00BEFF29 /* RoomsListTableViewController.swift in Sources */,
 				ED104A321BFB9D38004E0769 /* RoomsToAssignTableViewController.swift in Sources */,
 				ED104A221BFB9B78004E0769 /* EmployeeRoomTableViewController.swift in Sources */,
+				EDCC63EA1BFDADBE005D3187 /* EditTimersHeaderView.swift in Sources */,
 				1C782C1C1BD077410046B280 /* TimerStorageAdapter.swift in Sources */,
 				ED104A381BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift in Sources */,
 				1C7B8B651BF565A70069C10E /* Floor.swift in Sources */,
@@ -605,6 +620,7 @@
 				1CAAAB581BD0031200E3650F /* ServiceType.swift in Sources */,
 				1C782C0E1BD065870046B280 /* ParseEmployeeStorageAdapter.swift in Sources */,
 				1C7B8B611BF52E310069C10E /* ShapedButton.swift in Sources */,
+				ED026B8E1BFD9CB200842292 /* EditRoomsHeaderView.swift in Sources */,
 				1C782C111BD075920046B280 /* ParseFloorStorageAdapter.swift in Sources */,
 				1CDB9C041BEC4F6900A9DEA9 /* StringUitls.swift in Sources */,
 				ED104A2C1BFB9C94004E0769 /* EditWorkforceTableViewController.swift in Sources */,

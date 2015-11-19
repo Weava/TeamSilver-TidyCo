@@ -90,11 +90,62 @@ class EditRoomsTableViewController: UITableViewController {
     }
     
     func addFloor(sender: UIButton!) {
-        print ("addFloor clicked!")
+        let alertController = UIAlertController(title: "Add Floor", message: "Enter floor number", preferredStyle: .Alert)
+        
+        
+        let addAction = UIAlertAction(title: "Add", style: .Default) { (_) in
+            let floorNumberField = alertController.textFields![0] as UITextField
+            
+            if let _ = Int(floorNumberField.text!) {
+                let newFloor = Floor()
+                newFloor.floorRooms = [Room]()
+                newFloor.floorNum = floorNumberField.text!
+                
+                let room = Room()
+                room.roomNum = newFloor.floorNum + "01"
+                room.doNotDisturb = false
+                
+                newFloor.floorRooms = [room]
+                
+                let adapter = ParseFloorStorageAdapter()
+                    adapter.createFloor(newFloor)
+                
+                self.floors.append(newFloor)
+                
+                
+                self.tableView.reloadData()
+                
+                
+            }
+            else {
+                floorNumberField.text = ""
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Floor Number"
+            
+        }
+        
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     func editTimers(sender: UIButton!) {
         print ("edit timers!")
+        performSegueWithIdentifier("editTimersSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "roomListSegue" {
+            if let destinationVC = segue.destinationViewController as? RoomsListTableViewController {
+                destinationVC.floor = floors[selectedRowIndexPath!.row]
+            }
+        }
     }
 
 
