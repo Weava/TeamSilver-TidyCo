@@ -56,7 +56,7 @@
 		ED104A341BFB9D61004E0769 /* ViewProgressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A331BFB9D61004E0769 /* ViewProgressTableViewController.swift */; };
 		ED104A361BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */; };
 		ED104A381BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */; };
-		ED104A3A1BFB9E89004E0769 /* RoomNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */; };
+		ED104A3A1BFB9E89004E0769 /* RoomNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A391BFB9E89004E0769 /* RoomNotesViewController.swift */; };
 		ED27C51B1BFE3F1800441B5C /* UserNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27C51A1BFE3F1800441B5C /* UserNavigationViewController.swift */; };
 		ED27C5211BFE66B100441B5C /* AddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27C5201BFE66B100441B5C /* AddTimerViewController.swift */; };
 		EDC4B2541BFD74AF00BEFF29 /* EditFloorsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */; };
@@ -145,7 +145,7 @@
 		ED104A331BFB9D61004E0769 /* ViewProgressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProgressTableViewController.swift; sourceTree = "<group>"; };
 		ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeProgressViewTableViewController.swift; sourceTree = "<group>"; };
 		ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRoomNotesViewController.swift; sourceTree = "<group>"; };
-		ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNotesTableViewController.swift; sourceTree = "<group>"; };
+		ED104A391BFB9E89004E0769 /* RoomNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNotesViewController.swift; sourceTree = "<group>"; };
 		ED27C51A1BFE3F1800441B5C /* UserNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNavigationViewController.swift; sourceTree = "<group>"; };
 		ED27C5201BFE66B100441B5C /* AddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimerViewController.swift; sourceTree = "<group>"; };
 		EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditFloorsHeaderView.xib; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				ED104A331BFB9D61004E0769 /* ViewProgressTableViewController.swift */,
 				ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */,
 				ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */,
-				ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */,
+				ED104A391BFB9E89004E0769 /* RoomNotesViewController.swift */,
 				EDC4B2571BFD7B4C00BEFF29 /* RoomsListTableViewController.swift */,
 				ED27C51A1BFE3F1800441B5C /* UserNavigationViewController.swift */,
 				ED27C5201BFE66B100441B5C /* AddTimerViewController.swift */,
@@ -647,7 +647,7 @@
 				ED27C5211BFE66B100441B5C /* AddTimerViewController.swift in Sources */,
 				EDC4B2561BFD74C500BEFF29 /* EditFloorsHeaderView.swift in Sources */,
 				ED104A341BFB9D61004E0769 /* ViewProgressTableViewController.swift in Sources */,
-				ED104A3A1BFB9E89004E0769 /* RoomNotesTableViewController.swift in Sources */,
+				ED104A3A1BFB9E89004E0769 /* RoomNotesViewController.swift in Sources */,
 				1C782C141BD0764E0046B280 /* ParseTimerStorageAdapter.swift in Sources */,
 				ED104A281BFB9C3F004E0769 /* EditRoomsTableViewController.swift in Sources */,
 				1C782C061BD053930046B280 /* LoginController.swift in Sources */,

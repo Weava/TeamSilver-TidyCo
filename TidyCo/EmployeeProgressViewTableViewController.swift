@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SegueActivation
+{
+    func startSegue()
+}
+
 class EmployeeProgressViewTableViewController: UITableViewController {
 
     var employee: Employee?
@@ -63,12 +68,20 @@ class EmployeeProgressViewTableViewController: UITableViewController {
         {
             // Set imageView here
         }
+        else
+        {
+            cell?.selectionStyle = .None
+            cell?.userInteractionEnabled = false
+        }
         
         cell?.timeDifferenceLabel.text = "\(serviceActualTime)/\(serviceExpectedTime)"
-        
-        // Configure the cell...
 
         return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        performSegueWithIdentifier("managerViewRoomNotesSegue", sender: self)
     }
 
     private func calculateRoomProgress(service: Service) -> String
@@ -127,14 +140,21 @@ class EmployeeProgressViewTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+        if segue.identifier == "managerViewRoomNotesSegue"
+        {
+            if let destination = segue.destinationViewController as? RoomNotesViewController
+            {
+                destination.employee = employee
+                destination.service = servicesForEmployee![(tableView.indexPathForSelectedRow?.row)!]
+            }
+        }
     }
-    */
+
 
 }
