@@ -15,7 +15,6 @@ class Service: PFObject, PFSubclassing
     static let SERVICE_TYPE_RELATION: String = "serviceType"
     static let TIMER_RELATION: String = "serviceTimer"
     
-    @NSManaged var timeToFinishInMinutes: Int
     @NSManaged var dateTimeAssigned: NSDate
     @NSManaged var dateTimeStarted: NSDate
     @NSManaged var dateTimeFinished: NSDate
@@ -64,6 +63,15 @@ class Service: PFObject, PFSubclassing
         set(timer)
         {
             self[Service.TIMER_RELATION] = timer
+        }
+    }
+    
+    var timeToFinish: Float {
+        get
+        {
+            let timeDifference = self.dateTimeFinished.timeIntervalSinceDate(self.dateTimeStarted)
+            let timeDiffFloat = Float(timeDifference) / 60.0
+            return timeDiffFloat
         }
     }
     

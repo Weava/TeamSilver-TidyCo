@@ -50,8 +50,8 @@ class ViewProgressTableViewController: UITableViewController {
     
     private func getEmployeeProgress(employee: Employee) -> EmployeeStatus?
     {
-        var totalExpectedTime: Int = 0
-        var totalActualTime: Int = 0
+        var totalExpectedTime: Float = 0.0
+        var totalActualTime: Float = 0.0
         
         servicesForEmployee = serviceOps.getAllServicesForEmployee(employee)
         
@@ -61,14 +61,14 @@ class ViewProgressTableViewController: UITableViewController {
             let totalServices: Int = services.count
             var servicesCompleted: Int = 0
             
-            for var item in services
+            for item in services
             {
                 if item.isFinished
                 {
                     // Calculate employee's tardiness
-                    let timeToFinish = item.timeToFinishInMinutes
+                    let timeToFinish = item.timeToFinish
                     
-                    let expectedTime = item.serviceTimer.timerLengthInMinutes
+                    let expectedTime = Float(item.serviceTimer.timerLengthInMinutes)
                     
                     totalExpectedTime += expectedTime
                     totalActualTime += timeToFinish
