@@ -52,7 +52,7 @@ class EmployeeProgressViewTableViewController: UITableViewController {
         
         let serviceForCell = servicesForEmployee![indexPath.row]
         let serviceExpectedTime = NSString(format: "%.2f", Float(serviceForCell.serviceTimer.timerLengthInMinutes)).stringByReplacingOccurrencesOfString(".", withString: ":")
-        let serviceActualTime = NSString(format: "%.2f", calculateActualTimeForService(serviceForCell)).stringByReplacingOccurrencesOfString(".", withString: ":")
+        let serviceActualTime = NSString(format: "%.2f", serviceForCell.timeToFinish).stringByReplacingOccurrencesOfString(".", withString: ":")
 
         let roomStatus: String = calculateRoomProgress(serviceForCell)
         
@@ -70,17 +70,10 @@ class EmployeeProgressViewTableViewController: UITableViewController {
 
         return cell!
     }
-    
-    private func calculateActualTimeForService(service: Service) -> Float
-    {
-        let timeDifference = service.dateTimeFinished.timeIntervalSinceDate(service.dateTimeStarted)
-        let timeDiffFloat = Float(timeDifference) / 60.0
-        return timeDiffFloat
-    }
 
     private func calculateRoomProgress(service: Service) -> String
     {
-        let timeDifference = calculateActualTimeForService(service)
+        let timeDifference = service.timeToFinish
         
         switch (timeDifference)
         {
