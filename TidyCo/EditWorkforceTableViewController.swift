@@ -93,7 +93,8 @@ class EditWorkforceTableViewController: UITableViewController {
             headerHeight = fr.height
           
         }
-   
+        
+           
         return customView
     }
     
@@ -130,7 +131,11 @@ class EditWorkforceTableViewController: UITableViewController {
         }
     }
     
+    func bla(but : String){
     
+        
+        performSegueWithIdentifier("tableau", sender: self)
+    }
 
     
     
