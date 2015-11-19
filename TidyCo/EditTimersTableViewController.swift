@@ -10,8 +10,14 @@ import UIKit
 
 class EditTimersTableViewController: UITableViewController {
 
+    let adapter = ParseTimerStorageAdapter()
+    
+    var timers = [Timer]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timers = adapter.getAllTimers()!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +35,43 @@ class EditTimersTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return timers.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("timerCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = timers[indexPath.row].timerName
+        
+        let timerLength = timers[indexPath.row].timerLengthInMinutes / 60
+        let hours = timerLength / 60
+        let minutes = timerLength - (hours * 60)
+        
+        var detailString = ""
+        if hours != 0 {
+            if hours < 10 {
+                detailString += "0"
+            }
+            detailString += String(hours) + ":"
+        }
+        
+        if minutes < 10 {
+            detailString += "0"
+        }
+        detailString += String(minutes) + ":00"
+        
+        cell.detailTextLabel?.text = detailString
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
