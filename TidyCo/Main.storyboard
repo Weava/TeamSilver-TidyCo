@@ -215,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="1950" y="-539"/>
         </scene>
-        <!--Add Employee View Controller-->
+        <!--AddEmployeeViewController-->
         <scene sceneID="1Uu-pd-47E">
             <objects>
-                <viewController title="Add Employee View Controller" id="FdL-93-KoI" customClass="AddEmployeesViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Employee View Controller" id="FdL-93-KoI" userLabel="AddEmployeeViewController" customClass="AddEmployeesViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SBb-jB-xop"/>
                         <viewControllerLayoutGuide type="bottom" id="638-ge-yBx"/>

@@ -133,8 +133,11 @@ class EditWorkforceTableViewController: UITableViewController {
     
     func bla(but : String){
     
+        print("Unable to perform segue here! ");
+       // let vc : UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier("AddEmployeesViewController") as! UIViewController;
+        //self.presentViewController(vc, animated: true, completion: nil)
         
-        performSegueWithIdentifier("tableau", sender: self)
+       // performSegueWithIdentifier("addEmployeeSegue", sender: self)
     }
 
     
