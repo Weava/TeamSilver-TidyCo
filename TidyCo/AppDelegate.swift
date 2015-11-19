@@ -36,10 +36,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             print("Employee ID: \(employeeId)")
             //Select appropriate view controller for the user
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let userController: UserNavigationViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("userController") as! UserNavigationViewController
+            
+            let employeeType: String = (loginDefaults.valueForKey(StringUtils.employeeType) as? String)!
+            
+            print("Employee type: \(employeeType)")
+            
+            // Disabled check for Testing
+            // Set userController.isManager or userController.isEmployee to true for the respective storyboards
+            /*
+            if employeeType == "admin" || employeeType == "manager" {
+                userController.isManager = true
+            }
+            else {
+                userController.isEmployee = true
+            }
+            */
+            
+            userController.isManager = true
+            
+            
+            self.window?.rootViewController = userController
+            self.window?.makeKeyAndVisible()
         }
         else
         {
             //Select login view for the user
+            //The app was found to not have any login information from last time.
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginViewController: LoginController = mainStoryBoard.instantiateViewControllerWithIdentifier("loginController") as! LoginController
+            
+            self.window?.rootViewController = loginViewController
+            self.window?.makeKeyAndVisible()
+            
         }
         
         return true

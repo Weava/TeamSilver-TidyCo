@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2GF-wt-Nuw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,7 @@
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login Controller" id="BYZ-38-t0r" userLabel="Login Controller" customClass="LoginController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginController" title="Login Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="Login Controller" customClass="LoginController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,9 +37,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-kM-Lei">
-                                <rect key="frame" x="277" y="460" width="46" height="30"/>
+                                <rect key="frame" x="281" y="460" width="38" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjS-0x-j7r"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -59,6 +62,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textLoginPassword" destination="Hvu-tf-9cU" id="DxJ-2C-aVZ"/>
+                        <outlet property="textLoginUser" destination="fGn-Yk-EkH" id="UKS-DE-ZMp"/>
                         <segue destination="Anb-bb-Rcc" kind="show" id="j0A-Fp-Fry"/>
                     </connections>
                 </viewController>
@@ -66,18 +71,24 @@
             </objects>
             <point key="canvasLocation" x="-674" y="162"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--User Navigation View Controller-->
         <scene sceneID="aan-BZ-1Xt">
             <objects>
-                <navigationController id="Anb-bb-Rcc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="userController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Anb-bb-Rcc" customClass="UserNavigationViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xgg-RQ-jNX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="aZj-N3-YJh">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="2GF-wt-Nuw" kind="show" id="4xJ-tt-XcW"/>
-                        <segue destination="Ows-OM-wjJ" kind="show" identifier="EmployeeSegue" id="3m0-iY-dVF"/>
+                        <segue destination="2GF-wt-Nuw" kind="show" identifier="managerSegue" id="4xJ-tt-XcW"/>
+                        <segue destination="Ows-OM-wjJ" kind="show" identifier="employeeSegue" id="3m0-iY-dVF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9J-j5-QRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,7 +171,7 @@
         <!--Manager Tab Bar View-->
         <scene sceneID="5XP-zr-yEO">
             <objects>
-                <tabBarController title="Manager Tab Bar View" id="2GF-wt-Nuw" customClass="ManagerTabBarViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="managerController" title="Manager Tab Bar View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2GF-wt-Nuw" customClass="ManagerTabBarViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rt2-Y0-9UL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

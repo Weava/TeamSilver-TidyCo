@@ -11,4 +11,6 @@ import Foundation
 class StringUtils
 {
     internal static let loginDefaults = "loginDefaults"
+    internal static let employeeType = "employeeType"
+    
 }

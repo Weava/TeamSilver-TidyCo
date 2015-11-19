@@ -57,6 +57,7 @@
 		ED104A361BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */; };
 		ED104A381BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */; };
 		ED104A3A1BFB9E89004E0769 /* RoomNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */; };
+		ED27C51B1BFE3F1800441B5C /* UserNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27C51A1BFE3F1800441B5C /* UserNavigationViewController.swift */; };
 		EDC4B2541BFD74AF00BEFF29 /* EditFloorsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */; };
 		EDC4B2561BFD74C500BEFF29 /* EditFloorsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC4B2551BFD74C500BEFF29 /* EditFloorsHeaderView.swift */; };
 		EDC4B2581BFD7B4C00BEFF29 /* RoomsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC4B2571BFD7B4C00BEFF29 /* RoomsListTableViewController.swift */; };
@@ -144,6 +145,7 @@
 		ED104A351BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeProgressViewTableViewController.swift; sourceTree = "<group>"; };
 		ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRoomNotesViewController.swift; sourceTree = "<group>"; };
 		ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNotesTableViewController.swift; sourceTree = "<group>"; };
+		ED27C51A1BFE3F1800441B5C /* UserNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNavigationViewController.swift; sourceTree = "<group>"; };
 		EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditFloorsHeaderView.xib; sourceTree = "<group>"; };
 		EDC4B2551BFD74C500BEFF29 /* EditFloorsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFloorsHeaderView.swift; sourceTree = "<group>"; };
 		EDC4B2571BFD7B4C00BEFF29 /* RoomsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsListTableViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				ED104A371BFB9E5F004E0769 /* EmployeeRoomNotesViewController.swift */,
 				ED104A391BFB9E89004E0769 /* RoomNotesTableViewController.swift */,
 				EDC4B2571BFD7B4C00BEFF29 /* RoomsListTableViewController.swift */,
+				ED27C51A1BFE3F1800441B5C /* UserNavigationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				1C782C061BD053930046B280 /* LoginController.swift in Sources */,
 				ED104A361BFB9D7C004E0769 /* EmployeeProgressViewTableViewController.swift in Sources */,
 				7FF9427C1BFD45EF00E15C38 /* EditWorkforceHeaderViewClass.swift in Sources */,
+				ED27C51B1BFE3F1800441B5C /* UserNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

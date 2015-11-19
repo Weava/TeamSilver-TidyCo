@@ -12,6 +12,14 @@ class LoginController : UIViewController
 {
     let loginAdapter: ParseEmployeeStorageAdapter = ParseEmployeeStorageAdapter()
     
+    @IBOutlet weak var textLoginUser: UITextField!
+    @IBOutlet weak var textLoginPassword: UITextField!
+    
+    
+    @IBAction func loginButtonTap(sender: AnyObject) {
+        loginCheck(textLoginUser.text!, loginPassword: textLoginPassword.text!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Login controller, starting")
@@ -24,11 +32,11 @@ class LoginController : UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    private func loginCheck()
+    private func loginCheck(loginUser: String, loginPassword: String)
     {
         print("Running login check")
-        let loginUser: String = "testMaint"
-        let loginPassword: String = "realPass"
+        //let loginUser: String = "testMaint"
+        //let loginPassword: String = "realPass"
         
         if let employeeLogged: Employee = loginAdapter.checkLoginForEmployee(loginUser, password: loginPassword)!
         {
@@ -38,6 +46,10 @@ class LoginController : UIViewController
             
             print("Logged employee's type:  \(EmployeeType.getEmployeeTypeValue(employeeType)!.rawValue)")
             employeeStore.setObject(employeeLogged.employeeId, forKey: StringUtils.loginDefaults)
+           
+            employeeStore.setObject(employeeType.typeName, forKey: StringUtils.employeeType)
+            
+            
             employeeStore.synchronize()
         }
         else
