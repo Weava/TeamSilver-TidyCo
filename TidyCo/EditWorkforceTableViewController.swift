@@ -13,6 +13,7 @@ class EditWorkforceTableViewController: UITableViewController {
     let employeeOps = ParseEmployeeStorageAdapter()
     let serviceOps = ParseServiceStorageAdapter()
     var selectedRowIndex : Int = -1;
+    var headerHeight : CGFloat = 50
     
     var allEmployees: [Employee]?
 
@@ -77,36 +78,30 @@ class EditWorkforceTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         if indexPath.row == selectedRowIndex && selectedRowIndex != -1{
-            return 140
+            return 100
         }
         return 44
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        //var myView : UIView
-        //myView = UIView("editWorkforceHeader")
         
         let customView = NSBundle.mainBundle().loadNibNamed("EditWorkforceHeaderView", owner: self, options: nil).first as? UIView
-            
         
-       // headerCell.backgroundColor = UIColor.cyanColor()
-    /*
-        switch (section) {
-        case 0:
-            headerCell.headerLabel.text = "Europe";
-            //return sectionHeaderView
-        case 1:
-            headerCell.headerLabel.text = "Asia";
-            //return sectionHeaderView
-        case 2:
-            headerCell.headerLabel.text = "South America";
-            //return sectionHeaderView
-        default:
-            headerCell.headerLabel.text = "Other";
+        
+        if let fr : CGRect = customView?.frame{
+            
+            headerHeight = fr.height
+          
         }
-        */
+   
         return customView
     }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return headerHeight
+    }
+
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
