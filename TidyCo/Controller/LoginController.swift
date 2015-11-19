@@ -15,6 +15,8 @@ class LoginController : UIViewController
     @IBOutlet weak var textLoginUser: UITextField!
     @IBOutlet weak var textLoginPassword: UITextField!
     
+    var employeeTypeName: String?
+    
     
     @IBAction func loginButtonTap(sender: AnyObject) {
         loginCheck(textLoginUser.text!, loginPassword: textLoginPassword.text!)
@@ -44,6 +46,8 @@ class LoginController : UIViewController
             
             let employeeType: EmployeeType = employeeLogged[Employee.EMPLOYEE_TYPE_POINTER] as! EmployeeType
             
+            employeeTypeName = employeeType.typeName
+            
             print("Logged employee's type:  \(EmployeeType.getEmployeeTypeValue(employeeType)!.rawValue)")
             employeeStore.setObject(employeeLogged.employeeId, forKey: StringUtils.loginDefaults)
            
@@ -51,11 +55,30 @@ class LoginController : UIViewController
             
             
             employeeStore.synchronize()
+            
+            performSegueWithIdentifier("userNavigationSegue", sender: self)
         }
         else
         {
             print("Failed")
             // Do something to alert the user of incorrect password 'n' stuff.
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destinationVC = segue.destinationViewController as? UserNavigationViewController {
+            
+            destinationVC.isManager = true
+            
+            // Disabled for testing purposes
+            /*
+            if employeeTypeName == "admin" || employeeTypeName == "manager" {
+                destinationVC.isManager = true
+            }
+            else {
+                destinationVC.isEmployee = true
+            }
+            */
         }
     }
 }

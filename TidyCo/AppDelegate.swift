@@ -31,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServiceType.registerSubclass()
         EmployeeType.registerSubclass()
         
+        // CREATE TEST USERS
+        
+        
+        
+        // END CREATE TEST USERS
+        
         let loginDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if let employeeId: String = loginDefaults.valueForKey(StringUtils.loginDefaults) as? String
         {
