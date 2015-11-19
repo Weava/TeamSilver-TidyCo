@@ -31,6 +31,29 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
         return nil
     }
     
+    func getAllMaintenanceAndHousekeepingEmployees(storeNumber: String? = nil) -> [Employee]?
+    {
+        let query: PFQuery = Employee.query()!
+        
+        query.whereKey("employeeType", equalTo: getEmployeeTypeByName(EmployeeTypeValue.housekeeper)!)
+        query.whereKey("employeeType", equalTo: getEmployeeTypeByName(EmployeeTypeValue.maintenance)!)
+        
+        // Find all employees unless storeNumber is given.
+        if storeNumber != nil
+        {
+            query.whereKey("storeNumber", equalTo: storeNumber!)
+        }
+        
+        do
+        {
+            return try query.findObjects() as? [Employee]
+        } catch
+        {
+            print("Error finding employees")
+            return nil
+        }
+    }
+    
     func createEmployee(employee: Employee, employeeType: EmployeeTypeValue)
     {
         var employeesArr: [Employee]?

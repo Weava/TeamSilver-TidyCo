@@ -23,7 +23,7 @@ class ViewProgressTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        allEmployees = employeeOps.getAllItems()!
+        allEmployees = employeeOps.getAllMaintenanceAndHousekeepingEmployees()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -59,7 +59,7 @@ class EmployeeProgressViewTableViewController: UITableViewController {
         cell?.roomNumberLabel.text = serviceForCell.roomServiced.roomNum
         cell?.employeeStatusLabel.text = roomStatus
         
-        if serviceForCell.employeeNotes != ""
+        if serviceForCell.employeeNotes != "" || serviceForCell.employeeImages.count > 0
         {
             // Set imageView here
         }
@@ -74,16 +74,17 @@ class EmployeeProgressViewTableViewController: UITableViewController {
     private func calculateRoomProgress(service: Service) -> String
     {
         let timeDifference = service.timeToFinish
+        let expectedTime = Float(service.serviceTimer.timerLengthInMinutes)
         
         switch (timeDifference)
         {
-            case let x where x < Float(service.serviceTimer.timerLengthInMinutes):
+            case let x where x < expectedTime:
                 return "Ahead"
                 
-            case let x where x == Float(service.serviceTimer.timerLengthInMinutes):
+            case let x where x == expectedTime:
                 return "On Time"
                 
-            case let x where x > Float(service.serviceTimer.timerLengthInMinutes):
+            case let x where x > expectedTime:
                 return "Over Time"
                 
             default:
