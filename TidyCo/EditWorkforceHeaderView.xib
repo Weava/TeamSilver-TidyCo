@@ -11,32 +11,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-WL-dWL">
-                    <rect key="frame" x="8" y="37" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="8" y="37" width="99" height="30"/>
+                    <state key="normal" title="Add Worker"/>
                     <connections>
                         <action selector="AE:" destination="iN0-l3-epB" eventType="touchUpInside" id="SA7-xc-5Gi"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-j2-BmD">
-                    <rect key="frame" x="322" y="37" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="261" y="37" width="107" height="30"/>
+                    <state key="normal" title="Delete Worker"/>
                     <connections>
                         <action selector="DE:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fmq-Pg-tHz"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-bO-Hpr">
-                    <rect key="frame" x="174" y="37" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="167" y="37" width="61" height="30"/>
+                    <state key="normal" title="Edit Info"/>
                     <connections>
                         <action selector="EE:" destination="iN0-l3-epB" eventType="touchUpInside" id="jc8-ti-FlD"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-E5-gZm">
-                    <rect key="frame" x="26" y="20" width="11" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-7a-IUH">
                     <rect key="frame" x="192" y="20" width="11" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -44,7 +38,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-Wa-BZc">
-                    <rect key="frame" x="341" y="20" width="8" height="21"/>
+                    <rect key="frame" x="307" y="20" width="15" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-E5-gZm">
+                    <rect key="frame" x="52" y="20" width="11" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
