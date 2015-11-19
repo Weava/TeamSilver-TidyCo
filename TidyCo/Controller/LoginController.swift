@@ -14,6 +14,7 @@ class LoginController : UIViewController
     
     @IBOutlet weak var textLoginUser: UITextField!
     @IBOutlet weak var textLoginPassword: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     var employeeTypeName: String?
     
@@ -22,6 +23,12 @@ class LoginController : UIViewController
         loginCheck(textLoginUser.text!, loginPassword: textLoginPassword.text!)
     }
     
+    @IBAction func loginEditChange(sender: AnyObject) {
+        checkField()
+    }
+    @IBAction func passwordEditChange(sender: AnyObject) {
+        checkField()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Login controller, starting")
@@ -34,13 +41,22 @@ class LoginController : UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    func checkField() {
+        if textLoginUser.text!.isEmpty || textLoginPassword.text!.isEmpty {
+            loginButton.enabled = false
+        }
+        else {
+            loginButton.enabled = true
+        }
+    }
+    
     private func loginCheck(loginUser: String, loginPassword: String)
     {
         print("Running login check")
         //let loginUser: String = "testMaint"
         //let loginPassword: String = "realPass"
         
-        if let employeeLogged: Employee = loginAdapter.checkLoginForEmployee(loginUser, password: loginPassword)!
+        if let employeeLogged: Employee = loginAdapter.checkLoginForEmployee(loginUser, password: loginPassword)
         {
             let employeeStore: NSUserDefaults = NSUserDefaults.standardUserDefaults()
             
@@ -62,6 +78,13 @@ class LoginController : UIViewController
         {
             print("Failed")
             // Do something to alert the user of incorrect password 'n' stuff.
+            let alertController = UIAlertController(title: "Uh Oh!", message: "Incorrect Login ID or Password.\nPlease Try again.", preferredStyle: .Alert)
+            
+            let okayAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alertController.addAction(okayAction)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
     

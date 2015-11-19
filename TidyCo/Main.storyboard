@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login Controller-->
@@ -17,51 +16,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Npt-O8-Big">
-                                <rect key="frame" x="90" y="59" width="421" height="219"/>
-                                <animations/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-Yk-EkH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-Yk-EkH">
                                 <rect key="frame" x="203" y="323" width="194" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="wNi-hS-M4G"/>
+                                    <constraint firstAttribute="width" constant="194" id="JcD-6q-kcy"/>
+                                    <constraint firstAttribute="height" constant="30" id="aav-tb-SsF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="loginEditChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Nw8-a2-bGB"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-tf-9cU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-tf-9cU">
                                 <rect key="frame" x="203" y="387" width="194" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kIQ-e4-JQj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passwordEditChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Oyq-rl-1Lk"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-kM-Lei">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-kM-Lei">
                                 <rect key="frame" x="281" y="460" width="38" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xQa-PL-TGL"/>
+                                </constraints>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjS-0x-j7r"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TidyCo" translatesAutoresizingMaskIntoConstraints="NO" id="Npt-O8-Big">
+                                <rect key="frame" x="187" y="122" width="226" height="118"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="f3G-vt-xAT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="top" secondItem="Npt-O8-Big" secondAttribute="bottom" constant="45" id="68d-3q-IVU"/>
-                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="leading" secondItem="fGn-Yk-EkH" secondAttribute="leading" id="HOs-J8-fM4"/>
-                            <constraint firstItem="SzV-kM-Lei" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LEt-r3-Di8"/>
-                            <constraint firstItem="Npt-O8-Big" firstAttribute="centerX" secondItem="fGn-Yk-EkH" secondAttribute="centerX" id="LRN-2M-xEV"/>
-                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="top" secondItem="fGn-Yk-EkH" secondAttribute="bottom" constant="34" id="Ob5-5F-Nfn"/>
-                            <constraint firstItem="SzV-kM-Lei" firstAttribute="top" secondItem="Hvu-tf-9cU" secondAttribute="bottom" constant="43" id="Pdj-oe-nIK"/>
-                            <constraint firstItem="Npt-O8-Big" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="YkE-fh-FlU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SzV-kM-Lei" secondAttribute="bottom" constant="110" id="nQr-VZ-ze5"/>
-                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="trailing" secondItem="Hvu-tf-9cU" secondAttribute="trailing" id="oQI-0a-NVS"/>
-                            <constraint firstItem="Npt-O8-Big" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="wVP-mO-F03"/>
-                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="centerX" secondItem="SzV-kM-Lei" secondAttribute="centerX" id="yyp-DF-xBu"/>
+                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Z0-UF-uRi"/>
+                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="trailing" secondItem="fGn-Yk-EkH" secondAttribute="trailing" id="5Xp-O8-ye5"/>
+                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="top" secondItem="Npt-O8-Big" secondAttribute="bottom" constant="83" id="DVH-93-GFL"/>
+                            <constraint firstItem="SzV-kM-Lei" firstAttribute="centerX" secondItem="Hvu-tf-9cU" secondAttribute="centerX" id="U32-zw-hc1"/>
+                            <constraint firstItem="SzV-kM-Lei" firstAttribute="top" secondItem="Hvu-tf-9cU" secondAttribute="bottom" constant="43" id="aJ6-I7-M1E"/>
+                            <constraint firstItem="Npt-O8-Big" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="dPt-t2-TIn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SzV-kM-Lei" secondAttribute="bottom" constant="110" id="gIu-DO-Zt3"/>
+                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="leading" secondItem="Hvu-tf-9cU" secondAttribute="leading" id="nIx-Mp-3sr"/>
+                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="centerX" secondItem="Npt-O8-Big" secondAttribute="centerX" id="tsU-X1-zJc"/>
+                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="top" secondItem="fGn-Yk-EkH" secondAttribute="bottom" constant="34" id="vho-0H-nuN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="SzV-kM-Lei" id="8fn-AJ-31q"/>
                         <outlet property="textLoginPassword" destination="Hvu-tf-9cU" id="DxJ-2C-aVZ"/>
                         <outlet property="textLoginUser" destination="fGn-Yk-EkH" id="UKS-DE-ZMp"/>
                         <segue destination="Anb-bb-Rcc" kind="show" identifier="userNavigationSegue" id="j0A-Fp-Fry"/>
@@ -414,4 +429,7 @@
             <point key="canvasLocation" x="1942" y="1685"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TidyCo" width="213" height="119"/>
+    </resources>
 </document>
