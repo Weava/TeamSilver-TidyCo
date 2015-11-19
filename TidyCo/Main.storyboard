@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2GF-wt-Nuw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aoW-Et-QgO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login Controller" id="BYZ-38-t0r" userLabel="Login Controller" customClass="LoginController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginController" title="Login Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="Login Controller" customClass="LoginController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,67 +17,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Npt-O8-Big">
-                                <rect key="frame" x="90" y="59" width="421" height="219"/>
-                                <animations/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-Yk-EkH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-Yk-EkH">
                                 <rect key="frame" x="203" y="323" width="194" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="wNi-hS-M4G"/>
+                                    <constraint firstAttribute="width" constant="194" id="JcD-6q-kcy"/>
+                                    <constraint firstAttribute="height" constant="30" id="aav-tb-SsF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="loginEditChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Nw8-a2-bGB"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-tf-9cU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-tf-9cU">
                                 <rect key="frame" x="203" y="387" width="194" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kIQ-e4-JQj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passwordEditChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Oyq-rl-1Lk"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-kM-Lei">
-                                <rect key="frame" x="277" y="460" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-kM-Lei">
+                                <rect key="frame" x="281" y="460" width="38" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xQa-PL-TGL"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjS-0x-j7r"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TidyCo" translatesAutoresizingMaskIntoConstraints="NO" id="Npt-O8-Big">
+                                <rect key="frame" x="187" y="122" width="226" height="118"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="f3G-vt-xAT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="top" secondItem="Npt-O8-Big" secondAttribute="bottom" constant="45" id="68d-3q-IVU"/>
-                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="leading" secondItem="fGn-Yk-EkH" secondAttribute="leading" id="HOs-J8-fM4"/>
-                            <constraint firstItem="SzV-kM-Lei" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LEt-r3-Di8"/>
-                            <constraint firstItem="Npt-O8-Big" firstAttribute="centerX" secondItem="fGn-Yk-EkH" secondAttribute="centerX" id="LRN-2M-xEV"/>
-                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="top" secondItem="fGn-Yk-EkH" secondAttribute="bottom" constant="34" id="Ob5-5F-Nfn"/>
-                            <constraint firstItem="SzV-kM-Lei" firstAttribute="top" secondItem="Hvu-tf-9cU" secondAttribute="bottom" constant="43" id="Pdj-oe-nIK"/>
-                            <constraint firstItem="Npt-O8-Big" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="YkE-fh-FlU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SzV-kM-Lei" secondAttribute="bottom" constant="110" id="nQr-VZ-ze5"/>
-                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="trailing" secondItem="Hvu-tf-9cU" secondAttribute="trailing" id="oQI-0a-NVS"/>
-                            <constraint firstItem="Npt-O8-Big" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="wVP-mO-F03"/>
-                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="centerX" secondItem="SzV-kM-Lei" secondAttribute="centerX" id="yyp-DF-xBu"/>
+                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Z0-UF-uRi"/>
+                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="trailing" secondItem="fGn-Yk-EkH" secondAttribute="trailing" id="5Xp-O8-ye5"/>
+                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="top" secondItem="Npt-O8-Big" secondAttribute="bottom" constant="83" id="DVH-93-GFL"/>
+                            <constraint firstItem="SzV-kM-Lei" firstAttribute="centerX" secondItem="Hvu-tf-9cU" secondAttribute="centerX" id="U32-zw-hc1"/>
+                            <constraint firstItem="SzV-kM-Lei" firstAttribute="top" secondItem="Hvu-tf-9cU" secondAttribute="bottom" constant="43" id="aJ6-I7-M1E"/>
+                            <constraint firstItem="Npt-O8-Big" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="dPt-t2-TIn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SzV-kM-Lei" secondAttribute="bottom" constant="110" id="gIu-DO-Zt3"/>
+                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="leading" secondItem="Hvu-tf-9cU" secondAttribute="leading" id="nIx-Mp-3sr"/>
+                            <constraint firstItem="fGn-Yk-EkH" firstAttribute="centerX" secondItem="Npt-O8-Big" secondAttribute="centerX" id="tsU-X1-zJc"/>
+                            <constraint firstItem="Hvu-tf-9cU" firstAttribute="top" secondItem="fGn-Yk-EkH" secondAttribute="bottom" constant="34" id="vho-0H-nuN"/>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="Anb-bb-Rcc" kind="show" id="j0A-Fp-Fry"/>
+                        <outlet property="loginButton" destination="SzV-kM-Lei" id="8fn-AJ-31q"/>
+                        <outlet property="textLoginPassword" destination="Hvu-tf-9cU" id="DxJ-2C-aVZ"/>
+                        <outlet property="textLoginUser" destination="fGn-Yk-EkH" id="UKS-DE-ZMp"/>
+                        <segue destination="Anb-bb-Rcc" kind="show" identifier="userNavigationSegue" id="j0A-Fp-Fry"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-674" y="162"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--User Navigation View Controller-->
         <scene sceneID="aan-BZ-1Xt">
             <objects>
-                <navigationController id="Anb-bb-Rcc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="userController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Anb-bb-Rcc" customClass="UserNavigationViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xgg-RQ-jNX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="aZj-N3-YJh">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="2GF-wt-Nuw" kind="show" id="4xJ-tt-XcW"/>
-                        <segue destination="Ows-OM-wjJ" kind="show" identifier="EmployeeSegue" id="3m0-iY-dVF"/>
+                        <segue destination="2GF-wt-Nuw" kind="show" identifier="managerSegue" id="4xJ-tt-XcW"/>
+                        <segue destination="Ows-OM-wjJ" kind="show" identifier="employeeSegue" id="3m0-iY-dVF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9J-j5-QRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,8 +114,9 @@
         <!--View Progress-->
         <scene sceneID="5vs-Dw-u21">
             <objects>
-                <tableViewController id="G7h-7J-aup" customClass="ViewProgressTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="View Progress" id="G7h-7J-aup" customClass="ViewProgressTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="View Progress" id="Vb9-PZ-CgK"/>
+                    <navigationItem key="navigationItem" title="View Progress" id="SOY-uQ-GeY"/>
                     <connections>
                         <segue destination="wxT-ai-kfA" kind="show" identifier="viewEmployeeProgressSegue" id="zPm-vO-QQt"/>
                     </connections>
@@ -111,6 +139,7 @@
                             <outlet property="delegate" destination="wxT-ai-kfA" id="Vym-lO-hpi"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Employee Progress" id="euW-Tc-9S8"/>
                     <connections>
                         <segue destination="mFj-xo-fmg" kind="show" id="A5F-ja-HfX"/>
                     </connections>
@@ -133,6 +162,7 @@
                             <outlet property="delegate" destination="eRO-NQ-DXI" id="I6S-sE-aTR"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Rooms to Assign" id="tug-pz-631"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAb-0I-Y11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,15 +182,16 @@
                             <outlet property="delegate" destination="mFj-xo-fmg" id="mea-Jo-kEp"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Room Notes" id="bM5-BI-IbJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dr0-gH-kfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3642" y="-2139"/>
         </scene>
-        <!--Manager Tab Bar View-->
+        <!--Summary-->
         <scene sceneID="5XP-zr-yEO">
             <objects>
-                <tabBarController title="Manager Tab Bar View" id="2GF-wt-Nuw" customClass="ManagerTabBarViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="managerController" title="Summary" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2GF-wt-Nuw" customClass="ManagerTabBarViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rt2-Y0-9UL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -182,8 +213,9 @@
         <!--Assign Rooms-->
         <scene sceneID="vEy-RH-SyS">
             <objects>
-                <tableViewController id="CQi-Qt-LQ3" customClass="AssignRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Assign Rooms" id="CQi-Qt-LQ3" customClass="AssignRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Assign Rooms" id="TIG-KX-oS7"/>
+                    <navigationItem key="navigationItem" title="Assign Rooms" id="8YX-sC-kfo"/>
                     <connections>
                         <segue destination="eRO-NQ-DXI" kind="show" id="KFY-6O-KHf"/>
                     </connections>
@@ -192,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="1950" y="-1339"/>
         </scene>
-        <!--EDIT WORKFORCE-->
+        <!--Edit Workforce-->
         <scene sceneID="JAf-Dn-sFX">
             <objects>
-                <tableViewController title="EDIT WORKFORCE" id="qkp-SJ-3Er" customClass="EditWorkforceTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Edit Workforce" id="qkp-SJ-3Er" customClass="EditWorkforceTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WUs-nq-uSh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,6 +239,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Edit Workforce" id="3b5-hL-7Lb"/>
+                    <navigationItem key="navigationItem" title="Edit Workforce" id="jGb-2S-Fnw"/>
                     <connections>
                         <segue destination="FdL-93-KoI" kind="show" identifier="addEmployeeSegue" id="4PZ-hj-npq"/>
                     </connections>
@@ -270,6 +303,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Employee" id="FQN-w1-kN7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ids-vL-Wx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,7 +312,7 @@
         <!--Edit Rooms-->
         <scene sceneID="ioc-jJ-5XQ">
             <objects>
-                <tableViewController id="U0l-cM-vqk" customClass="EditRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Edit Rooms" id="U0l-cM-vqk" customClass="EditRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="690-Ji-f2d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,7 +323,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YqL-ax-XPx" id="BXL-5Y-44q">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -302,6 +336,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Edit Rooms" id="OIF-pt-7Wa"/>
+                    <navigationItem key="navigationItem" title="Floors" id="95x-yo-O1B"/>
                     <connections>
                         <segue destination="m9A-vt-4Fu" kind="show" identifier="editTimersSegue" id="iiJ-oH-82i"/>
                         <segue destination="rnd-Je-VBN" kind="show" identifier="roomListSegue" id="hae-wd-Nct"/>
@@ -325,7 +360,7 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sgc-Xu-u7p" id="7so-BE-Zry">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -337,6 +372,7 @@
                             <outlet property="delegate" destination="rnd-Je-VBN" id="aw7-K7-HuY"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Edit Rooms" id="jYa-t8-50A"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZr-ng-Cib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,15 +387,108 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timerCell" textLabel="YKk-HK-bqT" detailTextLabel="Qdj-JI-Uac" style="IBUITableViewCellStyleValue1" id="xWZ-d6-ISp">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xWZ-d6-ISp" id="YGs-YW-eFu">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YKk-HK-bqT">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qdj-JI-Uac">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="m9A-vt-4Fu" id="i7g-B4-iZx"/>
                             <outlet property="delegate" destination="m9A-vt-4Fu" id="Cz9-zF-9YX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Edit Timers" id="ddA-mh-y5G">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7tk-ci-6P3">
+                            <connections>
+                                <segue destination="aoW-Et-QgO" kind="show" id="k7c-sf-MRZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4O4-Ot-3oL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2814" y="261"/>
+        </scene>
+        <!--Add Timer-->
+        <scene sceneID="ntQ-ye-7P3">
+            <objects>
+                <viewController title="Add Timer" id="aoW-Et-QgO" customClass="AddTimerViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dAR-gX-zzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ihb-Et-FJN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3r1-0Y-jhd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8d6-dz-F5u">
+                                <rect key="frame" x="0.0" y="138" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="469656796.53477901">
+                                    <!--2015-11-19 20:13:16 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq4-mZ-zU8">
+                                <rect key="frame" x="20" y="97" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-hW-JWi">
+                                <rect key="frame" x="285" y="395" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonTap:" destination="aoW-Et-QgO" eventType="touchUpInside" id="lR4-bk-h0a"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2uK-9B-iVH">
+                                <rect key="frame" x="73" y="93" width="507" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8d6-dz-F5u" secondAttribute="trailing" id="4XI-00-l8P"/>
+                            <constraint firstItem="2uK-9B-iVH" firstAttribute="top" secondItem="dAR-gX-zzT" secondAttribute="bottom" constant="29" id="4xF-YC-qh7"/>
+                            <constraint firstItem="2uK-9B-iVH" firstAttribute="bottom" secondItem="Tq4-mZ-zU8" secondAttribute="bottom" constant="5" id="9HQ-gd-yCQ"/>
+                            <constraint firstItem="2uK-9B-iVH" firstAttribute="trailing" secondItem="3r1-0Y-jhd" secondAttribute="trailingMargin" id="DwJ-Ce-fsi"/>
+                            <constraint firstItem="eFF-hW-JWi" firstAttribute="top" secondItem="8d6-dz-F5u" secondAttribute="bottom" constant="41" id="Pmy-bf-Cgp"/>
+                            <constraint firstItem="2uK-9B-iVH" firstAttribute="leading" secondItem="Tq4-mZ-zU8" secondAttribute="trailing" constant="8" symbolic="YES" id="Qm9-GR-SKz"/>
+                            <constraint firstItem="8d6-dz-F5u" firstAttribute="top" secondItem="Tq4-mZ-zU8" secondAttribute="bottom" constant="20" id="hdw-r0-irM"/>
+                            <constraint firstItem="eFF-hW-JWi" firstAttribute="centerX" secondItem="8d6-dz-F5u" secondAttribute="centerX" id="l8a-4P-XGA"/>
+                            <constraint firstItem="8d6-dz-F5u" firstAttribute="leading" secondItem="3r1-0Y-jhd" secondAttribute="leading" id="m5a-0B-qEB"/>
+                            <constraint firstItem="Tq4-mZ-zU8" firstAttribute="leading" secondItem="3r1-0Y-jhd" secondAttribute="leadingMargin" id="uhb-HQ-Ctn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="2uK-9B-iVH" id="Vr9-fy-D65"/>
+                        <outlet property="timerPicker" destination="8d6-dz-F5u" id="Kgx-mg-Frf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyq-PB-47h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3427" y="274"/>
         </scene>
         <!--Employee Room List View-->
         <scene sceneID="KUa-ha-NRD">
@@ -375,6 +504,7 @@
                             <outlet property="delegate" destination="Ows-OM-wjJ" id="Ong-vH-uXx"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Rooms" id="8lx-GK-r3d"/>
                     <connections>
                         <segue destination="qqn-IX-ybp" kind="show" id="tYk-lR-3LX"/>
                     </connections>
@@ -397,10 +527,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Notes" id="U5B-kN-hIC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRt-Fa-3nl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1942" y="1685"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TidyCo" width="213" height="119"/>
+    </resources>
 </document>

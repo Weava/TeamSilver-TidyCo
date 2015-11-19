@@ -12,6 +12,23 @@ class LoginController : UIViewController
 {
     let loginAdapter: ParseEmployeeStorageAdapter = ParseEmployeeStorageAdapter()
     
+    @IBOutlet weak var textLoginUser: UITextField!
+    @IBOutlet weak var textLoginPassword: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    var employeeTypeName: String?
+    
+    
+    @IBAction func loginButtonTap(sender: AnyObject) {
+        loginCheck(textLoginUser.text!, loginPassword: textLoginPassword.text!)
+    }
+    
+    @IBAction func loginEditChange(sender: AnyObject) {
+        checkField()
+    }
+    @IBAction func passwordEditChange(sender: AnyObject) {
+        checkField()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Login controller, starting")
@@ -24,26 +41,67 @@ class LoginController : UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    private func loginCheck()
+    func checkField() {
+        if textLoginUser.text!.isEmpty || textLoginPassword.text!.isEmpty {
+            loginButton.enabled = false
+        }
+        else {
+            loginButton.enabled = true
+        }
+    }
+    
+    private func loginCheck(loginUser: String, loginPassword: String)
     {
         print("Running login check")
-        let loginUser: String = "testMaint"
-        let loginPassword: String = "realPass"
+        //let loginUser: String = "testMaint"
+        //let loginPassword: String = "realPass"
         
-        if let employeeLogged: Employee = loginAdapter.checkLoginForEmployee(loginUser, password: loginPassword)!
+        if let employeeLogged: Employee = loginAdapter.checkLoginForEmployee(loginUser, password: loginPassword)
         {
             let employeeStore: NSUserDefaults = NSUserDefaults.standardUserDefaults()
             
             let employeeType: EmployeeType = employeeLogged[Employee.EMPLOYEE_TYPE_POINTER] as! EmployeeType
             
+            employeeTypeName = employeeType.typeName
+            
             print("Logged employee's type:  \(EmployeeType.getEmployeeTypeValue(employeeType)!.rawValue)")
             employeeStore.setObject(employeeLogged.employeeId, forKey: StringUtils.loginDefaults)
+           
+            employeeStore.setObject(employeeType.typeName, forKey: StringUtils.employeeType)
+            
+            
             employeeStore.synchronize()
+            
+            performSegueWithIdentifier("userNavigationSegue", sender: self)
         }
         else
         {
             print("Failed")
             // Do something to alert the user of incorrect password 'n' stuff.
+            let alertController = UIAlertController(title: "Uh Oh!", message: "Incorrect Login ID or Password.\nPlease Try again.", preferredStyle: .Alert)
+            
+            let okayAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alertController.addAction(okayAction)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destinationVC = segue.destinationViewController as? UserNavigationViewController {
+            
+            destinationVC.isManager = true
+            
+            // Disabled for testing purposes
+            /*
+            if employeeTypeName == "admin" || employeeTypeName == "manager" {
+                destinationVC.isManager = true
+            }
+            else {
+                destinationVC.isEmployee = true
+            }
+            */
         }
     }
 }

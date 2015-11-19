@@ -102,6 +102,11 @@ class EditWorkforceTableViewController: UITableViewController {
         
         return headerHeight
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.title = self.title
+    }
 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -48,6 +48,11 @@ class ViewProgressTableViewController: UITableViewController {
         return (allEmployees?.count)!
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.title = self.title
+    }
+    
     private func getEmployeeProgress(employee: Employee) -> EmployeeStatus?
     {
         var totalExpectedTime: Float = 0.0
