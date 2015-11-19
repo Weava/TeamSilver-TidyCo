@@ -89,24 +89,20 @@ class EditWorkforceTableViewController: UITableViewController {
         let customView = NSBundle.mainBundle().loadNibNamed("EditWorkforceHeaderView", owner: self, options: nil).first as? UIView
             
         
-       // headerCell.backgroundColor = UIColor.cyanColor()
-    /*
-        switch (section) {
-        case 0:
-            headerCell.headerLabel.text = "Europe";
-            //return sectionHeaderView
-        case 1:
-            headerCell.headerLabel.text = "Asia";
-            //return sectionHeaderView
-        case 2:
-            headerCell.headerLabel.text = "South America";
-            //return sectionHeaderView
-        default:
-            headerCell.headerLabel.text = "Other";
+        if let fr : CGRect = customView?.frame{
+            
+           
+            let newfr : CGRect = CGRectMake(0 , 0, fr.width, fr.height * 0.3)
+            customView?.frame = newfr
+            
+            print(fr);
+            print(newfr);
         }
-        */
+   
         return customView
     }
+    
+
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
