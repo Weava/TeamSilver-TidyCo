@@ -8,19 +8,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EditRoomsHeaderView" customModule="TidyCo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ey-Cp-fj0">
-                    <rect key="frame" x="8" y="25" width="71" height="30"/>
+                    <rect key="frame" x="8" y="0.0" width="71" height="30"/>
                     <state key="normal" title="Add Room"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAv-Vn-uta">
-                    <rect key="frame" x="172" y="25" width="70" height="30"/>
+                    <rect key="frame" x="172" y="0.0" width="70" height="30"/>
                     <state key="normal" title="Edit Room"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oks-KB-s1M">
-                    <rect key="frame" x="318" y="25" width="88" height="30"/>
+                    <rect key="frame" x="318" y="0.0" width="88" height="30"/>
                     <state key="normal" title="Delete Room"/>
                 </button>
             </subviews>
@@ -30,7 +30,7 @@
                 <constraint firstItem="9ey-Cp-fj0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="BOf-L6-FOB"/>
                 <constraint firstItem="9ey-Cp-fj0" firstAttribute="baseline" secondItem="XAv-Vn-uta" secondAttribute="baseline" id="Ea8-XK-IE4"/>
                 <constraint firstItem="oks-KB-s1M" firstAttribute="baseline" secondItem="XAv-Vn-uta" secondAttribute="baseline" id="MW2-m6-QWu"/>
-                <constraint firstItem="oks-KB-s1M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="17" id="c3P-A3-fLQ"/>
+                <constraint firstItem="oks-KB-s1M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="-8" id="c3P-A3-fLQ"/>
                 <constraint firstItem="oks-KB-s1M" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="hmv-Sf-WWR"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -40,7 +40,7 @@
                 <outlet property="deleteRoomsButton" destination="oks-KB-s1M" id="avd-GB-mgJ"/>
                 <outlet property="editRoomsButton" destination="XAv-Vn-uta" id="qpq-aG-NG2"/>
             </connections>
-            <point key="canvasLocation" x="509" y="-11.5"/>
+            <point key="canvasLocation" x="509" y="1"/>
         </view>
     </objects>
 </document>

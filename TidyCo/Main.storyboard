@@ -442,10 +442,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8d6-dz-F5u">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d6-dz-F5u">
                                 <rect key="frame" x="0.0" y="138" width="600" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="469656796.53477901">
-                                    <!--2015-11-19 20:13:16 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="466923600.53477901">
+                                    <!--2015-10-19 05:00:00 +0000-->
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq4-mZ-zU8">
@@ -484,9 +484,11 @@
                     <connections>
                         <outlet property="nameTextField" destination="2uK-9B-iVH" id="Vr9-fy-D65"/>
                         <outlet property="timerPicker" destination="8d6-dz-F5u" id="Kgx-mg-Frf"/>
+                        <segue destination="Vvt-9I-afO" kind="unwind" identifier="timerListSegue" unwindAction="unwindToTimerList:" id="qeG-Y1-52g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyq-PB-47h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vvt-9I-afO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3427" y="274"/>
         </scene>
