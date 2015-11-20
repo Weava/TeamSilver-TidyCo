@@ -1,5 +1,5 @@
 //
-//  RoomNotesViewController.swift
+//  RoomNotesTableViewController.swift
 //  TidyCo
 //
 //  Created by KEETON AUSTIN R on 11/17/15.
@@ -9,27 +9,44 @@
 import UIKit
 
 class RoomNotesViewController: UIViewController {
+    
+    var employee: Employee?
+    var service: Service?
 
+    @IBOutlet weak var employeeNotesLabel: UILabel!
+    @IBOutlet weak var employeeImagesImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        employeeNotesLabel.lineBreakMode = .ByWordWrapping
+        employeeNotesLabel.numberOfLines = 0
+        
+        if let employee = employee
+        {
+            self.title = "\(employee.lastName), \(employee.firstName)"
+        }
+        
+        if let service = service
+        {
+            if service.employeeNotes != ""
+            {
+                employeeNotesLabel.text = service.employeeNotes
+            }
+            if service.employeeImages.count > 0
+            {
+                service.employeeImages.first!.getDataInBackgroundWithBlock({ (data, error) -> Void in
+                    if let data = data where error == nil{
+                        let image = UIImage(data: data)
+                        self.employeeImagesImageView.image = image
+                    }
+                })
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

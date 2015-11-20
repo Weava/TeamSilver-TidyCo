@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SegueActivation
+{
+    func startSegue()
+}
+
 class EmployeeProgressViewTableViewController: UITableViewController {
 
     var employee: Employee?
@@ -59,31 +64,40 @@ class EmployeeProgressViewTableViewController: UITableViewController {
         cell?.roomNumberLabel.text = serviceForCell.roomServiced.roomNum
         cell?.employeeStatusLabel.text = roomStatus
         
-        if serviceForCell.employeeNotes != ""
+        if serviceForCell.employeeNotes != "" || serviceForCell.employeeImages.count > 0
         {
             // Set imageView here
         }
+        else
+        {
+            cell?.selectionStyle = .None
+            cell?.userInteractionEnabled = false
+        }
         
         cell?.timeDifferenceLabel.text = "\(serviceActualTime)/\(serviceExpectedTime)"
-        
-        // Configure the cell...
 
         return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        performSegueWithIdentifier("managerViewRoomNotesSegue", sender: self)
     }
 
     private func calculateRoomProgress(service: Service) -> String
     {
         let timeDifference = service.timeToFinish
+        let expectedTime = Float(service.serviceTimer.timerLengthInMinutes)
         
         switch (timeDifference)
         {
-            case let x where x < Float(service.serviceTimer.timerLengthInMinutes):
+            case let x where x < expectedTime:
                 return "Ahead"
                 
-            case let x where x == Float(service.serviceTimer.timerLengthInMinutes):
+            case let x where x == expectedTime:
                 return "On Time"
                 
-            case let x where x > Float(service.serviceTimer.timerLengthInMinutes):
+            case let x where x > expectedTime:
                 return "Over Time"
                 
             default:
@@ -126,14 +140,21 @@ class EmployeeProgressViewTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+        if segue.identifier == "managerViewRoomNotesSegue"
+        {
+            if let destination = segue.destinationViewController as? RoomNotesViewController
+            {
+                destination.employee = employee
+                destination.service = servicesForEmployee![(tableView.indexPathForSelectedRow?.row)!]
+            }
+        }
     }
-    */
+
 
 }
