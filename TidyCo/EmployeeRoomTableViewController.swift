@@ -9,10 +9,16 @@
 import UIKit
 
 class EmployeeRoomTableViewController: UITableViewController {
+    
+    let serviceOps = ParseServiceStorageAdapter()
+    
+    var employee: Employee?
+    var servicesForEmployee: [Service]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        servicesForEmployee = serviceOps.getAllServicesForEmployee(employee!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,15 +35,15 @@ class EmployeeRoomTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (servicesForEmployee?.count)!
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
@@ -45,7 +51,7 @@ class EmployeeRoomTableViewController: UITableViewController {
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
