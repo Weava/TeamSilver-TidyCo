@@ -11,7 +11,7 @@ import UIKit
 class EditRoomsTableViewController: UITableViewController {
 
     var floors = [Floor]()
-    var headerHeight : CGFloat = 50
+    var headerHeight : CGFloat = 44
     var selectedRowIndexPath: NSIndexPath?
 
     
@@ -74,12 +74,12 @@ class EditRoomsTableViewController: UITableViewController {
         customView?.addFloorButton.addTarget(self, action: "addFloor:", forControlEvents: UIControlEvents.TouchUpInside)
         customView?.editTimersButton.addTarget(self, action: "editTimers:", forControlEvents: UIControlEvents.TouchUpInside)
         
-        
+        /*
         if let fr : CGRect = customView?.frame{
             
             headerHeight = fr.height
             
-        }
+        }*/
         
         return customView
     }

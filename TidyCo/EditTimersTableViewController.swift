@@ -50,7 +50,7 @@ class EditTimersTableViewController: UITableViewController {
         // Configure the cell...
         cell.textLabel?.text = timers[indexPath.row].timerName
         
-        let timerLength = timers[indexPath.row].timerLengthInMinutes / 60
+        let timerLength = timers[indexPath.row].timerLengthInMinutes
         let hours = timerLength / 60
         let minutes = timerLength - (hours * 60)
         
@@ -72,6 +72,12 @@ class EditTimersTableViewController: UITableViewController {
         return cell
     }
     
+    
+    @IBAction func unwindToTimerList(segue: UIStoryboardSegue) {
+        let sourceVC = segue.sourceViewController as? AddTimerViewController
+        timers.append((sourceVC?.addedTimer)!)
+        self.tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.

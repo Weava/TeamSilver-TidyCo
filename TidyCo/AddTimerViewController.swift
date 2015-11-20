@@ -10,11 +10,33 @@ import UIKit
 
 class AddTimerViewController: UIViewController {
 
+    var addedTimer: Timer?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var timerPicker: UIDatePicker!
     @IBAction func addButtonTap(sender: AnyObject) {
         print(nameTextField.text!)
-        print(timerPicker.date.)
+        print(Int(timerPicker.countDownDuration/60))
+        
+        if !nameTextField.text!.isEmpty {
+            let newTimer = Timer()
+            newTimer.timerName = nameTextField.text!
+            newTimer.timerLengthInMinutes = Int(timerPicker.countDownDuration/60)
+            newTimer.dateCreated = NSDate()
+            ParseTimerStorageAdapter().createTimer(newTimer)
+            
+            addedTimer = newTimer
+            
+            performSegueWithIdentifier("timerListSegue", sender: self)
+        }
+        else {
+            let alertController = UIAlertController(title: "Name Required", message: "Please enter a name for your timer.", preferredStyle: .Alert)
+            
+            let okayAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alertController.addAction(okayAction)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

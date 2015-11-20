@@ -8,24 +8,24 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EditTimersHeaderView" customModule="TidyCo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5m-Sc-kII">
-                    <rect key="frame" x="8" y="25" width="71" height="30"/>
+                    <rect key="frame" x="8" y="0.0" width="71" height="30"/>
                     <state key="normal" title="Add Timer"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Up-2k-Jde">
-                    <rect key="frame" x="318" y="25" width="88" height="30"/>
+                    <rect key="frame" x="318" y="0.0" width="88" height="30"/>
                     <state key="normal" title="Delete Timer"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="n5m-Sc-kII" secondAttribute="bottom" id="JMr-4m-XSk"/>
                 <constraint firstItem="n5m-Sc-kII" firstAttribute="baseline" secondItem="1Up-2k-Jde" secondAttribute="baseline" id="JUN-Ua-aEy"/>
-                <constraint firstItem="n5m-Sc-kII" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="awn-4M-blZ"/>
-                <constraint firstItem="1Up-2k-Jde" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="uci-9Q-HvY"/>
+                <constraint firstItem="1Up-2k-Jde" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ujz-0K-wrf"/>
+                <constraint firstItem="n5m-Sc-kII" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="oPN-FT-8t4"/>
+                <constraint firstItem="1Up-2k-Jde" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="vzK-MB-6PF"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -33,7 +33,7 @@
                 <outlet property="addTimerButton" destination="n5m-Sc-kII" id="JXv-ao-iyi"/>
                 <outlet property="deleteTimerButton" destination="1Up-2k-Jde" id="NLF-15-t4Y"/>
             </connections>
-            <point key="canvasLocation" x="468" y="224.5"/>
+            <point key="canvasLocation" x="468" y="237"/>
         </view>
     </objects>
 </document>
