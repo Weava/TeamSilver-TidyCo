@@ -12,8 +12,17 @@ class ManagerTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //UITabBar.appearance().barTintColor = UIColor(red: 47.0/255.0, green: 157.0/255.0, blue: 255.0, alpha: 1.0)
 
         // Do any additional setup after loading the view.
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        
+        for item in self.tabBar.items! {
+            if let image = item.image {
+                item.image = image.imageWithRenderingMode(.AlwaysOriginal)
+            }
+            item
+        }
     }
 
     override func didReceiveMemoryWarning() {
