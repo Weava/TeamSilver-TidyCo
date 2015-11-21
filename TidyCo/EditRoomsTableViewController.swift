@@ -18,6 +18,8 @@ class EditRoomsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         let adapter = ParseFloorStorageAdapter()
         
         floors = adapter.getAllFloors()!
