@@ -10,38 +10,64 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-WL-dWL">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-WL-dWL">
                     <rect key="frame" x="8" y="25" width="99" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="99" id="ljk-uH-Omt"/>
+                    </constraints>
                     <state key="normal" title="Add Worker"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-j2-BmD">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-j2-BmD">
                     <rect key="frame" x="262" y="25" width="106" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="106" id="U9Z-bt-5kz"/>
+                    </constraints>
                     <state key="normal" title="Delete Worker"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-bO-Hpr">
-                    <rect key="frame" x="167" y="25" width="61" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-bO-Hpr">
+                    <rect key="frame" x="157" y="25" width="61" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="61" id="cnt-gC-aWO"/>
+                    </constraints>
                     <state key="normal" title="Edit Info"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-7a-IUH">
-                    <rect key="frame" x="192" y="8" width="11" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-Wa-BZc">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-Wa-BZc">
                     <rect key="frame" x="307" y="8" width="15" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="ovX-Qb-ffU"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-E5-gZm">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-E5-gZm">
                     <rect key="frame" x="52" y="8" width="11" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-7a-IUH">
+                    <rect key="frame" x="182" y="8" width="11" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.85882352939999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="3Mh-j2-BmD" firstAttribute="top" secondItem="Ly4-Wa-BZc" secondAttribute="bottom" constant="-4" id="20i-xC-f9C"/>
+                <constraint firstItem="lKJ-7a-IUH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="52H-R0-ezu"/>
+                <constraint firstAttribute="trailing" secondItem="Ly4-Wa-BZc" secondAttribute="trailing" constant="53" id="5Wo-G8-hXC"/>
+                <constraint firstItem="lKJ-7a-IUH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GZf-AU-e05"/>
+                <constraint firstItem="bvT-WL-dWL" firstAttribute="top" secondItem="Hp1-E5-gZm" secondAttribute="bottom" constant="-4" id="JSx-Va-dk0"/>
+                <constraint firstItem="6x9-bO-Hpr" firstAttribute="top" secondItem="lKJ-7a-IUH" secondAttribute="bottom" constant="-4" id="Kab-rK-bEA"/>
+                <constraint firstItem="6x9-bO-Hpr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LDE-Au-YSj"/>
+                <constraint firstItem="Hp1-E5-gZm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="OTh-0C-7QV"/>
+                <constraint firstItem="Ly4-Wa-BZc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="WHk-AQ-drL"/>
+                <constraint firstAttribute="trailing" secondItem="3Mh-j2-BmD" secondAttribute="trailing" constant="7" id="dXs-hI-Reo"/>
+                <constraint firstItem="Hp1-E5-gZm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="52" id="dc4-lp-ACY"/>
+                <constraint firstItem="bvT-WL-dWL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="hAx-kb-3uX"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="AddWorkerOutlet" destination="bvT-WL-dWL" id="H91-y0-sHL"/>
