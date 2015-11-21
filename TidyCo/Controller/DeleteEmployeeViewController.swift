@@ -32,6 +32,9 @@ class DeleteEmployeeViewController: UIViewController {
             
             
             // Delete Employee
+            let adapter = ParseEmployeeStorageAdapter()
+            
+            self.selectedEmployee.deleteInBackground()
             
             print("Deleted \(self.selectedEmployee.lastName.uppercaseString), \(self.selectedEmployee.firstName)")
             // Go back
