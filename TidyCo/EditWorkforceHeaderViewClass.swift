@@ -12,26 +12,16 @@ import Foundation
 class EditWorkforceHeaderViewClass: UIView
 {
     
-    var buttonString = String()
     
-    @IBAction func AE(sender: UIButton) {
-        
-             
-        EditWorkforceTableViewController().bla(buttonString)
-                
-    }
     
-    @IBAction func EE(sender: UIButton) {
-    }
     
-    @IBAction func DE(sender: UIButton) {
-    }
+    
+    @IBOutlet weak var AddWorkerOutlet: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
    
     
 }

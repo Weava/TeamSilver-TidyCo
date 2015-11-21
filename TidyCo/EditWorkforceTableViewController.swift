@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class EditWorkforceTableViewController: UITableViewController {
     
     let employeeOps = ParseEmployeeStorageAdapter()
@@ -16,7 +17,7 @@ class EditWorkforceTableViewController: UITableViewController {
     var headerHeight : CGFloat = 50
     
     var allEmployees: [Employee]?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,8 +86,9 @@ class EditWorkforceTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let customView = NSBundle.mainBundle().loadNibNamed("EditWorkforceHeaderView", owner: self, options: nil).first as? UIView
+        let customView = NSBundle.mainBundle().loadNibNamed("EditWorkforceHeaderView", owner: self, options: nil).first as? EditWorkforceHeaderViewClass
         
+        customView?.AddWorkerOutlet.addTarget(self, action: "AddWorker:", forControlEvents: UIControlEvents.TouchUpInside)
         
         if let fr : CGRect = customView?.frame{
             
@@ -120,7 +122,7 @@ class EditWorkforceTableViewController: UITableViewController {
             self.selectedRowIndex = indexPath.row
             
             // paint the selected cell to gray
-            self.tableView.cellForRowAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
+            //self.tableView.cellForRowAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
             
             // update the height for all the cells
             self.tableView.beginUpdates()
@@ -136,16 +138,61 @@ class EditWorkforceTableViewController: UITableViewController {
         }
     }
     
-    func bla(but : String){
+    func AddWorker(sender : UIButton!){
     
-        print("Unable to perform segue here! ");
-       // let vc : UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier("AddEmployeesViewController") as! UIViewController;
-        //self.presentViewController(vc, animated: true, completion: nil)
+        performSegueWithIdentifier("addEmployeeSegue", sender: self)
         
-       // performSegueWithIdentifier("addEmployeeSegue", sender: self)
     }
 
+    @IBAction func addEmployee(segue:UIStoryboardSegue) {
     
+        
+        if let destViewController = segue.sourceViewController as? AddEmployeesViewController {
+            
+            let s1 = destViewController.firstName
+            let s2 = destViewController.middleInitial
+            let s3 = destViewController.lastName
+            let s4 = destViewController.employeeId
+            let s5 = destViewController.storeNumber
+            let s6 = destViewController.loginId
+            let s7 = destViewController.hashedPassword
+            
+            print(s1)
+            print(s2)
+            print(s3)
+            print(s4)
+            print(s5)
+            print(s6)
+            print(s7)
+            
+            var newEmp = Employee()
+            var empType = EmployeeType()
+            
+            var et = EmployeeTypeValue(rawValue: "housekeeper")
+            
+            
+            empType.typeName = "housekeeper"
+            
+            newEmp.firstName = s1
+            newEmp.middleInitial = s2
+            newEmp.lastName = s3
+            newEmp.employeeId = s4
+            newEmp.storeNumber = s5
+            newEmp.loginId = s6
+            newEmp.hashedPassword = s7
+            
+            newEmp.employeeType = empType
+            
+            let adapter = ParseEmployeeStorageAdapter()
+            adapter.createEmployee(newEmp,employeeType: et!)
+            
+            self.viewDidLoad()
+            
+            self.tableView.reloadData()
+            
+            
+        }
+    }
     
     /*
     // Override to support conditional editing of the table view.

@@ -51,6 +51,7 @@ class EditRoomsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("floorCell", forIndexPath: indexPath)
+        
 
         // Configure the cell...
         cell.textLabel?.text = "FLOOR " + floors[indexPath.row].floorNum

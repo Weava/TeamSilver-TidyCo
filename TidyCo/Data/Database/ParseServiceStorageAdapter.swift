@@ -38,6 +38,23 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
         }
     }
     
+    func getServicesForEmployeeOnTodaysDate(employeeAssigned: Employee) -> [Service]?
+    {
+        let query: PFQuery = self.queryWithRelations()
+        
+        let startOfToday = NSCalendar.currentCalendar().startOfDayForDate(NSDate())
+        
+        query.whereKey("dateTimeAssigned", greaterThanOrEqualTo: startOfToday)
+        
+        do
+        {
+            return try query.findObjects() as? [Service]
+        } catch
+        {
+            return nil
+        }
+    }
+    
     func createService(service: Service)
     {
         service.saveInBackground()
