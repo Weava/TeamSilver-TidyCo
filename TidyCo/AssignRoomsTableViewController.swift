@@ -18,6 +18,7 @@ class AssignRoomsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView!.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,15 +43,16 @@ class AssignRoomsTableViewController: UITableViewController {
         self.tabBarController?.title = self.title
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
+        cell.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -20,7 +20,7 @@
                     <state key="normal" title="Delete Timer"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.85882352939999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="n5m-Sc-kII" firstAttribute="baseline" secondItem="1Up-2k-Jde" secondAttribute="baseline" id="JUN-Ua-aEy"/>
                 <constraint firstItem="1Up-2k-Jde" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ujz-0K-wrf"/>

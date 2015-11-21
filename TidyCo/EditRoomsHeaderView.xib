@@ -24,7 +24,7 @@
                     <state key="normal" title="Delete Room"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.85882352939999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="XAv-Vn-uta" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1Zn-z9-fGj"/>
                 <constraint firstItem="9ey-Cp-fj0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="BOf-L6-FOB"/>

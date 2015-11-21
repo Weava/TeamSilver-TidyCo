@@ -24,6 +24,7 @@ class EditTimersTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView!.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +69,8 @@ class EditTimersTableViewController: UITableViewController {
         detailString += String(minutes) + ":00"
         
         cell.detailTextLabel?.text = detailString
+        
+        cell.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
 
         return cell
     }
