@@ -38,6 +38,7 @@
 		1CC05F621BC73110003DB99F /* TidyCoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC05F611BC73110003DB99F /* TidyCoUITests.swift */; };
 		1CDB9C041BEC4F6900A9DEA9 /* StringUitls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB9C031BEC4F6900A9DEA9 /* StringUitls.swift */; };
 		7E0C1AE4EED781457A18FFF7 /* libPods-TidyCo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE617F29106482EDF060A424 /* libPods-TidyCo.a */; };
+		7F3FD47E1BFFE3230062287D /* EditEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FD47D1BFFE3230062287D /* EditEmployeeController.swift */; };
 		7FF9427C1BFD45EF00E15C38 /* EditWorkforceHeaderViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9427A1BFD45EF00E15C38 /* EditWorkforceHeaderViewClass.swift */; };
 		7FF9427D1BFD45EF00E15C38 /* EditWorkforceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9427B1BFD45EF00E15C38 /* EditWorkforceTableViewCell.swift */; };
 		7FF942801BFD460100E15C38 /* EditWorkforceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9427E1BFD460100E15C38 /* EditWorkforceHeaderView.xib */; };
@@ -124,6 +125,7 @@
 		1CDB9C061BF0188100A9DEA9 /* AppDesignVisuals.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = AppDesignVisuals.pdf; path = Docs/AppDesignVisuals.pdf; sourceTree = "<group>"; };
 		1CDB9C191BF0350000A9DEA9 /* HKAppWireframes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = HKAppWireframes.pdf; path = Docs/HKAppWireframes.pdf; sourceTree = "<group>"; };
 		3022936D46E13BD6DBA6332E /* Pods-TidyCoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidyCoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidyCoTests/Pods-TidyCoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F3FD47D1BFFE3230062287D /* EditEmployeeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditEmployeeController.swift; path = Controller/EditEmployeeController.swift; sourceTree = "<group>"; };
 		7FF9427A1BFD45EF00E15C38 /* EditWorkforceHeaderViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWorkforceHeaderViewClass.swift; sourceTree = "<group>"; };
 		7FF9427B1BFD45EF00E15C38 /* EditWorkforceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWorkforceTableViewCell.swift; sourceTree = "<group>"; };
 		7FF9427E1BFD460100E15C38 /* EditWorkforceHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditWorkforceHeaderView.xib; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				ED104A291BFB9C64004E0769 /* EditTimersTableViewController.swift */,
 				ED104A2B1BFB9C94004E0769 /* EditWorkforceTableViewController.swift */,
 				ED104A2D1BFB9CB5004E0769 /* AddEmployeesViewController.swift */,
+				7F3FD47D1BFFE3230062287D /* EditEmployeeController.swift */,
 				ED104A2F1BFB9D1A004E0769 /* AssignRoomsTableViewController.swift */,
 				ED104A311BFB9D38004E0769 /* RoomsToAssignTableViewController.swift */,
 				ED104A331BFB9D61004E0769 /* ViewProgressTableViewController.swift */,
@@ -628,6 +631,7 @@
 				1C7B8B611BF52E310069C10E /* ShapedButton.swift in Sources */,
 				ED026B8E1BFD9CB200842292 /* EditRoomsHeaderView.swift in Sources */,
 				1C782C111BD075920046B280 /* ParseFloorStorageAdapter.swift in Sources */,
+				7F3FD47E1BFFE3230062287D /* EditEmployeeController.swift in Sources */,
 				1CDB9C041BEC4F6900A9DEA9 /* StringUitls.swift in Sources */,
 				ED104A2C1BFB9C94004E0769 /* EditWorkforceTableViewController.swift in Sources */,
 				1C782C191BD077410046B280 /* EmployeeStorageAdapter.swift in Sources */,
