@@ -18,10 +18,12 @@ class AddEmployeesViewController: UIViewController {
      var loginId = String()
      var hashedPassword = String()
     
-    @IBOutlet weak var employeeNameOutlet: UITextField!
-    
-    @IBOutlet weak var EmployeeIdOutlet: UITextField!
-    
+    @IBOutlet weak var AddFirstNameOutlet: UITextField!
+    @IBOutlet weak var AddMiddleInitialOutlet: UITextField!
+    @IBOutlet weak var AddLastNameOutlet: UITextField!
+    @IBOutlet weak var AddEmployeeIDOutlet: UITextField!
+    @IBOutlet weak var AddStoreNumberOutlet: UITextField!
+    @IBOutlet weak var AddPasswordOutlet: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +47,8 @@ class AddEmployeesViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
+        // Temporary string passing default values.
+        /// Replace with the values from the outlets.
         let str : String = "NewEmp2"
         
         firstName = str

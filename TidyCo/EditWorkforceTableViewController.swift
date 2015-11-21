@@ -30,6 +30,14 @@ class EditWorkforceTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func viewDidAppear(animated: Bool) {
+        
+        print("ViewWillAppear")
+        allEmployees = employeeOps.getAllItems()!
+        self.tableView.reloadData()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -110,6 +118,8 @@ class EditWorkforceTableViewController: UITableViewController {
         return headerHeight
     }
     
+    
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.title = self.title
@@ -183,10 +193,9 @@ class EditWorkforceTableViewController: UITableViewController {
             print(s6)
             print(s7)
             
-            var newEmp = Employee()
-            var empType = EmployeeType()
-            
-            var et = EmployeeTypeValue(rawValue: "housekeeper")
+            let newEmp = Employee()
+            let empType = EmployeeType()
+            let et = EmployeeTypeValue(rawValue: "housekeeper")
             
             
             empType.typeName = "housekeeper"

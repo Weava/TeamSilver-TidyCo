@@ -400,6 +400,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Employee" id="FQN-w1-kN7"/>
+                    <connections>
+                        <outlet property="AddEmployeeIDOutlet" destination="6mN-Di-BJ7" id="6R3-pd-6IB"/>
+                        <outlet property="AddFirstNameOutlet" destination="cOq-gi-m6R" id="Wvd-wN-xH1"/>
+                        <outlet property="AddLastNameOutlet" destination="Gud-aT-kHh" id="3R0-Kp-wZy"/>
+                        <outlet property="AddMiddleInitialOutlet" destination="Ay4-P2-PUW" id="TcE-0I-gNy"/>
+                        <outlet property="AddPasswordOutlet" destination="QE5-9j-6E3" id="1Wp-Ag-RWO"/>
+                        <outlet property="AddStoreNumberOutlet" destination="6IS-9y-QUY" id="8e6-W8-z84"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ids-vL-Wx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7ZD-Z8-Qq4" userLabel="Exit" sceneMemberID="exit"/>
