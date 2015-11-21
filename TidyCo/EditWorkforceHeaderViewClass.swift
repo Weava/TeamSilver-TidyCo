@@ -20,6 +20,7 @@ class EditWorkforceHeaderViewClass: UIView
     
     @IBOutlet weak var EditEmployeeOutlet: UIButton!
     
+    @IBOutlet weak var DeleteWorkerOutlet: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

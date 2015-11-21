@@ -45,6 +45,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="AddWorkerOutlet" destination="bvT-WL-dWL" id="H91-y0-sHL"/>
+                <outlet property="DeleteWorkerOutlet" destination="3Mh-j2-BmD" id="jUU-N5-ARI"/>
                 <outlet property="EditEmployeeOutlet" destination="6x9-bO-Hpr" id="eZi-Hp-cQV"/>
             </connections>
             <point key="canvasLocation" x="255.5" y="141.5"/>

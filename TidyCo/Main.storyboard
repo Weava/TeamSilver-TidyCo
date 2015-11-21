@@ -260,11 +260,12 @@
                     <connections>
                         <segue destination="FdL-93-KoI" kind="show" identifier="addEmployeeSegue" id="4PZ-hj-npq"/>
                         <segue destination="HhI-fh-kmn" kind="show" identifier="editEmployeeSegue" id="n7w-il-wvx"/>
+                        <segue destination="fjf-9N-m5L" kind="show" identifier="deleteEmployeeSegue" id="GKa-n1-qcD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ad-HH-yWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950" y="-539"/>
+            <point key="canvasLocation" x="2814" y="-343"/>
         </scene>
         <!--AddEmployeeViewController-->
         <scene sceneID="1Uu-pd-47E">
@@ -394,7 +395,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ids-vL-Wx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7ZD-Z8-Qq4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3619" y="-731"/>
+            <point key="canvasLocation" x="4286" y="-423"/>
+        </scene>
+        <!--Delete Employee-->
+        <scene sceneID="32d-ri-gvd">
+            <objects>
+                <viewController title="Delete Employee" id="fjf-9N-m5L" customClass="DeleteEmployeeViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uos-hK-QiO"/>
+                        <viewControllerLayoutGuide type="bottom" id="IAT-if-EXl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pwp-2C-9Zc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Employee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heu-nU-dah">
+                                <rect key="frame" x="237" y="72" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNg-LK-cmM">
+                                <rect key="frame" x="278" y="325" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteAction:" destination="fjf-9N-m5L" eventType="touchUpInside" id="RCE-6l-wqO"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrz-bA-IyM">
+                                <rect key="frame" x="140" y="101" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fjf-9N-m5L" id="tpw-B7-Cge"/>
+                                    <outlet property="delegate" destination="fjf-9N-m5L" id="8PV-UD-MAZ"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HNg-LK-cmM" firstAttribute="top" secondItem="Lrz-bA-IyM" secondAttribute="bottom" constant="8" id="DhV-yB-e3e"/>
+                            <constraint firstItem="HNg-LK-cmM" firstAttribute="centerX" secondItem="pwp-2C-9Zc" secondAttribute="centerX" id="bzI-Gg-530"/>
+                            <constraint firstItem="Lrz-bA-IyM" firstAttribute="centerX" secondItem="pwp-2C-9Zc" secondAttribute="centerX" id="n4I-7K-bpS"/>
+                            <constraint firstItem="heu-nU-dah" firstAttribute="top" secondItem="uos-hK-QiO" secondAttribute="bottom" constant="8" id="nWd-0b-q1R"/>
+                            <constraint firstItem="heu-nU-dah" firstAttribute="centerX" secondItem="pwp-2C-9Zc" secondAttribute="centerX" id="sNj-z1-3aL"/>
+                            <constraint firstItem="Lrz-bA-IyM" firstAttribute="top" secondItem="heu-nU-dah" secondAttribute="bottom" constant="8" id="w9u-Br-yCv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdI-pQ-wWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4286" y="-1124"/>
         </scene>
         <!--Edit Employee Info-->
         <scene sceneID="H7v-lO-vA5">
@@ -449,6 +498,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-dq-Xuu">
                                 <rect key="frame" x="285" y="556" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="EditAction:" destination="HhI-fh-kmn" eventType="touchUpInside" id="bgG-oq-H1L"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UID-h5-R3Z">
                                 <rect key="frame" x="20" y="331" width="92" height="21"/>
@@ -543,7 +595,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1Q-UL-I5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3619" y="-23"/>
+            <point key="canvasLocation" x="4286" y="235"/>
         </scene>
         <!--Edit Rooms-->
         <scene sceneID="ioc-jJ-5XQ">

@@ -92,6 +92,9 @@ class EditWorkforceTableViewController: UITableViewController {
         
         customView?.EditEmployeeOutlet.addTarget(self, action: "EditEmployee:", forControlEvents: UIControlEvents.TouchUpInside)
         
+        customView?.DeleteWorkerOutlet.addTarget(self, action: "DeleteEmployee:", forControlEvents: UIControlEvents.TouchUpInside)
+
+        
         if let fr : CGRect = customView?.frame{
             
             headerHeight = fr.height
@@ -151,6 +154,13 @@ class EditWorkforceTableViewController: UITableViewController {
         performSegueWithIdentifier("editEmployeeSegue", sender: self)
         
     }
+    
+    func DeleteEmployee(sender : UIButton!){
+        
+        performSegueWithIdentifier("deleteEmployeeSegue", sender: self)
+        
+    }
+    
 
     @IBAction func addEmployee(segue:UIStoryboardSegue) {
     

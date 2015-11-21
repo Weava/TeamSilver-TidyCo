@@ -1,5 +1,5 @@
 //
-//  EditEmployeeController.swift
+//  DeleteEmployeeViewController.swift
 //  TidyCo
 //
 //  Created by NUTALAPATI ROHIT  on 11/20/15.
@@ -7,9 +7,10 @@
 //
 
 
+
 import UIKit
 
-class EditEmployeeController: UIViewController {
+class DeleteEmployeeViewController: UIViewController {
     
     
     
@@ -19,37 +20,38 @@ class EditEmployeeController: UIViewController {
     var headerHeight : CGFloat = 50
     var selectedEmployee = Employee()
     
-    @IBOutlet weak var firstNameOutlet: UITextField!
-    
-    @IBOutlet weak var middleInitialOutlet: UITextField!
-    
-    @IBOutlet weak var LastNameOutlet: UITextField!
-    
-    @IBOutlet weak var employeeIDOutlet: UITextField!
-    
-    @IBOutlet weak var storeNumberOutlet: UITextField!
-   
-    @IBOutlet weak var passwordOutlet: UITextField!
-    
-    @IBAction func EditAction(sender: UIButton) {
+    @IBAction func deleteAction(sender: UIButton) {
         
-        // Check if any edited first name middle name last name
-        if firstNameOutlet.text != selectedEmployee.firstName || middleInitialOutlet!.text != selectedEmployee.middleInitial || LastNameOutlet!.text != selectedEmployee.lastName
-        {
-           
-            print("Changed")
+        print(selectedEmployee.firstName);
+        
+        let alert = UIAlertController(title: "Deleting Employee : \(selectedEmployee.lastName.uppercaseString), \(selectedEmployee.firstName)", message: "Are you sure?", preferredStyle: .Alert)
+        
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .Destructive, handler: {
+            (alert:UIAlertAction!) in
             
-            ///Insert code to modify database accordingly
             
+            // Delete Employee
+            
+            print("Deleted \(self.selectedEmployee.lastName.uppercaseString), \(self.selectedEmployee.firstName)")
             // Go back
-            navigationController?.popViewControllerAnimated(true)
+            self.navigationController?.popViewControllerAnimated(true)
             
-        }else
-        {
-            print("No change")
-        }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .Destructive, handler: {
+            (alert:UIAlertAction!) in
+            
+            
+            // Dont Delete Employee
+            print("Didnt delete")
+            
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
         
     }
+    
     
     
     var allEmployees: [Employee]?
@@ -57,17 +59,12 @@ class EditEmployeeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         allEmployees = employeeOps.getAllItems()!
         
-        let currentEmployee = allEmployees![0]
+        allEmployees = employeeOps.getAllItems()!
+        
         selectedEmployee = allEmployees![0]
         
-        firstNameOutlet.text = currentEmployee.firstName
-        middleInitialOutlet.text = currentEmployee.middleInitial
-        LastNameOutlet.text = currentEmployee.lastName
-        //  employeeIDOutlet = "empID"//currentEmployee.employeeId
-        storeNumberOutlet.text = currentEmployee.storeNumber
-        passwordOutlet.text = "Password" // (Get Pasword?)
+
         
         // Do any additional setup after loading the view.
     }
@@ -79,6 +76,7 @@ class EditEmployeeController: UIViewController {
     
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        
         return 1
     }
     
@@ -98,22 +96,14 @@ class EditEmployeeController: UIViewController {
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-       
+        
         let currentEmployee = allEmployees![row]
+        
         selectedEmployee = currentEmployee
         
         //let employeeStatus = self.getEmployeeProgress(currentEmployee)
         
         let name : String = "\(currentEmployee.lastName.uppercaseString), \(currentEmployee.firstName)"
-
-        firstNameOutlet.text = currentEmployee.firstName
-        middleInitialOutlet.text = currentEmployee.middleInitial
-        LastNameOutlet.text = currentEmployee.lastName
-      //  employeeIDOutlet = "empID"//currentEmployee.employeeId
-        storeNumberOutlet.text = currentEmployee.storeNumber
-        passwordOutlet.text = "Password" // (Get Pasword?)
-        
-        
         
         print("Selected : \(name)")
     }
