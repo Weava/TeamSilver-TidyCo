@@ -13,11 +13,13 @@ class RoomsToAssignTableViewController: UITableViewController {
     let floorOps = ParseFloorStorageAdapter()
     
     var floors: [Floor]?
+    
+    var headerHeight : CGFloat = 50
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        floors = floorOps.getAllFloors()
+        floors = floorOps.getAllFloors()!
         
         for data in floors! {
             print("floors: \(data)")
@@ -40,23 +42,48 @@ class RoomsToAssignTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (floors?.count)!
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("roomsToAssignCell", forIndexPath: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let customView = NSBundle.mainBundle().loadNibNamed("AssignRoomsFloorHeader", owner: self, options: nil).first as? AssignRoomsFloorHeaderView
+        
+        customView?.addRoomsButton.addTarget(self, action: "AddRooms:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        if let fr : CGRect = customView?.frame{
+            
+            headerHeight = fr.height
+            
+        }
+        
+        return customView
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return headerHeight
+    }
+    
+    func AddRooms(sender : UIButton!){
+        
+        
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
