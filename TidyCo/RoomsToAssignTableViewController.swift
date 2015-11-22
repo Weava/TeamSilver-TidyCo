@@ -9,9 +9,19 @@
 import UIKit
 
 class RoomsToAssignTableViewController: UITableViewController {
+    
+    let floorOps = ParseFloorStorageAdapter()
+    
+    var floors: [Floor]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        floors = floorOps.getAllFloors()
+        
+        for data in floors! {
+            print("floors: \(data)")
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

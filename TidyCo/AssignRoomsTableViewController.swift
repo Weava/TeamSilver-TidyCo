@@ -9,6 +9,8 @@
 import UIKit
 
 class AssignRoomsTableViewController: UITableViewController {
+    
+    var headerHeight : CGFloat = 50
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +27,60 @@ class AssignRoomsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let customView = NSBundle.mainBundle().loadNibNamed("AssignRoomsEmployeeHeader", owner: self, options: nil).first as? AssignRoomsEmployeeHeaderView
+        
+        customView?.addWorkerButton.addTarget(self, action: "AddWorker:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        customView?.editInfoButton.addTarget(self, action: "EditEmployee:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        customView?.deleteWorkerButton.addTarget(self, action: "DeleteEmployee:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        if let fr : CGRect = customView?.frame{
+            
+            headerHeight = fr.height
+            
+        }
+        
+        return customView
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return headerHeight
+    }
+    
+    func AddWorker(sender : UIButton!){
+        
+        performSegueWithIdentifier("addEmployeeSegue", sender: self)
+        
+    }
+    
+    func EditEmployee(sender : UIButton!){
+        
+        performSegueWithIdentifier("editEmployeeSegue", sender: self)
+        
+    }
+    
+    func DeleteEmployee(sender : UIButton!){
+        
+        performSegueWithIdentifier("deleteEmployeeSegue", sender: self)
+        
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,7 +90,7 @@ class AssignRoomsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("assignRoomsCell", forIndexPath: indexPath)
 
         // Configure the cell...
         cell.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)

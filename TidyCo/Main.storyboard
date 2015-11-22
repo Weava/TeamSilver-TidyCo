@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qkp-SJ-3Er">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CQi-Qt-LQ3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -254,10 +254,32 @@
         <scene sceneID="vEy-RH-SyS">
             <objects>
                 <tableViewController title="Assign Rooms" id="CQi-Qt-LQ3" customClass="AssignRoomsTableViewController" customModule="TidyCo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tJ2-ad-HiU">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="assignRoomsCell" id="lT6-oP-BFP">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lT6-oP-BFP" id="t2U-Ug-M4d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CQi-Qt-LQ3" id="App-At-S0w"/>
+                            <outlet property="delegate" destination="CQi-Qt-LQ3" id="uUY-SS-T1z"/>
+                        </connections>
+                    </tableView>
                     <tabBarItem key="tabBarItem" title="Assign Rooms" image="AssignRooms" selectedImage="AssignRooms" id="TIG-KX-oS7"/>
                     <navigationItem key="navigationItem" title="Assign Rooms" id="8YX-sC-kfo"/>
                     <connections>
                         <segue destination="eRO-NQ-DXI" kind="show" id="KFY-6O-KHf"/>
+                        <segue destination="fjf-9N-m5L" kind="show" identifier="deleteEmployeeSegue" id="HiX-Pt-iR8"/>
+                        <segue destination="FdL-93-KoI" kind="show" identifier="addEmployeeSegue" id="haD-ca-l8a"/>
+                        <segue destination="HhI-fh-kmn" kind="show" identifier="editEmployeeSegue" id="F78-oa-A1b"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG9-XZ-FOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -883,4 +905,9 @@
         <image name="ViewProgress" width="35" height="35"/>
         <image name="logo" width="575" height="390"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GKa-n1-qcD"/>
+        <segue reference="4PZ-hj-npq"/>
+        <segue reference="n7w-il-wvx"/>
+    </inferredMetricsTieBreakers>
 </document>
