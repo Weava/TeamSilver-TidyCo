@@ -12,6 +12,8 @@ class UserNavigationViewController: UINavigationController {
 
     var isManager = false
     var isEmployee = false
+    var employeeId: String?
+    let employeeOps = ParseEmployeeStorageAdapter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +36,22 @@ class UserNavigationViewController: UINavigationController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "employeeSegue"
+        {
+            if let destination = segue.destinationViewController as? EmployeeRoomTableViewController
+            {
+                destination.employee = employeeOps.getEmployeeByEmployeeId(self.employeeId!)
+            }
+        }
     }
-    */
+
 
 }

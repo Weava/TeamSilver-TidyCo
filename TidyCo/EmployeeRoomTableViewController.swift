@@ -8,7 +8,14 @@
 
 import UIKit
 
-class EmployeeRoomTableViewController: UITableViewController {
+protocol CurrentServiceHandler {
+    
+    func onDoNotDisturbClicked(service: Service)
+    
+    func onAddNotesClicked(service: Service)
+}
+
+class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHandler {
     
     let serviceOps = ParseServiceStorageAdapter()
     
@@ -49,22 +56,28 @@ class EmployeeRoomTableViewController: UITableViewController {
         
         let cellService = servicesForEmployee![indexPath.row]
         
-        if let timeStarted = cellService.objectForKey("dateTimeStarted") as? NSDate
+        if cellService.objectForKey("dateTimeStarted") as? NSDate != nil
+            && cellService.objectForKey("dateTimeFinished") as? NSDate == nil
         {
-            var cell = tableView.dequeueReusableCellWithIdentifier("employeeCurrentServiceCell") as? EmployeeCurrentServiceTableViewCell
+            print("Current cell creating")
             
-            if cell == nil
+            var currentServiceCell = tableView.dequeueReusableCellWithIdentifier("employeeCurrentServiceCell") as? EmployeeCurrentServiceTableViewCell
+            
+            if currentServiceCell == nil
             {
                 let nibs = NSBundle.mainBundle().loadNibNamed("EmployeeCurrentServiceCell", owner: self, options: nil)
-                cell = (nibs[0] as? EmployeeCurrentServiceTableViewCell)!
+                currentServiceCell = (nibs[0] as? EmployeeCurrentServiceTableViewCell)!
             }
+            
+            currentServiceCell?.currentServiceHandler = self
+            currentServiceCell?.serviceForCell = cellService
             
             let time = cellService.timeTaken
             let timeTaken = String(format: "%.2f", time)
             
-            cell?.roomNumberLabel.text = cellService.roomServiced.roomNum
+            currentServiceCell?.roomNumberLabel.text = cellService.roomServiced.roomNum
             
-            cell?.currentTimeLabel.text = timeTaken.stringByReplacingOccurrencesOfString(".", withString: ":")
+            currentServiceCell?.currentTimeLabel.text = timeTaken.stringByReplacingOccurrencesOfString(".", withString: ":")
             
             let expectedTime = Float(cellService.serviceTimer.timerLengthInMinutes)
             var statusString: String?
@@ -84,33 +97,53 @@ class EmployeeRoomTableViewController: UITableViewController {
                 statusString = ""
             }
             
-            cell?.statusLabel.text = statusString
+            currentServiceCell?.statusLabel.text = statusString
             
             servicingRoom = true
             
-            return cell!
+            return currentServiceCell!
         }
         else
         {
-           var cell = tableView.dequeueReusableCellWithIdentifier("employeeUpcomingServiceCell") as? EmployeeUpcomingServiceTableViewCell
+            var upcomingServiceCell = tableView.dequeueReusableCellWithIdentifier("employeeUpcomingServiceCell") as? EmployeeUpcomingServiceTableViewCell
             
-            if cell == nil
+            if upcomingServiceCell == nil
             {
                 let nibs = NSBundle.mainBundle().loadNibNamed("EmployeeUpcomingServiceCell", owner: self, options: nil)
-                cell = (nibs[0] as? EmployeeUpcomingServiceTableViewCell)!
+                upcomingServiceCell = (nibs[0] as? EmployeeUpcomingServiceTableViewCell)!
             }
             
-            cell?.roomNumberLabel.text = cellService.roomServiced.roomNum
-            cell?.expectedTimeLabel.text = String(format: "$.2f", Float(cellService.serviceTimer.timerLengthInMinutes)).stringByReplacingOccurrencesOfString(".", withString: ":")
+            upcomingServiceCell?.roomNumberLabel.text = cellService.roomServiced.roomNum
+            upcomingServiceCell?.expectedTimeLabel.text = String(format: "%.2f", Float(cellService.serviceTimer.timerLengthInMinutes)).stringByReplacingOccurrencesOfString(".", withString: ":")
             
             if servicingRoom
             {
-                cell?.userInteractionEnabled = false
-                cell?.selectionStyle = .None
+                upcomingServiceCell?.userInteractionEnabled = false
+                upcomingServiceCell?.selectionStyle = .None
             }
             
-            return cell!
+            return upcomingServiceCell!
         }
+//        else
+//        {
+//            //var cell = tableView.dequeueReusableCellWithIdentifier("employeeUpcomingServiceCell") as? EmployeeUpcomingServiceTableViewCell
+//            
+//            var cell: EmployeeUpcomingServiceTableViewCell?
+//            
+//            if cell == nil
+//            {
+//                let nibs = NSBundle.mainBundle().loadNibNamed("EmployeeUpcomingServiceCell", owner: self, options: nil)
+//                cell = (nibs[0] as? EmployeeUpcomingServiceTableViewCell)!
+//            }
+//            
+//            cell?.roomNumberLabel.text = cellService.roomServiced.roomNum
+//            cell?.expectedTimeLabel.text = "Finished"
+//            
+//            cell?.userInteractionEnabled = false
+//            cell?.selectionStyle = .None
+//            
+//            return cell!
+//        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -123,7 +156,10 @@ class EmployeeRoomTableViewController: UITableViewController {
             alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {
                 (alert: UIAlertAction!) in
                 
+                self.servicesForEmployee![indexPath.row].dateTimeStarted = NSDate()
+                self.servicesForEmployee![indexPath.row].saveInBackground()
                 self.servicingRoom = true
+                self.tableView.reloadData()
             }))
             alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {
                 (alert: UIAlertAction!) in
@@ -133,10 +169,15 @@ class EmployeeRoomTableViewController: UITableViewController {
         }
         else
         {
-            let alert = UIAlertController(title: "Finish Room", message: "Finished servicing room??", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Finish Room", message: "Finished servicing room?", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {
                 (alert: UIAlertAction!) in
+                
+                self.servicesForEmployee![indexPath.row].dateTimeFinished = NSDate()
+                self.servicesForEmployee![indexPath.row].saveInBackground()
+                self.servicingRoom = true
+                self.tableView.reloadData()
                 
                 self.servicingRoom = false
             }))
@@ -147,8 +188,60 @@ class EmployeeRoomTableViewController: UITableViewController {
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
+    
+    private func finishService(service: Service)
+    {
+        service.dateTimeFinished = NSDate()
+        do
+        {
+            try service.save()
+        } catch
+        {
+            print("Could not save")
+        }
+        
+        self.servicesForEmployee = serviceOps.getAllServicesForEmployee(self.employee!)
+    }
+    
+    func onDoNotDisturbClicked(service: Service)
+    {
+        let alert = UIAlertController(title: "Do Not Disturb", message: "Room has do not disturb sign?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {
+            (alert: UIAlertAction!) in
+            
+            service.roomServiced.doNotDisturb = true
+            self.finishService(service)
+            self.servicingRoom = false
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {
+            (alert: UIAlertAction!) in
+            
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func onAddNotesClicked(service: Service)
+    {
+        print("ADD NOTES CLICKED")
+        //Segue to add notes view
+    }
 
 
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        let cellService = self.servicesForEmployee![indexPath.row]
+        
+        if cellService.objectForKey("dateTimeStarted") as? NSDate != nil
+            && cellService.objectForKey("dateTimeFinished") as? NSDate == nil
+        {
+            return 90
+        }
+        else
+        {
+            return 40
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

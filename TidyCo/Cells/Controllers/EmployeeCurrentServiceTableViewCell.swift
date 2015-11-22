@@ -13,6 +13,9 @@ class EmployeeCurrentServiceTableViewCell: UITableViewCell
     @IBOutlet weak var roomNumberLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    
+    var currentServiceHandler: CurrentServiceHandler?
+    var serviceForCell: Service?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,9 +29,13 @@ class EmployeeCurrentServiceTableViewCell: UITableViewCell
     }
 
     @IBAction func disturbButtonClicked(sender: UIButton) {
+        
+        currentServiceHandler?.onDoNotDisturbClicked(serviceForCell!)
     }
     
     @IBAction func addNotesButtonClicked(sender: UIButton) {
+        
+        currentServiceHandler?.onAddNotesClicked(serviceForCell!)
     }
     
 }

@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // END CREATE TEST USERS
         
         let loginDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        let employeeOps = ParseEmployeeStorageAdapter()
         if let employeeId: String = loginDefaults.valueForKey(StringUtils.loginDefaults) as? String
         {
             print("Employee ID: \(employeeId)")
@@ -46,22 +47,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let userController: UserNavigationViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("userController") as! UserNavigationViewController
             
-            let employeeType: String = (loginDefaults.valueForKey(StringUtils.employeeType) as? String)!
+            //let employeeType: String = (loginDefaults.valueForKey(StringUtils.employeeType) as? String)!
+            let employeeType = employeeOps.getEmployeeByEmployeeId(employeeId)?.employeeType.typeName
             
             print("Employee type: \(employeeType)")
             
             // Disabled check for Testing
             // Set userController.isManager or userController.isEmployee to true for the respective storyboards
-            /*
+            
             if employeeType == "admin" || employeeType == "manager" {
                 userController.isManager = true
             }
             else {
                 userController.isEmployee = true
+                userController.employeeId = employeeId
             }
-            */
             
-            userController.isManager = true
+            
+            //userController.isManager = true
             
             
             self.window?.rootViewController = userController

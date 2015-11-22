@@ -120,6 +120,7 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
         let employeeQuery: PFQuery = Employee.query()!
         
         employeeQuery.whereKey("employeeId", equalTo: employeeId)
+        employeeQuery.includeKey("employeeType")
         
         do
         {
