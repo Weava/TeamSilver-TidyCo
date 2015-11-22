@@ -73,7 +73,7 @@ class ViewProgressTableViewController: UITableViewController {
                 if item.isFinished
                 {
                     // Calculate employee's tardiness
-                    let timeToFinish = item.timeToFinish
+                    let timeToFinish = Float(item.timeToFinish) / 60
                     
                     let expectedTime = Float(item.serviceTimer.timerLengthInMinutes)
                     

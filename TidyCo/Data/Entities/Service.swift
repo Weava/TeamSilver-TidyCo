@@ -66,21 +66,28 @@ class Service: PFObject, PFSubclassing
         }
     }
     
-    var timeToFinish: Float {
+    var timeToFinish: NSTimeInterval {
         get
         {
             let timeDifference = self.dateTimeFinished.timeIntervalSinceDate(self.dateTimeStarted)
-            let timeDiffFloat = Float(timeDifference) / 60.0
-            return timeDiffFloat
+            return timeDifference
         }
     }
     
-    var timeTaken: Float {
+    var timeTaken: NSTimeInterval {
         get
         {
             let timeDifference = NSDate().timeIntervalSinceDate(self.dateTimeStarted)
-            let timeDiffFloat = Float(timeDifference) / 60.0
-            return timeDiffFloat
+            return timeDifference
+        }
+    }
+    
+    var timeAsMinutesSecondsString: String {
+        get
+        {
+            let time = timeTaken
+            let timeString = String(format:"%02li:%02li", lround(floor(time / 60)) % 60, lround(floor(time)) % 60)
+            return timeString
         }
     }
     

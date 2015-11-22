@@ -72,12 +72,11 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
             currentServiceCell?.currentServiceHandler = self
             currentServiceCell?.serviceForCell = cellService
             
-            let time = cellService.timeTaken
-            let timeTaken = String(format: "%.2f", time)
+            let time = Float(cellService.timeTaken) / 60
             
             currentServiceCell?.roomNumberLabel.text = cellService.roomServiced.roomNum
             
-            currentServiceCell?.currentTimeLabel.text = timeTaken.stringByReplacingOccurrencesOfString(".", withString: ":")
+            currentServiceCell?.currentTimeLabel.text = cellService.timeAsMinutesSecondsString
             
             let expectedTime = Float(cellService.serviceTimer.timerLengthInMinutes)
             var statusString: String?
@@ -103,7 +102,7 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
             
             return currentServiceCell!
         }
-        else
+        else if cellService.objectForKey("dateTimeStarted") as? NSDate == nil
         {
             var upcomingServiceCell = tableView.dequeueReusableCellWithIdentifier("employeeUpcomingServiceCell") as? EmployeeUpcomingServiceTableViewCell
             
@@ -124,26 +123,26 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
             
             return upcomingServiceCell!
         }
-//        else
-//        {
-//            //var cell = tableView.dequeueReusableCellWithIdentifier("employeeUpcomingServiceCell") as? EmployeeUpcomingServiceTableViewCell
-//            
-//            var cell: EmployeeUpcomingServiceTableViewCell?
-//            
-//            if cell == nil
-//            {
-//                let nibs = NSBundle.mainBundle().loadNibNamed("EmployeeUpcomingServiceCell", owner: self, options: nil)
-//                cell = (nibs[0] as? EmployeeUpcomingServiceTableViewCell)!
-//            }
-//            
-//            cell?.roomNumberLabel.text = cellService.roomServiced.roomNum
-//            cell?.expectedTimeLabel.text = "Finished"
-//            
-//            cell?.userInteractionEnabled = false
-//            cell?.selectionStyle = .None
-//            
-//            return cell!
-//        }
+        else
+        {
+            //var cell = tableView.dequeueReusableCellWithIdentifier("employeeUpcomingServiceCell") as? EmployeeUpcomingServiceTableViewCell
+            
+            var cell: EmployeeUpcomingServiceTableViewCell?
+            
+            if cell == nil
+            {
+                let nibs = NSBundle.mainBundle().loadNibNamed("EmployeeUpcomingServiceCell", owner: self, options: nil)
+                cell = (nibs[0] as? EmployeeUpcomingServiceTableViewCell)!
+            }
+            
+            cell?.roomNumberLabel.text = cellService.roomServiced.roomNum
+            cell?.expectedTimeLabel.text = "Finished"
+            
+            cell?.userInteractionEnabled = false
+            cell?.selectionStyle = .None
+            
+            return cell!
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
