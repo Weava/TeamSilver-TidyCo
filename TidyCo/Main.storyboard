@@ -584,14 +584,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc8-MC-XqX">
-                                <rect key="frame" x="192" y="481" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <segue destination="7ZD-Z8-Qq4" kind="unwind" unwindAction="addEmployee:" id="uIz-Qb-Xh0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
