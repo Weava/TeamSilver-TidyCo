@@ -15,10 +15,6 @@
                     <rect key="frame" x="8" y="0.0" width="67" height="30"/>
                     <state key="normal" title="Add Floor"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXt-fm-4Wb">
-                    <rect key="frame" x="166" y="0.0" width="83" height="30"/>
-                    <state key="normal" title="Delete Floor"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaY-0J-iNd">
                     <rect key="frame" x="328" y="0.0" width="78" height="30"/>
                     <state key="normal" title="Edit Timers"/>
@@ -26,11 +22,9 @@
             </subviews>
             <color key="backgroundColor" red="0.85882352939999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="rXt-fm-4Wb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AFz-ma-VFA"/>
-                <constraint firstItem="rXt-fm-4Wb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GUy-lb-rpl"/>
-                <constraint firstItem="yaY-0J-iNd" firstAttribute="baseline" secondItem="rXt-fm-4Wb" secondAttribute="baseline" id="ib3-0v-eYW"/>
+                <constraint firstItem="yaY-0J-iNd" firstAttribute="baseline" secondItem="9kh-5R-Zbi" secondAttribute="baseline" id="4fe-4t-xFB"/>
+                <constraint firstItem="9kh-5R-Zbi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5ZM-Qp-uHW"/>
                 <constraint firstItem="9kh-5R-Zbi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="j57-Zu-WYt"/>
-                <constraint firstItem="rXt-fm-4Wb" firstAttribute="baseline" secondItem="9kh-5R-Zbi" secondAttribute="baseline" id="vyA-AM-6wH"/>
                 <constraint firstItem="yaY-0J-iNd" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="z8x-y2-Qh3"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

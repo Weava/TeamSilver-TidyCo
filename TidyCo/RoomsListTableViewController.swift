@@ -129,18 +129,19 @@ class RoomsListTableViewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             if floor.floorRooms.count > 1 {
-                floor.floorRooms[indexPath.row].deleteInBackground()
-                floor.floorRooms.removeAtIndex(indexPath.row)
+                
+                ParseFloorStorageAdapter().removeRoomFromFloor(floor, room: floor.floorRooms[indexPath.row])
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }
             else {
-                let alertController = UIAlertController(title: "Only on", message: "Incorrect Login ID or Password.\nPlease Try again.", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "Only one room left!", message: "Each floor must have at least one room.", preferredStyle: .Alert)
                 
                 let okayAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                 
                 alertController.addAction(okayAction)
                 
                 self.presentViewController(alertController, animated: true, completion: nil)
+                self.tableView.reloadData()
             }
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

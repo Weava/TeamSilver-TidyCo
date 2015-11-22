@@ -52,4 +52,13 @@ class ParseFloorStorageAdapter : FloorStorageAdapter
         floor[Floor.ROOM_ARRAY] = roomsForFloor
         floor.saveInBackground()
     }
+    
+    func removeRoomFromFloor(floor: Floor, room: Room) {
+        var roomsForFloor: [Room] = []
+        roomsForFloor = floor[Floor.ROOM_ARRAY] as! [Room]
+        let index = roomsForFloor.indexOf(room)
+        roomsForFloor.removeAtIndex(index!)
+        floor[Floor.ROOM_ARRAY] = roomsForFloor
+        floor.saveInBackground()
+    }
 }

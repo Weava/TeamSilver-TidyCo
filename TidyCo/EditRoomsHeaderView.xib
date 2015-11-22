@@ -15,23 +15,16 @@
                     <rect key="frame" x="8" y="0.0" width="71" height="30"/>
                     <state key="normal" title="Add Room"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oks-KB-s1M">
-                    <rect key="frame" x="318" y="0.0" width="88" height="30"/>
-                    <state key="normal" title="Delete Room"/>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.85882352939999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="9ey-Cp-fj0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="BOf-L6-FOB"/>
-                <constraint firstItem="9ey-Cp-fj0" firstAttribute="baseline" secondItem="oks-KB-s1M" secondAttribute="baseline" id="QPp-j5-8li"/>
-                <constraint firstItem="oks-KB-s1M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="-8" id="c3P-A3-fLQ"/>
-                <constraint firstItem="oks-KB-s1M" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="hmv-Sf-WWR"/>
+                <constraint firstItem="9ey-Cp-fj0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BP4-n8-qxP"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="addRoomsButton" destination="9ey-Cp-fj0" id="4my-WI-LOw"/>
-                <outlet property="deleteRoomsButton" destination="oks-KB-s1M" id="avd-GB-mgJ"/>
             </connections>
             <point key="canvasLocation" x="509" y="1"/>
         </view>
