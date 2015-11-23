@@ -10,18 +10,10 @@ import UIKit
 
 class AssignRoomsTableViewController: UITableViewController {
     
-    let employeeOps = ParseEmployeeStorageAdapter()
-    let serviceOps = ParseServiceStorageAdapter()
-    var selectedRowIndex : Int = -1;
     var headerHeight : CGFloat = 50
-    var allEmployees: [Employee]?
-    var selectedIndexPath : NSIndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        allEmployees = employeeOps.getAllItems()!
-        print("\(allEmployees?.count)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -78,18 +70,6 @@ class AssignRoomsTableViewController: UITableViewController {
         performSegueWithIdentifier("deleteEmployeeSegue", sender: self)
         
     }
-    
-    func addRooms(sender : UIButton!){
-        
-        performSegueWithIdentifier("assignRoomsSegue", sender: self)
-        
-    }
-    
-    func removeRooms(sener : UIButton!){
-        
-        //Add Action
-        
-    }
 
     // MARK: - Table view data source
 
@@ -100,7 +80,7 @@ class AssignRoomsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (allEmployees?.count)!
+        return 1
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -110,71 +90,14 @@ class AssignRoomsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("employeeRoomsAssignedCell") as? EmployeeRoomsAssignedCell
-        
-        if cell == nil
-        {
-            let nibs = NSBundle.mainBundle().loadNibNamed("EmployeeRoomsAssignedCell", owner: self, options: nil)
-            cell = (nibs[0] as? EmployeeRoomsAssignedCell)!
-        }
-        
-        let currentEmployee = allEmployees![indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("assignRoomsCell", forIndexPath: indexPath)
 
-        cell?.employeeNameLabel.text = "\(currentEmployee.lastName.uppercaseString), \(currentEmployee.firstName)"
-        cell?.addRooomsButton.addTarget(self, action: "addRooms:", forControlEvents: UIControlEvents.TouchUpInside)
-        cell?.removeRoomsButton.addTarget(self, action: "removeRooms:", forControlEvents: UIControlEvents.TouchUpInside)
-        
         // Configure the cell...
-        cell?.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
+        cell.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
 
-        return cell!
+        return cell
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        if indexPath == selectedIndexPath {
-            return EmployeeRoomsAssignedCell.expandedHeight
-        } else {
-            return EmployeeRoomsAssignedCell.defaultHeight
-        }
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let previousIndexPath = selectedIndexPath
-        if indexPath == selectedIndexPath {
-            selectedIndexPath = nil
-        } else {
-            selectedIndexPath = indexPath
-        }
-        
-        var indexPaths : Array<NSIndexPath> = []
-        if let previous = previousIndexPath {
-            indexPaths += [previous]
-        }
-        if let current = selectedIndexPath {
-            indexPaths += [current]
-        }
-        if indexPaths.count > 0 {
-            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
-    }
-    
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! EmployeeRoomsAssignedCell).watchFrameChanges()
-    }
-    
-    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! EmployeeRoomsAssignedCell).ignoreFrameChanges()
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        for cell in tableView.visibleCells as! [EmployeeRoomsAssignedCell] {
-            cell.ignoreFrameChanges()
-        }
-    }
-
 
     /*
     // Override to support conditional editing of the table view.
