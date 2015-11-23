@@ -35,6 +35,9 @@
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABy-kd-J8h">
                         <rect key="frame" x="327" y="14" width="16" height="16"/>
                         <state key="normal" image="AddButton"/>
+                        <connections>
+                            <action selector="addRoomsButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g5N-Xk-6h0"/>
+                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>

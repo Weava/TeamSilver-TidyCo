@@ -78,6 +78,18 @@ class AssignRoomsTableViewController: UITableViewController {
         performSegueWithIdentifier("deleteEmployeeSegue", sender: self)
         
     }
+    
+    func addRooms(sender : UIButton!){
+        
+        performSegueWithIdentifier("assignRoomsSegue", sender: self)
+        
+    }
+    
+    func removeRooms(sener : UIButton!){
+        
+        //Add Action
+        
+    }
 
     // MARK: - Table view data source
 
@@ -109,6 +121,8 @@ class AssignRoomsTableViewController: UITableViewController {
         let currentEmployee = allEmployees![indexPath.row]
 
         cell?.employeeNameLabel.text = "\(currentEmployee.lastName.uppercaseString), \(currentEmployee.firstName)"
+        cell?.addRooomsButton.addTarget(self, action: "addRooms:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell?.removeRoomsButton.addTarget(self, action: "removeRooms:", forControlEvents: UIControlEvents.TouchUpInside)
         
         // Configure the cell...
         cell?.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
@@ -126,30 +140,6 @@ class AssignRoomsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-//        if selectedRowIndex != indexPath.row {
-//            
-//            // paint the last cell tapped to white again
-//            self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: self.selectedRowIndex, inSection: 0))?.backgroundColor = UIColor.whiteColor()
-//            
-//            // save the selected index
-//            self.selectedRowIndex = indexPath.row
-//            
-//            // paint the selected cell to gray
-//            //self.tableView.cellForRowAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
-//            
-//            // update the height for all the cells
-//            self.tableView.beginUpdates()
-//            self.tableView.endUpdates()
-//            //self.tableView.reloadData()
-//        }else
-//        {
-//            selectedRowIndex = -1
-//            // update the height for all the cells
-//            self.tableView.beginUpdates()
-//            self.tableView.endUpdates()
-//            
-//        }
         
         let previousIndexPath = selectedIndexPath
         if indexPath == selectedIndexPath {

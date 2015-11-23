@@ -56,6 +56,8 @@
 		E7A2470A1C0243E4005143A9 /* AssignRoomsFloorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A247091C0243E4005143A9 /* AssignRoomsFloorHeaderView.swift */; };
 		E7A5F9C41C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A5F9C31C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib */; };
 		E7A5F9C61C037B7000114E89 /* EmployeeRoomsAssignedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A5F9C51C037B7000114E89 /* EmployeeRoomsAssignedCell.swift */; };
+		E7A5F9C81C03B2C100114E89 /* FloorRoomsToAssign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A5F9C71C03B2C100114E89 /* FloorRoomsToAssign.swift */; };
+		E7A5F9CA1C03B2ED00114E89 /* FloorRoomsToAssignCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A5F9C91C03B2ED00114E89 /* FloorRoomsToAssignCell.xib */; };
 		ED026B8E1BFD9CB200842292 /* EditRoomsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED026B8D1BFD9CB200842292 /* EditRoomsHeaderView.swift */; };
 		ED026B901BFD9CCE00842292 /* EditRoomsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED026B8F1BFD9CCE00842292 /* EditRoomsHeaderView.xib */; };
 		ED104A221BFB9B78004E0769 /* EmployeeRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */; };
@@ -158,6 +160,8 @@
 		E7A247091C0243E4005143A9 /* AssignRoomsFloorHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssignRoomsFloorHeaderView.swift; path = Cells/Controllers/AssignRoomsFloorHeaderView.swift; sourceTree = "<group>"; };
 		E7A5F9C31C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmployeeRoomsAssignedCell.xib; path = Cells/Views/EmployeeRoomsAssignedCell.xib; sourceTree = "<group>"; };
 		E7A5F9C51C037B7000114E89 /* EmployeeRoomsAssignedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeRoomsAssignedCell.swift; path = Cells/Controllers/EmployeeRoomsAssignedCell.swift; sourceTree = "<group>"; };
+		E7A5F9C71C03B2C100114E89 /* FloorRoomsToAssign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloorRoomsToAssign.swift; path = Cells/Views/FloorRoomsToAssign.swift; sourceTree = "<group>"; };
+		E7A5F9C91C03B2ED00114E89 /* FloorRoomsToAssignCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloorRoomsToAssignCell.xib; sourceTree = "<group>"; };
 		ED026B8D1BFD9CB200842292 /* EditRoomsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRoomsHeaderView.swift; sourceTree = "<group>"; };
 		ED026B8F1BFD9CCE00842292 /* EditRoomsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditRoomsHeaderView.xib; sourceTree = "<group>"; };
 		ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRoomTableViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 		1C7B8B691BFBD1D50069C10E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E7A5F9C91C03B2ED00114E89 /* FloorRoomsToAssignCell.xib */,
 				E7A5F9C31C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib */,
 				E7A247071C024321005143A9 /* AssignRoomsFloorHeader.xib */,
 				7FF9427E1BFD460100E15C38 /* EditWorkforceHeaderView.xib */,
@@ -286,6 +291,7 @@
 		1C7B8B6A1BFBD1DF0069C10E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E7A5F9C71C03B2C100114E89 /* FloorRoomsToAssign.swift */,
 				E7A5F9C51C037B7000114E89 /* EmployeeRoomsAssignedCell.swift */,
 				E7A247091C0243E4005143A9 /* AssignRoomsFloorHeaderView.swift */,
 				7FF9427A1BFD45EF00E15C38 /* EditWorkforceHeaderViewClass.swift */,
@@ -562,6 +568,7 @@
 				E788E2521C0152B500748F80 /* AssignRoomsEmployeeHeader.xib in Resources */,
 				1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */,
 				7FF942801BFD460100E15C38 /* EditWorkforceHeaderView.xib in Resources */,
+				E7A5F9CA1C03B2ED00114E89 /* FloorRoomsToAssignCell.xib in Resources */,
 				1C7B8B7E1BFFEA160069C10E /* Schematics in Resources */,
 				E7A247081C024321005143A9 /* AssignRoomsFloorHeader.xib in Resources */,
 				1C7B8B6C1BFBD2350069C10E /* EmployeeProgressCell.xib in Resources */,
@@ -676,6 +683,7 @@
 				ED026B8E1BFD9CB200842292 /* EditRoomsHeaderView.swift in Sources */,
 				1C782C111BD075920046B280 /* ParseFloorStorageAdapter.swift in Sources */,
 				7F3FD47E1BFFE3230062287D /* EditEmployeeController.swift in Sources */,
+				E7A5F9C81C03B2C100114E89 /* FloorRoomsToAssign.swift in Sources */,
 				1CDB9C041BEC4F6900A9DEA9 /* StringUitls.swift in Sources */,
 				ED104A2C1BFB9C94004E0769 /* EditWorkforceTableViewController.swift in Sources */,
 				1C782C191BD077410046B280 /* EmployeeStorageAdapter.swift in Sources */,

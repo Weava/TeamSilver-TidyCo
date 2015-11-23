@@ -274,7 +274,7 @@
                     <tabBarItem key="tabBarItem" title="Assign Rooms" image="AssignRooms" selectedImage="AssignRooms" id="TIG-KX-oS7"/>
                     <navigationItem key="navigationItem" title="Assign Rooms" id="8YX-sC-kfo"/>
                     <connections>
-                        <segue destination="eRO-NQ-DXI" kind="show" id="KFY-6O-KHf"/>
+                        <segue destination="eRO-NQ-DXI" kind="show" identifier="assignRoomsSegue" id="KFY-6O-KHf"/>
                         <segue destination="fjf-9N-m5L" kind="show" identifier="deleteEmployeeSegue" id="Qmu-Ja-3JY"/>
                         <segue destination="FdL-93-KoI" kind="show" identifier="addEmployeeSegue" id="TeE-Pq-tUI"/>
                         <segue destination="HhI-fh-kmn" kind="show" identifier="editEmployeeSegue" id="I1e-JK-cHR"/>
