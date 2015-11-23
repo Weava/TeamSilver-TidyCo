@@ -15,11 +15,13 @@ class AssignRoomsTableViewController: UITableViewController {
     var selectedRowIndex : Int = -1;
     var headerHeight : CGFloat = 50
     var allEmployees: [Employee]?
+    var selectedIndexPath : NSIndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         allEmployees = employeeOps.getAllItems()!
+        print("\(allEmployees?.count)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -116,11 +118,73 @@ class AssignRoomsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if indexPath.row == selectedRowIndex && selectedRowIndex != -1{
-            return 200
+        if indexPath == selectedIndexPath {
+            return EmployeeRoomsAssignedCell.expandedHeight
+        } else {
+            return EmployeeRoomsAssignedCell.defaultHeight
         }
-        return 44
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+//        if selectedRowIndex != indexPath.row {
+//            
+//            // paint the last cell tapped to white again
+//            self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: self.selectedRowIndex, inSection: 0))?.backgroundColor = UIColor.whiteColor()
+//            
+//            // save the selected index
+//            self.selectedRowIndex = indexPath.row
+//            
+//            // paint the selected cell to gray
+//            //self.tableView.cellForRowAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
+//            
+//            // update the height for all the cells
+//            self.tableView.beginUpdates()
+//            self.tableView.endUpdates()
+//            //self.tableView.reloadData()
+//        }else
+//        {
+//            selectedRowIndex = -1
+//            // update the height for all the cells
+//            self.tableView.beginUpdates()
+//            self.tableView.endUpdates()
+//            
+//        }
+        
+        let previousIndexPath = selectedIndexPath
+        if indexPath == selectedIndexPath {
+            selectedIndexPath = nil
+        } else {
+            selectedIndexPath = indexPath
+        }
+        
+        var indexPaths : Array<NSIndexPath> = []
+        if let previous = previousIndexPath {
+            indexPaths += [previous]
+        }
+        if let current = selectedIndexPath {
+            indexPaths += [current]
+        }
+        if indexPaths.count > 0 {
+            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        (cell as! EmployeeRoomsAssignedCell).watchFrameChanges()
+    }
+    
+    override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        (cell as! EmployeeRoomsAssignedCell).ignoreFrameChanges()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        for cell in tableView.visibleCells as! [EmployeeRoomsAssignedCell] {
+            cell.ignoreFrameChanges()
+        }
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
