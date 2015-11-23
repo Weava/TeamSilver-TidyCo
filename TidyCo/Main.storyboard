@@ -275,7 +275,7 @@
                     <navigationItem key="navigationItem" title="Assign Rooms" id="8YX-sC-kfo"/>
                     <connections>
                         <segue destination="eRO-NQ-DXI" kind="show" id="KFY-6O-KHf"/>
-                        <segue destination="fjf-9N-m5L" kind="show" id="Qmu-Ja-3JY"/>
+                        <segue destination="fjf-9N-m5L" kind="show" identifier="deleteEmployeeSegue" id="Qmu-Ja-3JY"/>
                         <segue destination="FdL-93-KoI" kind="show" identifier="addEmployeeSegue" id="TeE-Pq-tUI"/>
                         <segue destination="HhI-fh-kmn" kind="show" identifier="editEmployeeSegue" id="I1e-JK-cHR"/>
                     </connections>
@@ -982,8 +982,8 @@
         <image name="logo" width="575" height="390"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TeE-Pq-tUI"/>
-        <segue reference="I1e-JK-cHR"/>
-        <segue reference="Qmu-Ja-3JY"/>
+        <segue reference="4PZ-hj-npq"/>
+        <segue reference="n7w-il-wvx"/>
+        <segue reference="GKa-n1-qcD"/>
     </inferredMetricsTieBreakers>
 </document>
