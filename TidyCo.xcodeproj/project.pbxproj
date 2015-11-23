@@ -25,11 +25,11 @@
 		1C7B8B6E1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B8B6D1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift */; };
 		1C7B8B701BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B6F1BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib */; };
 		1C7B8B721BFCFC960069C10E /* SingleEmployeeProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B8B711BFCFC960069C10E /* SingleEmployeeProgressTableViewCell.swift */; };
-		1C7B8B761BFFB2880069C10E /* EmployeeCurrentServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B751BFFB2880069C10E /* EmployeeCurrentServiceCell.xib */; };
 		1C7B8B781BFFB34B0069C10E /* EmployeeUpcomingServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B771BFFB34B0069C10E /* EmployeeUpcomingServiceCell.xib */; };
 		1C7B8B7A1BFFB7CB0069C10E /* EmployeeCurrentServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B8B791BFFB7CB0069C10E /* EmployeeCurrentServiceTableViewCell.swift */; };
 		1C7B8B7C1BFFB7F20069C10E /* EmployeeUpcomingServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B8B7B1BFFB7F20069C10E /* EmployeeUpcomingServiceTableViewCell.swift */; };
 		1C7B8B7E1BFFEA160069C10E /* Schematics in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B7D1BFFEA160069C10E /* Schematics */; };
+		1C7B8B901C027DBB0069C10E /* EmployeeCurrentServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B8F1C027DBB0069C10E /* EmployeeCurrentServiceCell.xib */; };
 		1CAAAB541BD0031200E3650F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4E1BD0031200E3650F /* Employee.swift */; };
 		1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */; };
 		1CAAAB561BD0031200E3650F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB501BD0031200E3650F /* Room.swift */; };
@@ -113,11 +113,11 @@
 		1C7B8B6D1BFBD6C50069C10E /* EmployeeProgressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeProgressTableViewCell.swift; path = Cells/Controllers/EmployeeProgressTableViewCell.swift; sourceTree = "<group>"; };
 		1C7B8B6F1BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SingleEmployeeRoomProgressCell.xib; path = Cells/Views/SingleEmployeeRoomProgressCell.xib; sourceTree = "<group>"; };
 		1C7B8B711BFCFC960069C10E /* SingleEmployeeProgressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleEmployeeProgressTableViewCell.swift; path = Cells/Controllers/SingleEmployeeProgressTableViewCell.swift; sourceTree = "<group>"; };
-		1C7B8B751BFFB2880069C10E /* EmployeeCurrentServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeCurrentServiceCell.xib; sourceTree = "<group>"; };
 		1C7B8B771BFFB34B0069C10E /* EmployeeUpcomingServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmployeeUpcomingServiceCell.xib; path = Cells/Views/EmployeeUpcomingServiceCell.xib; sourceTree = "<group>"; };
 		1C7B8B791BFFB7CB0069C10E /* EmployeeCurrentServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeCurrentServiceTableViewCell.swift; path = Cells/Controllers/EmployeeCurrentServiceTableViewCell.swift; sourceTree = "<group>"; };
 		1C7B8B7B1BFFB7F20069C10E /* EmployeeUpcomingServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeUpcomingServiceTableViewCell.swift; path = Cells/Controllers/EmployeeUpcomingServiceTableViewCell.swift; sourceTree = "<group>"; };
 		1C7B8B7D1BFFEA160069C10E /* Schematics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Schematics; path = Docs/Schematics; sourceTree = "<group>"; };
+		1C7B8B8F1C027DBB0069C10E /* EmployeeCurrentServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeCurrentServiceCell.xib; sourceTree = "<group>"; };
 		1CAAAB4A1BCD61C500E3650F /* TidyCo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TidyCo-Bridging-Header.h"; sourceTree = "<group>"; };
 		1CAAAB4E1BD0031200E3650F /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Employee.swift; path = Data/Entities/Employee.swift; sourceTree = "<group>"; };
 		1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeType.swift; path = Data/Entities/EmployeeType.swift; sourceTree = "<group>"; };
@@ -272,8 +272,8 @@
 				EDC4B2531BFD74AF00BEFF29 /* EditFloorsHeaderView.xib */,
 				ED026B8F1BFD9CCE00842292 /* EditRoomsHeaderView.xib */,
 				EDCC63E71BFDAD6E005D3187 /* EditTimersHeaderView.xib */,
-				1C7B8B751BFFB2880069C10E /* EmployeeCurrentServiceCell.xib */,
 				1C7B8B771BFFB34B0069C10E /* EmployeeUpcomingServiceCell.xib */,
+				1C7B8B8F1C027DBB0069C10E /* EmployeeCurrentServiceCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -552,7 +552,7 @@
 				1C7B8B671BFBC7EE0069C10E /* Main.storyboard in Resources */,
 				1C7B8B781BFFB34B0069C10E /* EmployeeUpcomingServiceCell.xib in Resources */,
 				7FF942811BFD460100E15C38 /* EditWorkforceView.xib in Resources */,
-				1C7B8B761BFFB2880069C10E /* EmployeeCurrentServiceCell.xib in Resources */,
+				1C7B8B901C027DBB0069C10E /* EmployeeCurrentServiceCell.xib in Resources */,
 				E788E2521C0152B500748F80 /* AssignRoomsEmployeeHeader.xib in Resources */,
 				1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */,
 				7FF942801BFD460100E15C38 /* EditWorkforceHeaderView.xib in Resources */,

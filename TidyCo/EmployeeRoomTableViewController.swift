@@ -22,6 +22,7 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
     var employee: Employee?
     var servicesForEmployee: [Service]?
     var servicingRoom: Bool = false
+    var passingService: Service?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -223,6 +224,8 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
     func onAddNotesClicked(service: Service)
     {
         print("ADD NOTES CLICKED")
+        passingService = service
+    performSegueWithIdentifier("employeeAddNotesSegue", sender: self)
         //Segue to add notes view
     }
 
@@ -234,7 +237,7 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
         if cellService.objectForKey("dateTimeStarted") as? NSDate != nil
             && cellService.objectForKey("dateTimeFinished") as? NSDate == nil
         {
-            return 90
+            return 120
         }
         else
         {
@@ -276,14 +279,23 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "employeeAddNotesSegue"
+        {
+            if let destination = segue.destinationViewController as? EmployeeRoomNotesViewController
+            {
+                destination.employee = employee
+                destination.service = passingService
+            }
+        }
     }
-    */
+
 
 }

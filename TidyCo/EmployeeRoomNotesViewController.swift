@@ -9,10 +9,19 @@
 import UIKit
 
 class EmployeeRoomNotesViewController: UIViewController {
+    
+    var employee: Employee?
+    var service: Service?
 
+    @IBOutlet weak var employeeNameLabel: UILabel!
+    @IBOutlet weak var roomNumberLabel: UILabel!
+    @IBOutlet weak var serviceNotesTextArea: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        employeeNameLabel.text = "\(employee!.lastName.uppercaseString), \(employee!.firstName)"
+        roomNumberLabel.text = "\(service!.roomServiced.roomNum)"
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +31,11 @@ class EmployeeRoomNotesViewController: UIViewController {
     }
     
 
+    @IBAction func doneEditingClicked(sender: UIBarButtonItem) {
+        
+        service?.employeeNotes = serviceNotesTextArea.text
+        service?.saveInBackground()
+    }
     /*
     // MARK: - Navigation
 

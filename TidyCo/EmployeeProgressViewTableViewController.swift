@@ -67,9 +67,11 @@ class EmployeeProgressViewTableViewController: UITableViewController {
         if serviceForCell.employeeNotes != "" || serviceForCell.employeeImages.count > 0
         {
             // Set imageView here
+            cell?.employeeNotesImageView.hidden = false
         }
         else
         {
+            cell?.employeeNotesImageView.hidden = true
             cell?.selectionStyle = .None
             cell?.userInteractionEnabled = false
         }
@@ -139,6 +141,10 @@ class EmployeeProgressViewTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
+    }
 
     
     // MARK: - Navigation

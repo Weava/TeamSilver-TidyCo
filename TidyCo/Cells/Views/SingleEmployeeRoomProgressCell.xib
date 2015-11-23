@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -11,44 +11,44 @@
             <rect key="frame" x="0.0" y="0.0" width="444" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q4m-2c-5kE" id="veE-cN-aA0">
-                <rect key="frame" x="0.0" y="0.0" width="444" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="444" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="304" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2t-O0-cNW">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="304" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2t-O0-cNW">
                         <rect key="frame" x="8" y="10" width="32" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Over Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNh-ij-pD8">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Over Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNh-ij-pD8">
                         <rect key="frame" x="52" y="10" width="79" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tUz-ZO-xv2">
-                        <rect key="frame" x="164" y="4" width="36" height="32"/>
-                        <animations/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="actual time/expected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nQ-KV-daI">
-                        <rect key="frame" x="275" y="10" width="161" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="actual time/expected" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nQ-KV-daI">
+                        <rect key="frame" x="224" y="10" width="212" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="NotesPhotos" translatesAutoresizingMaskIntoConstraints="NO" id="tUz-ZO-xv2">
+                        <rect key="frame" x="171" y="11" width="35" height="22"/>
+                        <animations/>
+                    </imageView>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="leadingMargin" secondItem="Q2t-O0-cNW" secondAttribute="leading" id="PJA-G8-CEv"/>
-                    <constraint firstItem="lNh-ij-pD8" firstAttribute="top" secondItem="veE-cN-aA0" secondAttribute="topMargin" constant="2" id="l6S-fR-MI1"/>
-                    <constraint firstItem="tUz-ZO-xv2" firstAttribute="leading" secondItem="lNh-ij-pD8" secondAttribute="trailing" constant="33" id="nbl-gJ-anr"/>
-                    <constraint firstItem="lNh-ij-pD8" firstAttribute="leading" secondItem="Q2t-O0-cNW" secondAttribute="trailing" constant="12.5" id="sg8-Pv-Uu1"/>
-                    <constraint firstItem="Q2t-O0-cNW" firstAttribute="top" secondItem="veE-cN-aA0" secondAttribute="topMargin" constant="2" id="ye4-gg-naF"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="4nQ-KV-daI" secondAttribute="trailing" id="zGR-4d-3HS"/>
-                    <constraint firstItem="4nQ-KV-daI" firstAttribute="baseline" secondItem="lNh-ij-pD8" secondAttribute="baseline" id="zxR-UD-iiM"/>
+                    <constraint firstItem="tUz-ZO-xv2" firstAttribute="centerY" secondItem="veE-cN-aA0" secondAttribute="centerY" id="SqG-3J-xrY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4nQ-KV-daI" secondAttribute="trailing" id="XSx-AS-dzO"/>
+                    <constraint firstItem="Q2t-O0-cNW" firstAttribute="centerY" secondItem="veE-cN-aA0" secondAttribute="centerY" id="ax7-oL-JnU"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Q2t-O0-cNW" secondAttribute="leading" id="dYg-Zc-hDt"/>
+                    <constraint firstItem="lNh-ij-pD8" firstAttribute="centerY" secondItem="veE-cN-aA0" secondAttribute="centerY" id="kja-pb-5lv"/>
+                    <constraint firstItem="lNh-ij-pD8" firstAttribute="leading" secondItem="Q2t-O0-cNW" secondAttribute="trailing" constant="12" id="qgj-Nm-Vld"/>
+                    <constraint firstItem="4nQ-KV-daI" firstAttribute="baseline" secondItem="lNh-ij-pD8" secondAttribute="baseline" id="yi7-Gz-2UZ"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
@@ -61,4 +61,7 @@
             <point key="canvasLocation" x="233" y="207"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="NotesPhotos" width="80" height="57"/>
+    </resources>
 </document>

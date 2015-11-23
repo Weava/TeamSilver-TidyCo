@@ -173,20 +173,33 @@
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2e-F4-RL6">
-                                <rect key="frame" x="20" y="72" width="560" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Na-Xg-bbN">
+                                <rect key="frame" x="20" y="320" width="374" height="223"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-ax-dyL">
+                                <rect key="frame" x="175" y="20" width="64" height="26.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2e-F4-RL6">
+                                <rect key="frame" x="20" y="54" width="374" height="41"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Na-Xg-bbN">
-                                <rect key="frame" x="20" y="320" width="560" height="223"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="O2e-F4-RL6" secondAttribute="leading" id="9k9-iP-Dov"/>
+                            <constraint firstItem="O2e-F4-RL6" firstAttribute="top" secondItem="Ko8-ax-dyL" secondAttribute="bottom" constant="7.5" id="OF5-aN-wUG"/>
+                            <constraint firstItem="Ko8-ax-dyL" firstAttribute="top" secondItem="fYO-qW-PuY" secondAttribute="bottom" constant="20" id="e6M-3c-N9v"/>
+                            <constraint firstItem="Ko8-ax-dyL" firstAttribute="centerX" secondItem="4TF-vg-gJj" secondAttribute="centerX" id="lRC-6c-B84"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="employeeImagesImageView" destination="9Na-Xg-bbN" id="KAK-3d-PjH"/>
@@ -885,7 +898,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Rooms" id="8lx-GK-r3d"/>
                     <connections>
-                        <segue destination="qqn-IX-ybp" kind="show" id="tYk-lR-3LX"/>
+                        <segue destination="qqn-IX-ybp" kind="show" identifier="employeeAddNotesSegue" id="tYk-lR-3LX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xi8-7O-qdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -903,10 +916,53 @@
                     <view key="view" contentMode="scaleToFill" id="bej-Lk-4FG">
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhi-CD-ako">
+                                <rect key="frame" x="20" y="20" width="183" height="43"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="306" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rh9-Ge-bVX">
+                                <rect key="frame" x="273" y="14" width="121" height="55"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Enter Notes Here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iox-ub-DOO">
+                                <rect key="frame" x="20" y="83" width="374" height="194"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rh9-Ge-bVX" firstAttribute="baseline" secondItem="nhi-CD-ako" secondAttribute="baseline" id="7DV-Gy-rQf"/>
+                            <constraint firstItem="nhi-CD-ako" firstAttribute="top" secondItem="JnL-Rx-I4Z" secondAttribute="bottom" constant="20" id="94v-Gm-Fpv"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="iox-ub-DOO" secondAttribute="leading" id="K6o-SX-eN1"/>
+                            <constraint firstItem="iox-ub-DOO" firstAttribute="top" secondItem="nhi-CD-ako" secondAttribute="bottom" constant="20" id="QfL-6W-PS7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="nhi-CD-ako" secondAttribute="leading" id="d04-1c-LYj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rh9-Ge-bVX" secondAttribute="trailing" id="lTl-rz-Zdi"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Notes" id="U5B-kN-hIC"/>
+                    <navigationItem key="navigationItem" title="Notes" id="U5B-kN-hIC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="pUN-mk-HNl">
+                            <color key="tintColor" red="0.88235294119999996" green="0.95294117649999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="doneEditingClicked:" destination="qqn-IX-ybp" id="xWr-rC-FuN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="employeeNameLabel" destination="nhi-CD-ako" id="h8s-Fg-9Ul"/>
+                        <outlet property="roomNumberLabel" destination="rh9-Ge-bVX" id="oeT-c1-Edl"/>
+                        <outlet property="serviceNotesTextArea" destination="iox-ub-DOO" id="rPE-aP-rry"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRt-Fa-3nl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -915,7 +971,7 @@
     </scenes>
     <resources>
         <image name="AssignRooms" width="35" height="35"/>
-        <image name="Background" width="750" height="1280"/>
+        <image name="Background" width="80" height="57"/>
         <image name="Circle" width="1043" height="1035"/>
         <image name="EditRooms" width="35" height="35"/>
         <image name="EditStaff" width="35" height="35"/>

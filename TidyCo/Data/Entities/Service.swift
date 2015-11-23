@@ -86,8 +86,16 @@ class Service: PFObject, PFSubclassing
         get
         {
             let time = timeTaken
-            let timeString = String(format:"%02li:%02li", lround(floor(time / 60)) % 60, lround(floor(time)) % 60)
-            return timeString
+            if (lround(floor(time / 3600)) < 1)
+            {
+                let timeString = String(format:"%02li:%02li", lround(floor(time / 60)) % 60, lround(floor(time)) % 60)
+                return timeString
+            }
+            else
+            {
+                let timeString = String(format:"%02li:%02li:%02li", lround(floor(time / 3600)), lround(floor(time / 60)) % 60, lround(floor(time)) % 60)
+                return timeString
+            }
         }
     }
     

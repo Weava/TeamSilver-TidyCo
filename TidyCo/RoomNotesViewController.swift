@@ -32,6 +32,7 @@ class RoomNotesViewController: UIViewController {
             if service.employeeNotes != ""
             {
                 employeeNotesLabel.text = service.employeeNotes
+                employeeNotesLabel.sizeToFit()
             }
             if service.employeeImages.count > 0
             {
