@@ -27,6 +27,7 @@ class EmployeeProgressViewTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView!.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
+        self.title = "\(employee!.lastName), \(employee!.firstName)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +59,7 @@ class EmployeeProgressViewTableViewController: UITableViewController {
         
         let serviceForCell = servicesForEmployee![indexPath.row]
         let serviceExpectedTime = NSString(format: "%.2f", Float(serviceForCell.serviceTimer.timerLengthInMinutes)).stringByReplacingOccurrencesOfString(".", withString: ":")
-        let serviceActualTime = serviceForCell.timeAsMinutesSecondsString
+        let serviceActualTime = serviceForCell.finishedTimeAsMinutesSecondsString
         let roomStatus: String = calculateRoomProgress(serviceForCell)
         
         cell?.roomNumberLabel.text = serviceForCell.roomServiced.roomNum

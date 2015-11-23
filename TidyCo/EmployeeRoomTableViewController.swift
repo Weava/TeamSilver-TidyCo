@@ -27,7 +27,8 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        servicesForEmployee = serviceOps.getAllServicesForEmployee(employee!)
+        //servicesForEmployee = serviceOps.getAllServicesForEmployee(employee!)
+        servicesForEmployee = serviceOps.getUnfinishedServicesForEmployees(employee!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -101,6 +102,7 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
             
             servicingRoom = true
             
+            currentServiceCell?.startUpdatingTimer()
             return currentServiceCell!
         }
         else if cellService.objectForKey("dateTimeStarted") as? NSDate == nil
@@ -241,7 +243,7 @@ class EmployeeRoomTableViewController: UITableViewController, CurrentServiceHand
         }
         else
         {
-            return 40
+            return 60
         }
     }
     /*

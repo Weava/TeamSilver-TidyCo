@@ -38,6 +38,21 @@ class ParseServiceStorageAdapter : ServiceStorageAdapter
         }
     }
     
+    func getUnfinishedServicesForEmployees(employeeAssigned: Employee) -> [Service]?
+    {
+        let query: PFQuery = self.queryWithRelations()
+        
+        query.whereKeyDoesNotExist("dateTimeFinished")
+        
+        do
+        {
+            return try query.findObjects() as? [Service]
+        } catch
+        {
+            return nil
+        }
+    }
+    
     func getServicesForEmployeeOnTodaysDate(employeeAssigned: Employee) -> [Service]?
     {
         let query: PFQuery = self.queryWithRelations()

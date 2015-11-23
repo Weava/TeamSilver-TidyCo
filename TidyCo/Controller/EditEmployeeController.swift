@@ -65,7 +65,7 @@ class EditEmployeeController: UIViewController {
         firstNameOutlet.text = currentEmployee.firstName
         middleInitialOutlet.text = currentEmployee.middleInitial
         LastNameOutlet.text = currentEmployee.lastName
-        //  employeeIDOutlet = "empID"//currentEmployee.employeeId
+        employeeIDOutlet.text = currentEmployee.employeeId
         storeNumberOutlet.text = currentEmployee.storeNumber
         passwordOutlet.text = "Password" // (Get Pasword?)
         

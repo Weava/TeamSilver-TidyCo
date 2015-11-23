@@ -11,6 +11,7 @@ import UIKit
 struct EmployeeStatus {
     var employeeSimpleStatus: String
     var employeePercentComplete: Float
+    var textColor: UIColor
 }
 
 class ViewProgressTableViewController: UITableViewController {
@@ -85,27 +86,31 @@ class ViewProgressTableViewController: UITableViewController {
             }
             
             var status: String = ""
+            var color: UIColor?
             let percentComplete: Float = Float(servicesCompleted) / Float(totalServices)
             
             switch (totalActualTime)
             {
                 case let x where x < totalExpectedTime:
                     status = "Ahead"
+                    color = UIColor(red: 64.0/255.0, green: 64.0/255.0, blue: 65.0/255.0, alpha: 1.0)
                     break
                 
                 case let x where x == totalExpectedTime:
                     status = "On Time"
+                    color = UIColor(red: 64.0/255.0, green: 64.0/255.0, blue: 65.0/255.0, alpha: 1.0)
                     break
                 
                 case let x where x > totalExpectedTime:
                     status = "Over Time"
+                    color = UIColor(red: 39.0/255.0, green: 184.0/255.0, blue: 158.0/255.0, alpha: 1.0)
                     break
                 
                 default:
                     break
             }
             
-            return EmployeeStatus(employeeSimpleStatus: status, employeePercentComplete: percentComplete)
+            return EmployeeStatus(employeeSimpleStatus: status, employeePercentComplete: percentComplete, textColor: color!)
         }
         return nil
     }
@@ -132,6 +137,7 @@ class ViewProgressTableViewController: UITableViewController {
             cell?.employeePercentCompleteLabel.text = "\(Int(employeeStatus!.employeePercentComplete * 100))% Complete"
         
             cell?.employeeSimpleStatusLabel.text = "\(employeeStatus!.employeeSimpleStatus)"
+            cell?.employeeSimpleStatusLabel.textColor = employeeStatus!.textColor
         }
         else
         {
@@ -141,13 +147,12 @@ class ViewProgressTableViewController: UITableViewController {
         
         cell?.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
         
-        
         return cell!
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
-        return 60
+        return 100
     }
 
 
