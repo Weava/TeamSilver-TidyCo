@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        
+        
+        
         print("in AppDelegate.swift: didFinishLaunchingWithOptions")
         // Override point for customization after application launch.
         
@@ -32,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServiceType.registerSubclass()
         EmployeeType.registerSubclass()
         
+        
+        /*
         if let employeeId = NSUserDefaults.standardUserDefaults().valueForKey("employeeId") {
             if let loggedInEmployee: Employee = ParseEmployeeStorageAdapter().getEmployeeByEmployeeId(employeeId as! String) {
                 self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -43,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.makeKeyAndVisible()
             }
         }
+*/
         
         
         

@@ -33,6 +33,20 @@ class LoginController : UIViewController
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // only for creating new employee for testing
+        /*
+        let adminEmployee = Employee()
+        adminEmployee.firstName = "Annie"
+        adminEmployee.middleInitial = "T"
+        adminEmployee.lastName = "Admin"
+        adminEmployee.employeeId = "11111111"
+        adminEmployee.storeNumber = "001"
+        adminEmployee.loginId = "testAdmin"
+        adminEmployee.hashedPassword = "realPass"
+        loginAdapter.createEmployee(adminEmployee, employeeType: EmployeeTypeValue.admin)
+        print("added employee")
+        */
     }
     
     override func didReceiveMemoryWarning() {
