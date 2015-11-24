@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        print("in AppDelegate.swift: didFinishLaunchingWithOptions")
         // Override point for customization after application launch.
         
         // Initialize Parse and analytic tools.
@@ -31,12 +32,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ServiceType.registerSubclass()
         EmployeeType.registerSubclass()
         
-        // CREATE TEST USERS
+        if let employeeId = NSUserDefaults.standardUserDefaults().valueForKey("employeeId") {
+            if let loggedInEmployee: Employee = ParseEmployeeStorageAdapter().getEmployeeByEmployeeId(employeeId as! String) {
+                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+                let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+                let userController: UserNavigationViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("userController") as! UserNavigationViewController
+                userController.loggedInEmployee = loggedInEmployee
+                
+                self.window?.rootViewController = userController
+                self.window?.makeKeyAndVisible()
+            }
+        }
         
         
         
-        // END CREATE TEST USERS
-        
+        /*
         let loginDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
         let employeeOps = ParseEmployeeStorageAdapter()
         if let employeeId: String = loginDefaults.valueForKey(StringUtils.loginDefaults) as? String
@@ -72,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else
         {
+            print("in AppDelgate: no login --> send to login view")
             //Select login view for the user
             //The app was found to not have any login information from last time.
             self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -82,6 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             
         }
+        */
         
         return true
     }
