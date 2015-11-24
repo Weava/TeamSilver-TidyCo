@@ -18,16 +18,63 @@ class AddEmployeesViewController: UIViewController {
      var loginId = String()
      var hashedPassword = String()
     
+    let employeeOps = ParseEmployeeStorageAdapter()
+    let serviceOps = ParseServiceStorageAdapter()
+    var selectedRowIndex : Int = -1;
+    var headerHeight : CGFloat = 50
+    var selectedEmployee = Employee()
+    var selectedType = String()
+    
+    var allEmployees: [Employee]?
+    
     @IBOutlet weak var AddFirstNameOutlet: UITextField!
     @IBOutlet weak var AddMiddleInitialOutlet: UITextField!
     @IBOutlet weak var AddLastNameOutlet: UITextField!
     @IBOutlet weak var AddEmployeeIDOutlet: UITextField!
     @IBOutlet weak var AddStoreNumberOutlet: UITextField!
     @IBOutlet weak var AddPasswordOutlet: UITextField!
+    
+    @IBAction func ChangeEmployeeTypeAction(sender: UISegmentedControl) {
+        
+        let x = sender.selectedSegmentIndex
+        
+        switch x{
+            
+        case 0 :
+            selectedType = "admin"
+            break
+        case 1 :
+            selectedType = "manager"
+            break
+        case 2 :
+            selectedType = "housekeeper"
+            break
+        case 3 :
+            selectedType = "maintenance"
+            break
+        default:
+            selectedType = "admin"
+            break
+            
+        }
+        
+        print(selectedType)
+        
+    }
+    
+   
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       // EmployeeTypeOutlet.
+        
+        self.selectedType = "admin"
+        
+        allEmployees = employeeOps.getAllItems()!
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -49,6 +96,9 @@ class AddEmployeesViewController: UIViewController {
         
         // Temporary string passing default values.
         /// Replace with the values from the outlets.
+        
+        print(selectedType)
+
         let str : String = "NewEmp2"
         
         firstName = str
@@ -60,6 +110,8 @@ class AddEmployeesViewController: UIViewController {
         hashedPassword = str
         
     }
-
+    
+    
+    
 
 }

@@ -14,7 +14,13 @@ class EditWorkforceTableViewCell: UITableViewCell
     
     @IBOutlet weak var EmployeeName: UILabel!
 
+    @IBOutlet weak var AheadOutlet: UILabel!
     
+    @IBOutlet weak var OnTimeOutlet: UILabel!
+    
+    @IBOutlet weak var BehindOutlet: UILabel!
+    
+    @IBOutlet weak var OverTimeOutlet: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

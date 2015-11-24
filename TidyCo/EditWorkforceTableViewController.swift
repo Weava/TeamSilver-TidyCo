@@ -82,6 +82,62 @@ class EditWorkforceTableViewController: UITableViewController {
        // cell?.employeeSimpleStatusLabel.text = "\(employeeStatus!.employeeSimpleStatus)"
         cell?.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
         
+        var servicesForEmployee: [Service]?
+        
+        var overtimeCount = 0
+        var aheadCount = 0
+        var OnTimeCount = 0
+        var behindCount = 0
+        
+        
+        servicesForEmployee = serviceOps.getAllServicesForEmployee(currentEmployee)
+        
+        for data in servicesForEmployee!
+        {
+        
+            let roomStatus: String = calculateRoomProgress(data)
+            
+            if roomStatus == "Over Time"
+            {
+                overtimeCount++
+            }else if roomStatus == "Ahead"
+            {
+                aheadCount++
+            }else if roomStatus == "On Time"
+            {
+                OnTimeCount++
+            }else if roomStatus == ""
+            {
+                behindCount++
+            }
+            
+            
+            
+            print(roomStatus)
+            
+        }
+        
+        var f : Float = 0.0
+        
+        if(servicesForEmployee?.count > 0)
+        {
+        
+            f = (Float)((Float)(aheadCount)/(Float)((servicesForEmployee?.count)!))
+            cell?.AheadOutlet.text = "\(f * 100)%"
+            f = (Float)((Float)(OnTimeCount)/(Float)((servicesForEmployee?.count)!))
+            cell?.OnTimeOutlet.text = "\(f * 100)%"
+            f = (Float)((Float)(behindCount)/(Float)((servicesForEmployee?.count)!))
+            cell?.BehindOutlet.text = "\(f * 100)%"
+            f = (Float)((Float)(overtimeCount)/(Float)((servicesForEmployee?.count)!))
+            cell?.OverTimeOutlet.text = "\(f * 100)%"
+        }else
+        {
+            cell?.AheadOutlet.text = "N/A"
+            cell?.OnTimeOutlet.text = "N/A"
+            cell?.BehindOutlet.text = "N/A"
+            cell?.OverTimeOutlet.text = "N/A"
+        }
+        
         return cell!
     }
     
@@ -121,6 +177,26 @@ class EditWorkforceTableViewController: UITableViewController {
     }
     
     
+    private func calculateRoomProgress(service: Service) -> String
+    {
+        let timeDifference = Float(service.timeToFinish) / 60
+        let expectedTime = Float(service.serviceTimer.timerLengthInMinutes)
+        
+        switch (timeDifference)
+        {
+        case let x where x < expectedTime:
+            return "Ahead"
+            
+        case let x where x == expectedTime:
+            return "On Time"
+            
+        case let x where x > expectedTime:
+            return "Over Time"
+            
+        default:
+            return ""
+        }
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
