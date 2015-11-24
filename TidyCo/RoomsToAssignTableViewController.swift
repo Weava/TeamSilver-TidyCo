@@ -81,7 +81,7 @@ class RoomsToAssignTableViewController: UITableViewController {
     
     func AddRooms(sender : UIButton!){
         
-        //Create alert to be shown.
+        
     }
 
 

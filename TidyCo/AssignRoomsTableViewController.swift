@@ -10,16 +10,10 @@ import UIKit
 
 class AssignRoomsTableViewController: UITableViewController {
     
-    let employeeOps = ParseEmployeeStorageAdapter()
-    let serviceOps = ParseServiceStorageAdapter()
-    var selectedRowIndex : Int = -1;
     var headerHeight : CGFloat = 50
-    var allEmployees: [Employee]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        allEmployees = employeeOps.getAllItems()!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -86,7 +80,7 @@ class AssignRoomsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (allEmployees?.count)!
+        return 1
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -96,31 +90,14 @@ class AssignRoomsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("employeeRoomsAssignedCell") as? EmployeeRoomsAssignedCell
-        
-        if cell == nil
-        {
-            let nibs = NSBundle.mainBundle().loadNibNamed("EmployeeRoomsAssignedCell", owner: self, options: nil)
-            cell = (nibs[0] as? EmployeeRoomsAssignedCell)!
-        }
-        
-        let currentEmployee = allEmployees![indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("assignRoomsCell", forIndexPath: indexPath)
 
-        cell?.employeeNameLabel.text = "\(currentEmployee.lastName.uppercaseString), \(currentEmployee.firstName)"
-        
         // Configure the cell...
-        cell?.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
+        cell.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
 
-        return cell!
+        return cell
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        if indexPath.row == selectedRowIndex && selectedRowIndex != -1{
-            return 200
-        }
-        return 44
-    }
 
     /*
     // Override to support conditional editing of the table view.

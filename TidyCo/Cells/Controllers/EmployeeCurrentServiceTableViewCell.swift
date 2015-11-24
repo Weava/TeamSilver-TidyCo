@@ -38,4 +38,18 @@ class EmployeeCurrentServiceTableViewCell: UITableViewCell
         currentServiceHandler?.onAddNotesClicked(serviceForCell!)
     }
     
+    func startUpdatingTimer()
+    {
+        let timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
+            target: self,
+            selector: Selector("updateTimer:"),
+            userInfo: nil,
+            repeats: true)
+    }
+    
+    func updateTimer(timer: NSTimer)
+    {
+        self.currentTimeLabel.text = self.serviceForCell!.timeAsMinutesSecondsString
+        print("\(serviceForCell?.timeAsMinutesSecondsString) TIME")
+    }
 }

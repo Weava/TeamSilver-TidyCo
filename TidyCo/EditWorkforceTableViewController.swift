@@ -197,7 +197,6 @@ class EditWorkforceTableViewController: UITableViewController {
             
             let newEmp = Employee()
             let empType = EmployeeType()
-            let et = EmployeeTypeValue(rawValue: "housekeeper")
             
             
             empType.typeName = "housekeeper"
@@ -212,8 +211,9 @@ class EditWorkforceTableViewController: UITableViewController {
             
             newEmp.employeeType = empType
             
+            
             let adapter = ParseEmployeeStorageAdapter()
-            adapter.createEmployee(newEmp,employeeType: et!)
+            adapter.createEmployee(newEmp, employeeType: EmployeeTypeValue.housekeeper)
             
             self.viewDidLoad()
             

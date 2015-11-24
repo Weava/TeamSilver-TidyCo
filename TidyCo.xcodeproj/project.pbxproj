@@ -30,6 +30,16 @@
 		1C7B8B7C1BFFB7F20069C10E /* EmployeeUpcomingServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B8B7B1BFFB7F20069C10E /* EmployeeUpcomingServiceTableViewCell.swift */; };
 		1C7B8B7E1BFFEA160069C10E /* Schematics in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B7D1BFFEA160069C10E /* Schematics */; };
 		1C7B8B901C027DBB0069C10E /* EmployeeCurrentServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B8F1C027DBB0069C10E /* EmployeeCurrentServiceCell.xib */; };
+		1C7B8B9C1C0372FD0069C10E /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B921C0372FD0069C10E /* Lato-Black.ttf */; };
+		1C7B8B9D1C0372FD0069C10E /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B931C0372FD0069C10E /* Lato-BlackItalic.ttf */; };
+		1C7B8B9E1C0372FD0069C10E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B941C0372FD0069C10E /* Lato-Bold.ttf */; };
+		1C7B8B9F1C0372FD0069C10E /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B951C0372FD0069C10E /* Lato-BoldItalic.ttf */; };
+		1C7B8BA01C0372FD0069C10E /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B961C0372FD0069C10E /* Lato-Hairline.ttf */; };
+		1C7B8BA11C0372FD0069C10E /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B971C0372FD0069C10E /* Lato-HairlineItalic.ttf */; };
+		1C7B8BA21C0372FD0069C10E /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B981C0372FD0069C10E /* Lato-Italic.ttf */; };
+		1C7B8BA31C0372FD0069C10E /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B991C0372FD0069C10E /* Lato-Light.ttf */; };
+		1C7B8BA41C0372FD0069C10E /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B9A1C0372FD0069C10E /* Lato-LightItalic.ttf */; };
+		1C7B8BA51C0372FD0069C10E /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B8B9B1C0372FD0069C10E /* Lato-Regular.ttf */; };
 		1CAAAB541BD0031200E3650F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4E1BD0031200E3650F /* Employee.swift */; };
 		1CAAAB551BD0031200E3650F /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */; };
 		1CAAAB561BD0031200E3650F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAAAB501BD0031200E3650F /* Room.swift */; };
@@ -54,8 +64,6 @@
 		E788E2541C01548400748F80 /* AssignRoomsEmployeeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E788E2531C01548400748F80 /* AssignRoomsEmployeeHeaderView.swift */; };
 		E7A247081C024321005143A9 /* AssignRoomsFloorHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A247071C024321005143A9 /* AssignRoomsFloorHeader.xib */; };
 		E7A2470A1C0243E4005143A9 /* AssignRoomsFloorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A247091C0243E4005143A9 /* AssignRoomsFloorHeaderView.swift */; };
-		E7A5F9C41C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A5F9C31C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib */; };
-		E7A5F9C61C037B7000114E89 /* EmployeeRoomsAssignedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A5F9C51C037B7000114E89 /* EmployeeRoomsAssignedCell.swift */; };
 		ED026B8E1BFD9CB200842292 /* EditRoomsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED026B8D1BFD9CB200842292 /* EditRoomsHeaderView.swift */; };
 		ED026B901BFD9CCE00842292 /* EditRoomsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED026B8F1BFD9CCE00842292 /* EditRoomsHeaderView.xib */; };
 		ED104A221BFB9B78004E0769 /* EmployeeRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */; };
@@ -120,6 +128,16 @@
 		1C7B8B7B1BFFB7F20069C10E /* EmployeeUpcomingServiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeUpcomingServiceTableViewCell.swift; path = Cells/Controllers/EmployeeUpcomingServiceTableViewCell.swift; sourceTree = "<group>"; };
 		1C7B8B7D1BFFEA160069C10E /* Schematics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Schematics; path = Docs/Schematics; sourceTree = "<group>"; };
 		1C7B8B8F1C027DBB0069C10E /* EmployeeCurrentServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeCurrentServiceCell.xib; sourceTree = "<group>"; };
+		1C7B8B921C0372FD0069C10E /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		1C7B8B931C0372FD0069C10E /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		1C7B8B941C0372FD0069C10E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		1C7B8B951C0372FD0069C10E /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1C7B8B961C0372FD0069C10E /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		1C7B8B971C0372FD0069C10E /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		1C7B8B981C0372FD0069C10E /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		1C7B8B991C0372FD0069C10E /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		1C7B8B9A1C0372FD0069C10E /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		1C7B8B9B1C0372FD0069C10E /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		1CAAAB4A1BCD61C500E3650F /* TidyCo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TidyCo-Bridging-Header.h"; sourceTree = "<group>"; };
 		1CAAAB4E1BD0031200E3650F /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Employee.swift; path = Data/Entities/Employee.swift; sourceTree = "<group>"; };
 		1CAAAB4F1BD0031200E3650F /* EmployeeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeType.swift; path = Data/Entities/EmployeeType.swift; sourceTree = "<group>"; };
@@ -156,8 +174,6 @@
 		E788E2531C01548400748F80 /* AssignRoomsEmployeeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssignRoomsEmployeeHeaderView.swift; path = Cells/Controllers/AssignRoomsEmployeeHeaderView.swift; sourceTree = "<group>"; };
 		E7A247071C024321005143A9 /* AssignRoomsFloorHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AssignRoomsFloorHeader.xib; path = ../AssignRoomsFloorHeader.xib; sourceTree = "<group>"; };
 		E7A247091C0243E4005143A9 /* AssignRoomsFloorHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssignRoomsFloorHeaderView.swift; path = Cells/Controllers/AssignRoomsFloorHeaderView.swift; sourceTree = "<group>"; };
-		E7A5F9C31C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmployeeRoomsAssignedCell.xib; path = Cells/Views/EmployeeRoomsAssignedCell.xib; sourceTree = "<group>"; };
-		E7A5F9C51C037B7000114E89 /* EmployeeRoomsAssignedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeRoomsAssignedCell.swift; path = Cells/Controllers/EmployeeRoomsAssignedCell.swift; sourceTree = "<group>"; };
 		ED026B8D1BFD9CB200842292 /* EditRoomsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRoomsHeaderView.swift; sourceTree = "<group>"; };
 		ED026B8F1BFD9CCE00842292 /* EditRoomsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditRoomsHeaderView.xib; sourceTree = "<group>"; };
 		ED104A211BFB9B78004E0769 /* EmployeeRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRoomTableViewController.swift; sourceTree = "<group>"; };
@@ -267,7 +283,6 @@
 		1C7B8B691BFBD1D50069C10E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E7A5F9C31C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib */,
 				E7A247071C024321005143A9 /* AssignRoomsFloorHeader.xib */,
 				7FF9427E1BFD460100E15C38 /* EditWorkforceHeaderView.xib */,
 				E788E2511C0152B500748F80 /* AssignRoomsEmployeeHeader.xib */,
@@ -286,7 +301,6 @@
 		1C7B8B6A1BFBD1DF0069C10E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7A5F9C51C037B7000114E89 /* EmployeeRoomsAssignedCell.swift */,
 				E7A247091C0243E4005143A9 /* AssignRoomsFloorHeaderView.swift */,
 				7FF9427A1BFD45EF00E15C38 /* EditWorkforceHeaderViewClass.swift */,
 				E788E2531C01548400748F80 /* AssignRoomsEmployeeHeaderView.swift */,
@@ -300,6 +314,23 @@
 				1C7B8B7B1BFFB7F20069C10E /* EmployeeUpcomingServiceTableViewCell.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1C7B8B911C0372EF0069C10E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C7B8B921C0372FD0069C10E /* Lato-Black.ttf */,
+				1C7B8B931C0372FD0069C10E /* Lato-BlackItalic.ttf */,
+				1C7B8B941C0372FD0069C10E /* Lato-Bold.ttf */,
+				1C7B8B951C0372FD0069C10E /* Lato-BoldItalic.ttf */,
+				1C7B8B961C0372FD0069C10E /* Lato-Hairline.ttf */,
+				1C7B8B971C0372FD0069C10E /* Lato-HairlineItalic.ttf */,
+				1C7B8B981C0372FD0069C10E /* Lato-Italic.ttf */,
+				1C7B8B991C0372FD0069C10E /* Lato-Light.ttf */,
+				1C7B8B9A1C0372FD0069C10E /* Lato-LightItalic.ttf */,
+				1C7B8B9B1C0372FD0069C10E /* Lato-Regular.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		1CAAAB491BCD61AB00E3650F /* ObjC */ = {
@@ -371,6 +402,7 @@
 		1CC05F401BC73110003DB99F /* TidyCo */ = {
 			isa = PBXGroup;
 			children = (
+				1C7B8B911C0372EF0069C10E /* Resources */,
 				1C7B8B681BFBD1A00069C10E /* Cells */,
 				1C7B8B5F1BF52DA10069C10E /* Views */,
 				1CDB9C021BEC4E4F00A9DEA9 /* Utils */,
@@ -553,19 +585,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7B8B9F1C0372FD0069C10E /* Lato-BoldItalic.ttf in Resources */,
 				EDC4B2541BFD74AF00BEFF29 /* EditFloorsHeaderView.xib in Resources */,
 				EDCC63E81BFDAD6E005D3187 /* EditTimersHeaderView.xib in Resources */,
 				1C7B8B671BFBC7EE0069C10E /* Main.storyboard in Resources */,
+				1C7B8BA21C0372FD0069C10E /* Lato-Italic.ttf in Resources */,
 				1C7B8B781BFFB34B0069C10E /* EmployeeUpcomingServiceCell.xib in Resources */,
+				1C7B8B9C1C0372FD0069C10E /* Lato-Black.ttf in Resources */,
+				1C7B8BA31C0372FD0069C10E /* Lato-Light.ttf in Resources */,
+				1C7B8BA01C0372FD0069C10E /* Lato-Hairline.ttf in Resources */,
 				7FF942811BFD460100E15C38 /* EditWorkforceView.xib in Resources */,
 				1C7B8B901C027DBB0069C10E /* EmployeeCurrentServiceCell.xib in Resources */,
+				1C7B8B9E1C0372FD0069C10E /* Lato-Bold.ttf in Resources */,
 				E788E2521C0152B500748F80 /* AssignRoomsEmployeeHeader.xib in Resources */,
+				1C7B8BA11C0372FD0069C10E /* Lato-HairlineItalic.ttf in Resources */,
 				1CC05F4C1BC73110003DB99F /* LaunchScreen.storyboard in Resources */,
 				7FF942801BFD460100E15C38 /* EditWorkforceHeaderView.xib in Resources */,
+				1C7B8B9D1C0372FD0069C10E /* Lato-BlackItalic.ttf in Resources */,
+				1C7B8BA51C0372FD0069C10E /* Lato-Regular.ttf in Resources */,
 				1C7B8B7E1BFFEA160069C10E /* Schematics in Resources */,
 				E7A247081C024321005143A9 /* AssignRoomsFloorHeader.xib in Resources */,
+				1C7B8BA41C0372FD0069C10E /* Lato-LightItalic.ttf in Resources */,
 				1C7B8B6C1BFBD2350069C10E /* EmployeeProgressCell.xib in Resources */,
-				E7A5F9C41C037B5E00114E89 /* EmployeeRoomsAssignedCell.xib in Resources */,
 				1CC05F491BC73110003DB99F /* Assets.xcassets in Resources */,
 				1C7B8B701BFCF76A0069C10E /* SingleEmployeeRoomProgressCell.xib in Resources */,
 				ED026B901BFD9CCE00842292 /* EditRoomsHeaderView.xib in Resources */,
@@ -696,7 +737,6 @@
 				ED104A2A1BFB9C64004E0769 /* EditTimersTableViewController.swift in Sources */,
 				1CAAAB561BD0031200E3650F /* Room.swift in Sources */,
 				ED27C5211BFE66B100441B5C /* AddTimerViewController.swift in Sources */,
-				E7A5F9C61C037B7000114E89 /* EmployeeRoomsAssignedCell.swift in Sources */,
 				EDC4B2561BFD74C500BEFF29 /* EditFloorsHeaderView.swift in Sources */,
 				ED104A341BFB9D61004E0769 /* ViewProgressTableViewController.swift in Sources */,
 				ED104A3A1BFB9E89004E0769 /* RoomNotesViewController.swift in Sources */,

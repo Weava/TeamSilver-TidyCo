@@ -63,8 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 userController.employeeId = employeeId
             }
             
-            
-            //userController.isManager = true
+            userController.isEmployee = true
+            userController.isManager = false
             
             
             self.window?.rootViewController = userController

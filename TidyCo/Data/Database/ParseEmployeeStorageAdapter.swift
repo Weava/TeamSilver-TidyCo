@@ -79,7 +79,7 @@ class ParseEmployeeStorageAdapter : EmployeeStorageAdapter
             {
                 //let relation: PFRelation = employee.relationForKey(Employee.EMPLOYEE_TYPE_RELATION)
                 //relation.addObject(self.getEmployeeTypeByName(employeeType)!)
-                employee[Employee.EMPLOYEE_TYPE_POINTER] = self.getEmployeeTypeByName(employeeType)
+                employee.employeeType = self.getEmployeeTypeByName(employeeType)!
                 employee.saveInBackground()
             }
         } catch

@@ -10,16 +10,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaf-ea-OrE">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaf-ea-OrE">
                     <rect key="frame" x="171" y="13" width="32" height="30"/>
                     <state key="normal" title="ADD"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="oaf-ea-OrE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aA6-9g-jfF"/>
-                <constraint firstItem="oaf-ea-OrE" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="l59-hr-Eml"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="addFloorButton" destination="oaf-ea-OrE" id="4Rb-EF-pF2"/>
