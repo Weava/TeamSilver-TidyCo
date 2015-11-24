@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         EmployeeType.registerSubclass()
         
         
-        /*
+        
         if let employeeId = NSUserDefaults.standardUserDefaults().valueForKey("employeeId") {
             if let loggedInEmployee: Employee = ParseEmployeeStorageAdapter().getEmployeeByEmployeeId(employeeId as! String) {
                 self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.makeKeyAndVisible()
             }
         }
-*/
+
         
         
         
