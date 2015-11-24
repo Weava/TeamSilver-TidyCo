@@ -262,6 +262,9 @@ class EditWorkforceTableViewController: UITableViewController {
             let s5 = destViewController.storeNumber
             let s6 = destViewController.loginId
             let s7 = destViewController.hashedPassword
+            let s8 = destViewController.selectedType
+            
+            
             
             print(s1)
             print(s2)
@@ -287,9 +290,39 @@ class EditWorkforceTableViewController: UITableViewController {
             
             newEmp.employeeType = empType
             
+            let et : EmployeeTypeValue
+            
+            switch(s8)
+            {
+            
+            case "admin":
+            
+                et = EmployeeTypeValue.admin
+                
+                break
+            
+            case "manager":
+                
+                et = EmployeeTypeValue.manager
+                
+                break
+            
+            case "maintenance":
+                
+                et = EmployeeTypeValue.maintenance
+                break
+                
+            case "housekeeper":
+                et = EmployeeTypeValue.housekeeper
+                break
+            default :
+                et = EmployeeTypeValue.maintenance
+                break
+            }
+            
             
             let adapter = ParseEmployeeStorageAdapter()
-            adapter.createEmployee(newEmp, employeeType: EmployeeTypeValue.housekeeper)
+            adapter.createEmployee(newEmp, employeeType: et)
             
             self.viewDidLoad()
             

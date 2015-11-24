@@ -98,16 +98,14 @@ class AddEmployeesViewController: UIViewController {
         /// Replace with the values from the outlets.
         
         print(selectedType)
-
-        let str : String = "NewEmp2"
         
-        firstName = str
-        middleInitial = str
-        lastName = str
-        employeeId = str
-        storeNumber = str
-        loginId = str
-        hashedPassword = str
+        firstName = AddFirstNameOutlet.text!
+        middleInitial = AddMiddleInitialOutlet.text!
+        lastName = AddLastNameOutlet.text!
+        employeeId = AddEmployeeIDOutlet.text!
+        storeNumber = AddStoreNumberOutlet.text!
+        loginId = "LoginID"
+        hashedPassword = AddPasswordOutlet.text!
         
     }
     
