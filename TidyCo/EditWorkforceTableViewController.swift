@@ -255,16 +255,23 @@ class EditWorkforceTableViewController: UITableViewController {
         
         if let destViewController = segue.sourceViewController as? AddEmployeesViewController {
             
-            let s1 = destViewController.firstName
-            let s2 = destViewController.middleInitial
-            let s3 = destViewController.lastName
-            let s4 = destViewController.employeeId
-            let s5 = destViewController.storeNumber
-            let s6 = destViewController.loginId
-            let s7 = destViewController.hashedPassword
-            let s8 = destViewController.selectedType
             
             
+            let s1 = destViewController.firstName.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s2 = destViewController.middleInitial.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s3 = destViewController.lastName.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s4 = destViewController.employeeId.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s5 = destViewController.storeNumber.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s6 = destViewController.loginId.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s7 = destViewController.hashedPassword.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s8 = destViewController.selectedType.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            
+            
+            
+            if s1 == "" || s2 == "" || s3 == "" || s4 == "" || s5 == "" || s6 == "" || s7 == "" || s8 == "" {
+                print("Null")
+            
+            }else{
             
             print(s1)
             print(s2)
@@ -276,7 +283,6 @@ class EditWorkforceTableViewController: UITableViewController {
             
             let newEmp = Employee()
             let empType = EmployeeType()
-            
             
             empType.typeName = "housekeeper"
             
@@ -328,6 +334,7 @@ class EditWorkforceTableViewController: UITableViewController {
             
             self.tableView.reloadData()
             
+            }
             
         }
     }

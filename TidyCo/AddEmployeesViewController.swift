@@ -33,6 +33,7 @@ class AddEmployeesViewController: UIViewController {
     @IBOutlet weak var AddEmployeeIDOutlet: UITextField!
     @IBOutlet weak var AddStoreNumberOutlet: UITextField!
     @IBOutlet weak var AddPasswordOutlet: UITextField!
+    @IBOutlet weak var AddLoginIDOutlet: UITextField!
     
     @IBAction func ChangeEmployeeTypeAction(sender: UISegmentedControl) {
         
@@ -104,7 +105,7 @@ class AddEmployeesViewController: UIViewController {
         lastName = AddLastNameOutlet.text!
         employeeId = AddEmployeeIDOutlet.text!
         storeNumber = AddStoreNumberOutlet.text!
-        loginId = "LoginID"
+        loginId = AddLoginIDOutlet.text!
         hashedPassword = AddPasswordOutlet.text!
         
     }

@@ -31,6 +31,9 @@ class EditEmployeeController: UIViewController {
    
     @IBOutlet weak var passwordOutlet: UITextField!
     
+    @IBOutlet weak var loginIDOutlet: UITextField!
+    
+    
     @IBAction func EditAction(sender: UIButton) {
         
         // Check if any edited first name middle name last name
@@ -67,7 +70,9 @@ class EditEmployeeController: UIViewController {
         LastNameOutlet.text = currentEmployee.lastName
         employeeIDOutlet.text = currentEmployee.employeeId
         storeNumberOutlet.text = currentEmployee.storeNumber
-        passwordOutlet.text = "Password" // (Get Pasword?)
+        passwordOutlet.text = currentEmployee.hashedPassword
+        loginIDOutlet.text = currentEmployee.loginId
+        
         
         // Do any additional setup after loading the view.
     }
@@ -111,7 +116,9 @@ class EditEmployeeController: UIViewController {
         LastNameOutlet.text = currentEmployee.lastName
         employeeIDOutlet.text = currentEmployee.employeeId
         storeNumberOutlet.text = currentEmployee.storeNumber
-        passwordOutlet.text = "Password" // (Get Pasword?)
+        passwordOutlet.text = currentEmployee.hashedPassword
+        loginIDOutlet.text = currentEmployee.loginId
+
         
         
         
