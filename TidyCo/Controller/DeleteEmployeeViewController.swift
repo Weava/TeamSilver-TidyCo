@@ -36,7 +36,7 @@ class DeleteEmployeeViewController: UIViewController {
             
             self.selectedEmployee.deleteInBackground()
             
-            print("Deleted \(self.selectedEmployee.lastName.uppercaseString), \(self.selectedEmployee.firstName)")
+           // print("Deleted \(self.selectedEmployee.lastName.uppercaseString), \(self.selectedEmployee.firstName)")
             // Go back
             self.navigationController?.popViewControllerAnimated(true)
             
@@ -47,7 +47,7 @@ class DeleteEmployeeViewController: UIViewController {
             
             
             // Dont Delete Employee
-            print("Didnt delete")
+           // print("Didnt delete")
             
         }))
         
@@ -62,6 +62,8 @@ class DeleteEmployeeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
         
         allEmployees = employeeOps.getAllItems()!
         
@@ -108,7 +110,7 @@ class DeleteEmployeeViewController: UIViewController {
         
         let name : String = "\(currentEmployee.lastName.uppercaseString), \(currentEmployee.firstName)"
         
-        print("Selected : \(name)")
+       // print("Selected : \(name)")
     }
     
     

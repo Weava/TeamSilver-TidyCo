@@ -33,23 +33,81 @@ class EditEmployeeController: UIViewController {
     
     @IBOutlet weak var loginIDOutlet: UITextField!
     
+
     
     @IBAction func EditAction(sender: UIButton) {
         
         // Check if any edited first name middle name last name
-        if firstNameOutlet.text != selectedEmployee.firstName || middleInitialOutlet!.text != selectedEmployee.middleInitial || LastNameOutlet!.text != selectedEmployee.lastName
+        if firstNameOutlet.text != selectedEmployee.firstName || middleInitialOutlet!.text != selectedEmployee.middleInitial || LastNameOutlet!.text != selectedEmployee.lastName || employeeIDOutlet.text != selectedEmployee.employeeId || storeNumberOutlet.text != selectedEmployee.storeNumber || loginIDOutlet.text != selectedEmployee.loginId || selectedEmployee.hashedPassword != passwordOutlet.text
         {
+            
+            let s1 = firstNameOutlet.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s2 = middleInitialOutlet.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s3 = LastNameOutlet.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s4 = employeeIDOutlet.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s5 = storeNumberOutlet.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s6 = loginIDOutlet.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let s7 = passwordOutlet.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            
+            if s1 == "" || s2 == "" || s3 == "" || s4 == "" || s5 == "" || s6 == "" || s7 == ""  {
+               // print("Null")
+                
+                let alert = UIAlertController(title: "Please fill all the fields!", message: "Empty fields present. Kindly fill all thge fields.", preferredStyle: .Alert)
+                
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: {
+                    (alert:UIAlertAction!) in
+                    
+                    
+                    
+                }))
+                
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    super.presentViewController(alert, animated: true, completion: nil)
+                }
+                
+                
+                
+            }else{
+            
+            let newEmp = Employee()
+            
+            newEmp.firstName = s1
+            newEmp.middleInitial = s2
+            newEmp.lastName = s3
+            newEmp.employeeId = s4
+            newEmp.storeNumber = s5
+            newEmp.loginId = s6
+            newEmp.hashedPassword = s7
+            
+            
+            
+            let et : EmployeeTypeValue = EmployeeTypeValue.admin
+            
+            let adapter = ParseEmployeeStorageAdapter()
+            
+            //     let str : String = newEmp.employeeType.typeName
+            
+            self.selectedEmployee.deleteInBackground()
+            adapter.createEmployee(newEmp, employeeType: et)
+            
+            self.selectedEmployee.deleteInBackground()
            
-            print("Changed")
+           // print("Changed")
             
             ///Insert code to modify database accordingly
             
             // Go back
             navigationController?.popViewControllerAnimated(true)
             
+        }
+        
         }else
         {
-            print("No change")
+         //   print("No change")
+            navigationController?.popViewControllerAnimated(true)
+            
         }
         
     }
@@ -61,7 +119,7 @@ class EditEmployeeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          allEmployees = employeeOps.getAllItems()!
-        
+        self.view.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
         let currentEmployee = allEmployees![0]
         selectedEmployee = allEmployees![0]
         
@@ -72,6 +130,7 @@ class EditEmployeeController: UIViewController {
         storeNumberOutlet.text = currentEmployee.storeNumber
         passwordOutlet.text = currentEmployee.hashedPassword
         loginIDOutlet.text = currentEmployee.loginId
+        
         
         
         // Do any additional setup after loading the view.
@@ -121,8 +180,7 @@ class EditEmployeeController: UIViewController {
 
         
         
-        
-        print("Selected : \(name)")
+      
     }
     
     

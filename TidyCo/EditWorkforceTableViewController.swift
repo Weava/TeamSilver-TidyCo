@@ -23,17 +23,11 @@ class EditWorkforceTableViewController: UITableViewController {
         
         allEmployees = employeeOps.getAllItems()!
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView!.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
     }
 
     override func viewDidAppear(animated: Bool) {
-        
-        print("ViewWillAppear")
+
         allEmployees = employeeOps.getAllItems()!
         self.tableView.reloadData()
         
@@ -113,7 +107,7 @@ class EditWorkforceTableViewController: UITableViewController {
             
             
             
-            print(roomStatus)
+            //print(roomStatus)
             
         }
         
@@ -268,18 +262,35 @@ class EditWorkforceTableViewController: UITableViewController {
             
             
             
-            if s1 == "" || s2 == "" || s3 == "" || s4 == "" || s5 == "" || s6 == "" || s7 == "" || s8 == "" {
-                print("Null")
-            
+            if s1 == "" || s2 == "" || s3 == "" || s4 == "" || s5 == "" || s6 == "" || s7 == "" {
+              //  print("Null")
+                
+                let alert = UIAlertController(title: "Please fill all the fields!", message: "Empty fields present. Kindly fill all thge fields.", preferredStyle: .Alert)
+                
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: {
+                    (alert:UIAlertAction!) in
+                    
+                    
+                    
+                }))
+                
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    super.presentViewController(alert, animated: true, completion: nil)
+                }
+                
+             
+                
             }else{
             
-            print(s1)
-            print(s2)
-            print(s3)
-            print(s4)
-            print(s5)
-            print(s6)
-            print(s7)
+           // print(s1)
+          //  print(s2)
+          //  print(s3)
+          //  print(s4)
+          //  print(s5)
+          //  print(s6)
+          //  print(s7)
             
             let newEmp = Employee()
             let empType = EmployeeType()
@@ -297,7 +308,7 @@ class EditWorkforceTableViewController: UITableViewController {
             newEmp.employeeType = empType
             
             let et : EmployeeTypeValue
-            
+                
             switch(s8)
             {
             
@@ -328,7 +339,10 @@ class EditWorkforceTableViewController: UITableViewController {
             
             
             let adapter = ParseEmployeeStorageAdapter()
-            adapter.createEmployee(newEmp, employeeType: et)
+               
+       //     let str : String = newEmp.employeeType.typeName
+                
+            employeeOps.createEmployee(newEmp, employeeType: et)
             
             self.viewDidLoad()
             

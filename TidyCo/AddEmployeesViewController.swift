@@ -59,7 +59,7 @@ class AddEmployeesViewController: UIViewController {
             
         }
         
-        print(selectedType)
+       // print(selectedType)
         
     }
     
@@ -74,6 +74,7 @@ class AddEmployeesViewController: UIViewController {
         
         allEmployees = employeeOps.getAllItems()!
         
+        self.view.backgroundColor = UIColor(red: 219.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0)
         
         
         // Do any additional setup after loading the view.
@@ -98,7 +99,7 @@ class AddEmployeesViewController: UIViewController {
         // Temporary string passing default values.
         /// Replace with the values from the outlets.
         
-        print(selectedType)
+       // print(selectedType)
         
         firstName = AddFirstNameOutlet.text!
         middleInitial = AddMiddleInitialOutlet.text!
