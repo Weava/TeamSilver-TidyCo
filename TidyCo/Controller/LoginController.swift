@@ -18,6 +18,8 @@ class LoginController : UIViewController
     
     var employeeTypeName: String?
     
+    var loggedInEmployee: Employee?
+    
     
     @IBAction func loginButtonTap(sender: AnyObject) {
         loginCheck(textLoginUser.text!, loginPassword: textLoginPassword.text!)
@@ -31,9 +33,20 @@ class LoginController : UIViewController
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Login controller, starting")
-        //loginCheck()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // only for creating new employee for testing
+        /*
+        let adminEmployee = Employee()
+        adminEmployee.firstName = "Annie"
+        adminEmployee.middleInitial = "T"
+        adminEmployee.lastName = "Admin"
+        adminEmployee.employeeId = "11111111"
+        adminEmployee.storeNumber = "001"
+        adminEmployee.loginId = "testAdmin"
+        adminEmployee.hashedPassword = "realPass"
+        loginAdapter.createEmployee(adminEmployee, employeeType: EmployeeTypeValue.admin)
+        print("added employee")
+        */
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,8 +66,36 @@ class LoginController : UIViewController
     private func loginCheck(loginUser: String, loginPassword: String)
     {
         print("Running login check")
-        //let loginUser: String = "testMaint"
-        //let loginPassword: String = "realPass"
+        
+        if let foundEmployee: Employee = loginAdapter.checkLoginForEmployee(loginUser, password: loginPassword) {
+            print("correct username/password combo")
+            
+            loggedInEmployee = foundEmployee
+            
+            // store employeeid in NSUserDefaults
+            // get the standard user defaults
+            let loggedInStore: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            // put in user defaults
+            loggedInStore.setObject(loggedInEmployee?.employeeId, forKey: "employeeId")
+            loggedInStore.synchronize()
+            
+            // successfull login. Go to navigation view
+            performSegueWithIdentifier("userNavigationSegue", sender: self)
+        }
+        else
+        {
+            print("Failed")
+            // Do something to alert the user of incorrect password 'n' stuff.
+            let alertController = UIAlertController(title: "Uh Oh!", message: "Incorrect Login ID or Password.\nPlease Try again.", preferredStyle: .Alert)
+            
+            let okayAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alertController.addAction(okayAction)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+        /*
         
         if let employeeLogged: Employee = loginAdapter.checkLoginForEmployee(loginUser, password: loginPassword)
         {
@@ -64,7 +105,7 @@ class LoginController : UIViewController
             
             employeeTypeName = employeeType.typeName
             
-            print("Logged employee's type:  \(EmployeeType.getEmployeeTypeValue(employeeType)!.rawValue)")
+            print("Logged employee's type:  \(employeeTypeName)")
             employeeStore.setObject(employeeLogged.employeeId, forKey: StringUtils.loginDefaults)
            
             employeeStore.setObject(employeeType.typeName, forKey: StringUtils.employeeType)
@@ -86,22 +127,13 @@ class LoginController : UIViewController
             
             self.presentViewController(alertController, animated: true, completion: nil)
         }
+
+        */
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destinationVC = segue.destinationViewController as? UserNavigationViewController {
-            
-            destinationVC.isManager = true
-            
-            // Disabled for testing purposes
-            /*
-            if employeeTypeName == "admin" || employeeTypeName == "manager" {
-                destinationVC.isManager = true
-            }
-            else {
-                destinationVC.isEmployee = true
-            }
-            */
+            destinationVC.loggedInEmployee = loggedInEmployee
         }
     }
 }

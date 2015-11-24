@@ -5,10 +5,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Lato-Bold.ttf">
-            <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-        </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </mutableArray>
@@ -50,6 +46,18 @@
                                     <action selector="passwordEditChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Oyq-rl-1Lk"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTs-Sq-xbK">
+                                <rect key="frame" x="175" y="564" width="65" height="65"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="dJ4-ep-ijM"/>
+                                    <constraint firstAttribute="width" constant="65" id="vFK-6d-Xoi"/>
+                                </constraints>
+                                <state key="normal" title="Login" backgroundImage="Circle"/>
+                                <connections>
+                                    <action selector="loginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SUz-Zb-hod"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-Yk-EkH">
                                 <rect key="frame" x="110" y="436" width="194" height="30"/>
                                 <animations/>
@@ -63,18 +71,6 @@
                                     <action selector="loginEditChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Nw8-a2-bGB"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTs-Sq-xbK">
-                                <rect key="frame" x="175" y="564" width="65" height="65"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="dJ4-ep-ijM"/>
-                                    <constraint firstAttribute="width" constant="65" id="vFK-6d-Xoi"/>
-                                </constraints>
-                                <state key="normal" title="Login" backgroundImage="Circle"/>
-                                <connections>
-                                    <action selector="loginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SUz-Zb-hod"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

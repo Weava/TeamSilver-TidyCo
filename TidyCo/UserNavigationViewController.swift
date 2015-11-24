@@ -10,20 +10,20 @@ import UIKit
 
 class UserNavigationViewController: UINavigationController {
 
-    var isManager = false
-    var isEmployee = false
-    var employeeId: String?
     let employeeOps = ParseEmployeeStorageAdapter()
+    var loggedInEmployee: Employee?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if isManager {
+        
+        if loggedInEmployee?.employeeType.typeName == "admin" || loggedInEmployee?.employeeType.typeName == "manager" {
             performSegueWithIdentifier("managerSegue", sender: self)
         }
-        else if isEmployee {
+        else {
             performSegueWithIdentifier("employeeSegue", sender: self)
         }
+        
 
         // Do any additional setup after loading the view.
         
@@ -48,7 +48,7 @@ class UserNavigationViewController: UINavigationController {
         {
             if let destination = segue.destinationViewController as? EmployeeRoomTableViewController
             {
-                destination.employee = employeeOps.getEmployeeByEmployeeId(self.employeeId!)
+                destination.employee = loggedInEmployee
             }
         }
     }
